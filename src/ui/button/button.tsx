@@ -5,5 +5,5 @@ interface Prop {
 }
 
 export default function ButtonUI({ children }: Prop) {
-    return <div className="button">{children}</div>;
+    return <div className="button dark">{children}</div>;
 }

@@ -1,11 +1,16 @@
+@import "../../variables.scss";
+
 .navbar {
-    border: solid;
     display: flex;
     justify-content: space-between;
     width: 100%;
     .links-container {
         display: flex;
-        gap: 40px;
+        gap: 20px;
         align-items: center;
+
+        a {
+            color: $grey-300;
+        }
     }
 }

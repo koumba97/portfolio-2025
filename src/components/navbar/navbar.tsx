@@ -1,7 +1,7 @@
 import LogoLink from "@/ui/logo-link/logo-link";
 import "./navbar.scss";
 import Link from "next/link";
-import ButtonUI from "../button/button";
+import ButtonUI from "../../ui/button/button";
 
 export default function NavBar() {
     return (
