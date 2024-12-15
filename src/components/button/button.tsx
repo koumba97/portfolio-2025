@@ -1,5 +1,9 @@
 import "./button.scss";
 
-export default function ButtonUI() {
-    return <div className="button">Button</div>;
+interface Prop {
+    children: any;
+}
+
+export default function ButtonUI({ children }: Prop) {
+    return <div className="button">{children}</div>;
 }
