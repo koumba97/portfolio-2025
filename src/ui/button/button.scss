@@ -1,12 +1,28 @@
 @import "../../variables.scss";
 
 .button {
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 50px;
-    font-weight: bold;
+    font-family: "Nunito";
+    font-size: 14px;
+    font-weight: 800;
+    border: none;
+    transition: 0.3s scale;
+    cursor: pointer;
 
-    &.dark {
-        background-color: $grey-800;
+    &:active {
+        scale: 0.9;
+    }
+
+    &.filled {
+        background-color: $grey-900;
         color: white;
+    }
+
+    &.outlined {
+        border-color: $grey-900;
+        border: 2px solid;
+
+        background-color: white;
     }
 }
