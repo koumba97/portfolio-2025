@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+.hero-section {
+    padding: 50px 60px;
+    height: 600px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .title {
+        font-size: 70px;
+        font-family: "Lost Days";
+
+        .brand {
+            color: $brand-color;
+        }
+    }
+}

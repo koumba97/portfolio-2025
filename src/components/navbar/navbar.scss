@@ -11,6 +11,11 @@
 
         a {
             color: $grey-300;
+            transition: 0.5s color, 0.5s font-weight;
+            &:hover {
+                color: $grey-800;
+                font-weight: bold;
+            }
         }
     }
 }
