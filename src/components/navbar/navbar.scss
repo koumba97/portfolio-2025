@@ -2,6 +2,7 @@
 
 .navbar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     .links-container {
@@ -20,10 +21,18 @@
     }
 }
 
+.side-menu {
+    display: none;
+}
+
 @media (max-width: $md-breakpoint) {
     .navbar {
         .links-container {
             display: none;
         }
+    }
+
+    .side-menu {
+        display: block;
     }
 }
