@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+.side-menu {
+    .menu-icon {
+        cursor: pointer;
+        transition: scale 0.5s, color 0.5s;
+        &:hover {
+            color: $grey-400;
+        }
+        &:active {
+            scale: 0.9;
+        }
+    }
+}
+.svg-inline--fa {
+    height: unset !important;
+}
