@@ -20,7 +20,11 @@ export default function SideMenu() {
                 className="menu-icon"
                 onClick={toggleSideMenu}
             />
-            {isOpen ? "open" : "closed"}
+
+            <menu className={`menu ${isOpen ? "open" : "closed"}`}>
+                menu content here
+            </menu>
+            {isOpen ? <div className="side-menu-bg"></div> : null}
         </div>
     );
 }

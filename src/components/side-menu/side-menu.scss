@@ -3,6 +3,7 @@
 .side-menu {
     .menu-icon {
         cursor: pointer;
+        z-index: 12;
         transition: scale 0.5s, color 0.5s;
         &:hover {
             color: $grey-400;
@@ -11,7 +12,36 @@
             scale: 0.9;
         }
     }
+
+    .menu {
+        position: fixed;
+        z-index: 11;
+        background-color: pink;
+        height: 100vh;
+        padding: 50px;
+        top: 0;
+        transition: right 0.5s;
+
+        &.closed {
+            right: -200px;
+        }
+        &.open {
+            right: 0px;
+        }
+    }
+    .side-menu-bg {
+        background-color: rgba(0, 0, 0, 0.314);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
 }
-.svg-inline--fa {
-    height: unset !important;
-}
+// body {
+//     &:has(.open) {
+//         overflow: hidden;
+//         background-color: green;
+//     }
+// }
