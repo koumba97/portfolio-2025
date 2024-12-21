@@ -3,10 +3,29 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./side-menu.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function SideMenu() {
+interface Prop {
+    // defines the max screen where the sidemenu should be visible
+    maxSize?: number;
+}
+
+export default function SideMenu({ maxSize }: Prop) {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (maxSize && window.innerWidth > maxSize) {
+                setIsOpen(false);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     function toggleSideMenu() {
         setIsOpen(!isOpen);
@@ -24,7 +43,12 @@ export default function SideMenu() {
             <menu className={`menu ${isOpen ? "open" : "closed"}`}>
                 menu content here
             </menu>
-            {isOpen ? <div className="side-menu-bg"></div> : null}
+            {isOpen ? (
+                <div
+                    className="side-menu-bg"
+                    onClick={() => setIsOpen(false)}
+                ></div>
+            ) : null}
         </div>
     );
 }

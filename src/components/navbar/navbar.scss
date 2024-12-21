@@ -1,10 +1,14 @@
 @import "../../variables.scss";
 
+.navbar-content {
+    //border: solid;
+}
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: calc(100% - 50px * 2);
+    position: fixed;
     .links-container {
         display: flex;
         gap: 20px;

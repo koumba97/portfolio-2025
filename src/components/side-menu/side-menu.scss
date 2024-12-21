@@ -15,6 +15,7 @@
 
     .menu {
         position: fixed;
+        width: 300px;
         z-index: 11;
         background-color: pink;
         height: 100vh;
@@ -23,7 +24,7 @@
         transition: right 0.5s;
 
         &.closed {
-            right: -200px;
+            right: -300px;
         }
         &.open {
             right: 0px;
@@ -34,6 +35,7 @@
         width: 100vw;
         height: 100vh;
         position: fixed;
+        user-select: none;
         top: 0;
         left: 0;
         z-index: 10;
@@ -45,3 +47,7 @@
 //         background-color: green;
 //     }
 // }
+
+.svg-inline--fa {
+    height: unset !important;
+}
