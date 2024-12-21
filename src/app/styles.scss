@@ -1,3 +1,5 @@
+@import "../utils/variables.scss";
+
 @font-face {
     font-family: "Lost Days";
     src: url("../assets/fonts/lost-days.ttf") format("opentype");
@@ -15,4 +17,20 @@
 body {
     padding: 50px;
     font-family: "Nunito";
+}
+
+.hero-section {
+    margin: auto;
+    max-width: 800px;
+    min-height: 500px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@media (max-width: $sm-breakpoint) {
+    body {
+        padding: 20px;
+    }
 }

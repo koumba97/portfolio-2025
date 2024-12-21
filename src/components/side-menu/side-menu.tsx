@@ -1,7 +1,7 @@
 "use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./side-menu.scss";
 import { useEffect, useState } from "react";
 
@@ -33,12 +33,21 @@ export default function SideMenu({ maxSize }: Prop) {
 
     return (
         <div className="side-menu">
-            <FontAwesomeIcon
-                icon={faBars}
-                height={40}
-                className="menu-icon"
-                onClick={toggleSideMenu}
-            />
+            {!isOpen ? (
+                <FontAwesomeIcon
+                    icon={faBars}
+                    height={30}
+                    className="menu-icon"
+                    onClick={() => setIsOpen(true)}
+                />
+            ) : (
+                <FontAwesomeIcon
+                    icon={faXmark}
+                    height={30}
+                    className="menu-icon"
+                    onClick={() => setIsOpen(false)}
+                />
+            )}
 
             <menu className={`menu ${isOpen ? "open" : "closed"}`}>
                 menu content here

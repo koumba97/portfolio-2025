@@ -1,7 +1,7 @@
 @import "../../utils/variables.scss";
 
 .navbar-content {
-    //border: solid;
+    height: 50px;
 }
 .navbar {
     display: flex;
@@ -38,5 +38,14 @@
 
     .side-menu {
         display: flex;
+    }
+}
+
+@media (max-width: $sm-breakpoint) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 20px * 2);
     }
 }
