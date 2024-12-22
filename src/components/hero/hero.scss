@@ -30,6 +30,9 @@
             .brand {
                 color: $brand-color;
             }
+            .mw-w:nth-child(2) {
+                color: $brand-color;
+            }
         }
         p {
             font-size: 18px;
