@@ -13,9 +13,10 @@ export default function Hero() {
     const roles = [
         "UI/UX Designer",
         "Digital Illustrator",
+        "Graphic Designer",
         "Frontend engineer",
     ];
-    const [currentRole, setCurrentRole] = useState(roles[2]);
+    const [currentRole, setCurrentRole] = useState(roles[3]);
 
     const INTERVAL_TIME = 3000;
 
@@ -39,7 +40,7 @@ export default function Hero() {
         titleRef.current = new Movinwords({
             el: ".test",
             sentence: currentRole,
-            transition: "slideInBottom",
+            transition: "revealInBottom",
         });
 
         titleRef.current.start();
