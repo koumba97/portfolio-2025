@@ -16,15 +16,13 @@
 
         a {
             color: $grey-300;
-            transition: 0.5s color, 0.5s font-weight;
-            transition: scale 0.5s;
+            transition: 0.5s color, 0.5s scale;
 
             &:active {
                 scale: 0.9;
             }
             &:hover {
                 color: $grey-800;
-                font-weight: bold;
             }
         }
     }
