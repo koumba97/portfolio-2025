@@ -1,11 +1,13 @@
-@import "../../utils/variables.scss";
+@import "../../../utils/variables.scss";
 
+.section-container {
+    background-color: $grey-100;
+    margin: -50px;
+}
 .about-me-section {
     display: flex;
-    gap: 20px;
-    background-color: $grey-100;
+    gap: 50px;
     height: 600px;
-    margin: -50px;
     margin-top: 100px;
     padding: 50px;
 
@@ -13,14 +15,18 @@
         font-size: 70px;
         font-family: "Lost Days";
         width: fit-content;
+        margin-bottom: 50px;
+
+        .brand {
+            color: $brand-color;
+        }
     }
 
     .text-container {
-        flex: 1;
+        flex: 4;
     }
 
     .stack-container {
-        flex: 1;
-        background-color: white;
+        flex: 5;
     }
 }

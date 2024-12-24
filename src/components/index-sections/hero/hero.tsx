@@ -12,7 +12,7 @@ export default function Hero() {
     const titleRef = useRef<Movinwords | null>(null);
     const roles = [
         "UI/UX Designer",
-        "Digital Illustrator",
+        "Digital Artist",
         "Graphic Designer",
         "Frontend engineer",
     ];
