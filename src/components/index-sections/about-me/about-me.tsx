@@ -20,8 +20,7 @@ export default function AboutMe() {
                     <p>
                         Donec lacinia nec ipsum ac consectetur. Pellentesque
                         habitant morbi tristique senectus et netus et malesuada
-                        fames ac turpis egestas. Etiam elementum ullamcorper
-                        enim, id aliquam libero viverra sit amet.
+                        fames ac turpis egestas.
                     </p>
                 </div>
                 <StackContainer />

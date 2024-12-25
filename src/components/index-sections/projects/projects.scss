@@ -1,0 +1,55 @@
+@import "../../../utils/variables.scss";
+
+.projects-section {
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        gap: 30px;
+        grid-auto-rows: minmax(170px, auto);
+        grid-auto-columns: minmax(100px, auto);
+
+        div {
+            background-color: grey;
+            border-radius: 20px;
+
+            &:nth-of-type(1) {
+                background-color: pink;
+                grid-column: 1 / 3;
+            }
+            &:nth-of-type(2) {
+                background-color: rgb(255, 241, 82);
+            }
+
+            &:nth-of-type(3) {
+                background-color: #a0b3ff;
+                grid-column: 4;
+                grid-row: 1/3;
+            }
+
+            &:nth-of-type(4) {
+                background-color: #43fabd;
+                grid-column: 1;
+                grid-row: 2/4;
+            }
+
+            &:nth-of-type(5) {
+                background-color: #6146ff;
+            }
+
+            &:nth-of-type(6) {
+                background-color: #eaeaea;
+            }
+
+            &:nth-of-type(7) {
+                background-color: #ffdbf3;
+            }
+
+            &:nth-of-type(8) {
+                background-color: $brand-color;
+                grid-column: 3/5;
+                grid-row: 3;
+            }
+        }
+    }
+}
