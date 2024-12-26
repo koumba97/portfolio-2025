@@ -52,6 +52,23 @@
         flex-direction: column;
         align-items: center;
         gap: 40px;
+
+        .text-container {
+            h2,
+            p {
+                margin: auto;
+            }
+            h2,
+            .title,
+            p {
+                text-align: center;
+            }
+
+            .buttons-container {
+                width: max-content;
+                margin: auto;
+            }
+        }
     }
 }
 
