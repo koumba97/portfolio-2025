@@ -1,4 +1,3 @@
-import StackContainer from "@/components/stack-container/stack-container";
 import "./about-me.scss";
 
 export default function AboutMe() {
@@ -23,7 +22,6 @@ export default function AboutMe() {
                         fames ac turpis egestas.
                     </p>
                 </div>
-                <StackContainer />
             </div>
         </div>
     );
