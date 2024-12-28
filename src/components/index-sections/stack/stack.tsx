@@ -9,7 +9,14 @@ export default function Stack() {
                 <CompetenceBox
                     title="Programming"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in urna sit amet sapien accumsan consequat."
-                    tools={[Tool.HTML, Tool.CSS, Tool.SASS]}
+                    tools={[
+                        Tool.html,
+                        Tool.css,
+                        Tool.javascript,
+                        Tool.typescript,
+                        Tool.sass,
+                        Tool.react,
+                    ]}
                 ></CompetenceBox>
 
                 <CompetenceBox

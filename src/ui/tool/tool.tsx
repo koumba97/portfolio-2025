@@ -5,13 +5,14 @@ import Image, { StaticImageData } from "next/image";
 interface Prop {
     name: string;
     image: StaticImageData;
+    full?: boolean;
     visibleText?: boolean;
 }
-export default function Tool({ name, image, visibleText = true }: Prop) {
+export default function Tool({ name, image, full, visibleText = true }: Prop) {
     return (
         <div className="tool">
             <div className="icon-container">
-                <Image src={image} alt="" height={30} />
+                <Image src={image} alt="" height={full ? 40 : 25} />
             </div>
             {visibleText ? <h2 className="tool-name">{name}</h2> : null}
         </div>
