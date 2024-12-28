@@ -4,9 +4,17 @@
     background-color: #eaeaea;
     padding: 20px;
     border-radius: 20px;
-    flex: 1;
     min-height: 300px;
+    display: flex;
+    flex-direction: column;
     p {
         font-size: 18;
+    }
+
+    .tools-container {
+        display: flex;
+        align-items: flex-end;
+        flex: 1;
+        gap: 10px;
     }
 }
