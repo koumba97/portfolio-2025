@@ -11,6 +11,7 @@ import nodeLogo from "@/assets/images/logo/node.png";
 import cypressLogo from "@/assets/images/logo/cypress.png";
 import symfonyLogo from "@/assets/images/logo/symfony.png";
 import storybookLogo from "@/assets/images/logo/storybook.png";
+import angularLogo from "@/assets/images/logo/angular.png";
 
 
 import { StaticImageData } from "next/image";
