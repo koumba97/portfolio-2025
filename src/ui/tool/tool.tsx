@@ -12,7 +12,7 @@ export default function Tool({ name, image, full, visibleText = true }: Prop) {
     return (
         <div className="tool">
             <div className="icon-container">
-                <Image src={image} alt="" height={full ? 40 : 25} />
+                <Image src={image} alt="" height={full ? 36 : 25} />
             </div>
             {visibleText ? <h2 className="tool-name">{name}</h2> : null}
         </div>
