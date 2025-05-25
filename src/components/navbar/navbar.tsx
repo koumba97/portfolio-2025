@@ -5,25 +5,44 @@ import "./navbar.scss";
 import Link from "next/link";
 import ButtonUI from "../../ui/button/button";
 import SideMenu from "../side-menu/side-menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MD_BREAKPOINT } from "@/utils/dimensions";
+import { log } from "console";
 
 export default function NavBar() {
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setScrollPosition(position);
+        console.log(position);
+    };
+
     return (
         <div className="navbar-content">
-            <div className="navbar">
-                <LogoLink />
+            {scrollPosition < 90 ? (
+                <div className="navbar">
+                    <LogoLink />
 
-                <div className="links-container">
-                    <Link href="">Home</Link>
-                    <Link href="">About me</Link>
-                    <Link href="">Projects</Link>
-                    <Link href="">Skills</Link>
-                    <Link href="">Experience</Link>
-                    <ButtonUI>Contact me</ButtonUI>
+                    <div className="links-container">
+                        <Link href="">Home</Link>
+                        <Link href="">About me</Link>
+                        <Link href="">Projects</Link>
+                        <Link href="">Skills</Link>
+                        <Link href="">Experience</Link>
+                        <ButtonUI>Contact me</ButtonUI>
+                    </div>
+                    <SideMenu maxSize={MD_BREAKPOINT} />
                 </div>
-                <SideMenu maxSize={MD_BREAKPOINT} />
-            </div>
+            ) : null}
         </div>
     );
 }
