@@ -1,5 +1,10 @@
+import Link from "next/link";
 import "./logo-link.scss";
 
 export default function LogoLink() {
-    return <h1 className="logo-link">Koum.</h1>;
+    return (
+        <Link href="/">
+            <h1 className="logo-link">Koum.</h1>
+        </Link>
+    );
 }
