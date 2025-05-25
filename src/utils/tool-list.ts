@@ -13,6 +13,21 @@ import symfonyLogo from "@/assets/images/logo/symfony.png";
 import storybookLogo from "@/assets/images/logo/storybook.png";
 import angularLogo from "@/assets/images/logo/angular.png";
 
+import photoshopLogo from "@/assets/images/logo/html.png";
+import inDesignLogo from "@/assets/images/logo/css.png";
+import illustratorLogo from "@/assets/images/logo/sass.png";
+import afterEffectsLogo from "@/assets/images/logo/javascript.png";
+import adobeXDLogo from "@/assets/images/logo/typescript.png";
+import quarkExpressLogo from "@/assets/images/logo/tailwind.png";
+import wordpressLogo from "@/assets/images/logo/react.png";
+import sitecoreLogo from "@/assets/images/logo/vue.png";
+import figmaLogo from "@/assets/images/logo/laravel.png";
+import canvaLogo from "@/assets/images/logo/node.png";
+import microsoftOfficeSuiteLogo from "@/assets/images/logo/symfony.png";
+import procreateLogo from "@/assets/images/logo/storybook.png";
+//import cypressLogo from "@/assets/images/logo/cypress.png";
+//import angularLogo from "@/assets/images/logo/angular.png";
+
 
 import { StaticImageData } from "next/image";
 export interface ToolInterface {
@@ -22,6 +37,7 @@ export interface ToolInterface {
 }
 
 export const Tool: Record<string, ToolInterface> = {
+    //PROGRAMMING
     html: {
         name: 'HTML',
         image: htmlLogo,
@@ -84,4 +100,56 @@ export const Tool: Record<string, ToolInterface> = {
         name: 'Storybook',
         image: storybookLogo,
     },
+
+    //DESIGN
+    photoshop: {
+        name: '',
+        image: photoshopLogo
+    },
+    indesign: {
+        name: '',
+        image: inDesignLogo
+    },
+    illustrator: {
+        name: '',
+        image: illustratorLogo
+    },
+    afterEffects: {
+        name: '',
+        image: afterEffectsLogo
+    },
+    adobeXD: {
+        name: '',
+        image: adobeXDLogo
+    },
+    quarkExpress: {
+        name: '',
+        image: quarkExpressLogo
+    },
+    wordpress: {
+        name: '',
+        image: wordpressLogo
+    },
+    sitecore: {
+        name: '',
+        image: sitecoreLogo
+    },
+    figma: {
+        name: '',
+        image: figmaLogo
+    },
+    canva: {
+        name: '',
+        image: canvaLogo
+    },
+    procreate: {
+        name: '',
+        image: procreateLogo
+    },
+    microsoftOfficeSuite: {
+        name: '',
+        image: microsoftOfficeSuiteLogo
+    },
+
+
 }

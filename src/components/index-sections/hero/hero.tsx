@@ -17,13 +17,14 @@ export default function Hero() {
         "Frontend engineer",
     ];
     const [currentRole, setCurrentRole] = useState(roles[3]);
-
     const INTERVAL_TIME = 3000;
+    const ROLE_JUMP = 1;
 
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentRole((prev) => {
-                const nextIndex = (roles.indexOf(prev) + 1) % roles.length;
+                const nextIndex =
+                    (roles.indexOf(prev) + ROLE_JUMP) % roles.length;
                 return roles[nextIndex];
             });
         }, INTERVAL_TIME);
@@ -53,21 +54,24 @@ export default function Hero() {
 
     return (
         <div className="hero-section section">
-            <Image src={koumImg} alt="Koum image" id="koum-img" />
-            <div>
-                <div className="text-container">
-                    <div>
-                        <h2>Hi I'm Koum and I'm a</h2>
-                        <h1 className="title test"></h1>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        In in urna sit amet sapien accumsan consequat.
-                    </p>
-                    <div className="buttons-container">
-                        <ButtonUI>Learn more</ButtonUI>
-                        <ButtonUI type="outlined">Projects</ButtonUI>
-                    </div>
+            <div id="koum-img">
+                <Image src={koumImg} alt="Koum image" />
+            </div>
+
+            <div className="text-container">
+                <div>
+                    <h2>Hi I'm Koum and I'm a</h2>
+                    <h1 className="title test"></h1>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectet adipiscing elit.
+                    Integer porttitor ligula sit amet turpis congue, at faucibus
+                    tellus auctor. Fusce molestie scelerisque ligula in varius.
+                    In diam dui, molestie ut gravida et, sodales eu odio.
+                </p>
+                <div className="buttons-container">
+                    <ButtonUI>Learn more</ButtonUI>
+                    <ButtonUI type="outlined">Projects</ButtonUI>
                 </div>
             </div>
         </div>
