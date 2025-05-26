@@ -3,6 +3,11 @@
 .navbar-content {
     height: 50px;
     position: relative;
+    animation-name: fadein;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    // animation-direction: reverse;
+
     &.slideup {
         animation-name: slideup;
         animation-duration: 0.5s;
@@ -45,6 +50,16 @@
 
     100% {
         top: -100px;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
