@@ -23,26 +23,29 @@ export default function NavBar() {
     const handleScroll = () => {
         const position = window.pageYOffset;
         setScrollPosition(position);
-        console.log(position);
     };
 
     return (
-        <div className="navbar-content">
-            {scrollPosition < 90 ? (
-                <div className="navbar">
-                    <LogoLink />
+        <div
+            className={`navbar-content ${
+                scrollPosition > 90 ? "slideup" : null
+            }`}
+        >
+            {/* {scrollPosition < 90 ? ( */}
+            <div className="navbar">
+                <LogoLink />
 
-                    <div className="links-container">
-                        <Link href="">Home</Link>
-                        <Link href="">About me</Link>
-                        <Link href="">Projects</Link>
-                        <Link href="">Skills</Link>
-                        <Link href="">Experience</Link>
-                        <ButtonUI>Contact me</ButtonUI>
-                    </div>
-                    <SideMenu maxSize={MD_BREAKPOINT} />
+                <div className="links-container">
+                    <Link href="">Home</Link>
+                    <Link href="">About me</Link>
+                    <Link href="">Projects</Link>
+                    <Link href="">Skills</Link>
+                    <Link href="">Experience</Link>
+                    <ButtonUI>Contact me</ButtonUI>
                 </div>
-            ) : null}
+                <SideMenu maxSize={MD_BREAKPOINT} />
+            </div>
+            {/* ) : null} */}
         </div>
     );
 }

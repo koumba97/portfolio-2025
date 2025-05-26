@@ -2,6 +2,12 @@
 
 .navbar-content {
     height: 50px;
+    position: relative;
+    &.slideup {
+        animation-name: slideup;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
 }
 .navbar {
     display: flex;
@@ -30,6 +36,16 @@
 
 .side-menu {
     display: none;
+}
+
+@keyframes slideup {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -100px;
+    }
 }
 
 @media (max-width: $md-breakpoint) {
