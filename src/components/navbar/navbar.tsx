@@ -7,7 +7,6 @@ import ButtonUI from "../../ui/button/button";
 import SideMenu from "../side-menu/side-menu";
 import { useEffect, useState } from "react";
 import { MD_BREAKPOINT } from "@/utils/dimensions";
-import { log } from "console";
 
 export default function NavBar() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -26,12 +25,24 @@ export default function NavBar() {
     };
 
     return (
+        <>
+            <TopNavbar scrollPosition={scrollPosition} />
+            <BottomNavbar scrollPosition={scrollPosition} />
+        </>
+    );
+}
+
+interface NavbarProp {
+    scrollPosition: number;
+}
+
+function TopNavbar({ scrollPosition }: NavbarProp) {
+    return (
         <div
             className={`navbar-content ${
                 scrollPosition > 90 ? "slideup" : null
             }`}
         >
-            {/* {scrollPosition < 90 ? ( */}
             <div className="navbar">
                 <LogoLink />
 
@@ -45,7 +56,17 @@ export default function NavBar() {
                 </div>
                 <SideMenu maxSize={MD_BREAKPOINT} />
             </div>
-            {/* ) : null} */}
+        </div>
+    );
+}
+function BottomNavbar({ scrollPosition }: NavbarProp) {
+    return (
+        <div
+            className={`bottom-navbar ${
+                scrollPosition > 90 ? "slideup" : null
+            }`}
+        >
+            bottom
         </div>
     );
 }

@@ -3,13 +3,13 @@
 .navbar-content {
     height: 50px;
     position: relative;
-    animation-name: fadein;
+    animation-name: fadeIn;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    // animation-direction: reverse;
+    z-index: 10;
 
     &.slideup {
-        animation-name: slideup;
+        animation-name: slideUp;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
     }
@@ -39,11 +39,29 @@
     }
 }
 
+.bottom-navbar {
+    border: solid;
+    position: fixed;
+    opacity: 0;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 16px 30px;
+    border-radius: 50px;
+    transition: bottom 1s, opacity 1s;
+
+    &.slideup {
+        bottom: 10px;
+        opacity: 1;
+    }
+}
+
 .side-menu {
     display: none;
 }
 
-@keyframes slideup {
+@keyframes slideUp {
     0% {
         top: 0;
     }
@@ -53,13 +71,33 @@
     }
 }
 
-@keyframes fadein {
+@keyframes slideUpBottom {
+    0% {
+        bottom: -100px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@keyframes fadeIn {
     0% {
         opacity: 0;
     }
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
