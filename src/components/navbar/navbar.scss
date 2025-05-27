@@ -49,7 +49,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 12px 16px;
+    padding: 8px 12px;
     border-radius: 14px;
     transition: bottom 1s, opacity 1s;
     box-shadow: 0px 5px 15px -8px #000000cb;
@@ -60,8 +60,9 @@
     }
 
     .nav-button {
-        width: 34px;
-        height: 34px;
+        width: 34px !important;
+        height: 34px !important;
+        min-width: unset;
         display: flex;
         align-items: center;
         border-radius: 5px;
@@ -73,8 +74,8 @@
         }
 
         &:hover {
-            //background-color: #5e5ef3;
-            background-color: black;
+            background-color: $brand-color-secondary;
+            //background-color: $grey-800;
             svg {
                 filter: invert(99%) sepia(50%) saturate(2%) hue-rotate(199deg)
                     brightness(110%) contrast(101%);
