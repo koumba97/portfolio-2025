@@ -1,9 +1,11 @@
-export default function FolderSVG() {
+import { SVGProp } from "@/utils/types";
+
+export default function FolderSVG({ width, height, viewBox }: SVGProp) {
     return (
         <svg
-            width="28"
-            height="28"
-            viewBox="0 0 20 18"
+            width={width}
+            height={height}
+            viewBox={viewBox ? viewBox : `0 0 ${width} ${height}`}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >

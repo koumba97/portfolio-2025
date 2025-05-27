@@ -1,9 +1,11 @@
-export default function SuitcaseSVG() {
+import { SVGProp } from "@/utils/types";
+
+export default function SuitcaseSVG({ width, height, viewBox }: SVGProp) {
     return (
         <svg
-            width="32"
-            height="32"
-            viewBox="2 2 30 30"
+            width={width}
+            height={height}
+            viewBox={viewBox ? viewBox : `0 0 ${width} ${height}`}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >

@@ -1,9 +1,11 @@
-export default function ToolSVG() {
+import { SVGProp } from "@/utils/types";
+
+export default function ToolSVG({ width, height, viewBox }: SVGProp) {
     return (
         <svg
-            width="30"
-            height="30"
-            viewBox="0 0 37 37"
+            width={width}
+            height={height}
+            viewBox={viewBox ? viewBox : `0 0 ${width} ${height}`}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >

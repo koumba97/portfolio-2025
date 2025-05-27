@@ -71,11 +71,21 @@ function BottomNavbar({ scrollPosition }: NavbarProp) {
                 scrollPosition > 90 ? "slideup" : null
             }`}
         >
-            <HomeSVG />
-            <UserSVG />
-            <SuitcaseSVG />
-            <FolderSVG />
-            <ToolSVG />
+            <div className="nav-button">
+                <HomeSVG width={24} height={24} viewBox="0 0 32 32" />
+            </div>
+            <div className="nav-button">
+                <UserSVG width={24} height={24} viewBox="0 0 24 24" />
+            </div>
+            <div className="nav-button">
+                <SuitcaseSVG width={24} height={24} viewBox="2 2 30 30" />
+            </div>
+            <div className="nav-button">
+                <FolderSVG width={22} height={22} viewBox="0 0 20 18" />
+            </div>
+            <div className="nav-button">
+                <ToolSVG width={24} height={24} viewBox="0 0 37 37" />
+            </div>
         </div>
     );
 }

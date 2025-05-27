@@ -49,14 +49,41 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 18px 30px;
-    border-radius: 20px;
+    padding: 12px 16px;
+    border-radius: 14px;
     transition: bottom 1s, opacity 1s;
-    box-shadow: 0px 5px 20px -10px #000000cb;
+    box-shadow: 0px 5px 15px -8px #000000cb;
 
     &.slideup {
         bottom: 10px;
         opacity: 1;
+    }
+
+    .nav-button {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        transition: background-color 0.5s, scale 0.5s;
+        cursor: pointer;
+        svg {
+            margin: auto;
+            transition: filter 0.5s;
+        }
+
+        &:hover {
+            //background-color: #5e5ef3;
+            background-color: black;
+            svg {
+                filter: invert(99%) sepia(50%) saturate(2%) hue-rotate(199deg)
+                    brightness(110%) contrast(101%);
+            }
+        }
+
+        &:active {
+            scale: 0.9;
+        }
     }
 }
 
