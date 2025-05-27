@@ -7,6 +7,11 @@ import ButtonUI from "../../ui/button/button";
 import SideMenu from "../side-menu/side-menu";
 import { useEffect, useState } from "react";
 import { MD_BREAKPOINT } from "@/utils/dimensions";
+import FolderSVG from "@/svg/Folder";
+import HomeSVG from "@/svg/Home";
+import SuitcaseSVG from "@/svg/Suitcase";
+import ToolSVG from "@/svg/Tool";
+import UserSVG from "@/svg/User";
 
 export default function NavBar() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -66,7 +71,11 @@ function BottomNavbar({ scrollPosition }: NavbarProp) {
                 scrollPosition > 90 ? "slideup" : null
             }`}
         >
-            bottom
+            <HomeSVG />
+            <UserSVG />
+            <SuitcaseSVG />
+            <FolderSVG />
+            <ToolSVG />
         </div>
     );
 }
