@@ -1,26 +1,32 @@
 @import "../../utils/variables.scss";
 
-.button {
-    padding: 12px 24px;
+.button.MuiButtonBase-root {
+    padding: 8px 24px;
     border-radius: 50px;
     font-family: "Nunito";
     font-size: 14px;
     font-weight: 800;
+    text-transform: unset;
+    box-shadow: none;
     border: none;
     transition: 0.3s scale;
-    cursor: pointer;
+
+    &:hover {
+        box-shadow: none;
+    }
 
     &:active {
         scale: 0.9;
     }
 
-    &.filled {
+    &.contained {
         background-color: $grey-900;
         color: white;
     }
 
     &.outlined {
         border-color: $grey-900;
+        color: $grey-900;
         border: 2px solid;
 
         background-color: white;
