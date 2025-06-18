@@ -12,9 +12,9 @@ export default function Projects() {
                 <ProjectBloc />
                 <ProjectBloc backImg="line2.svg" frontImg={cookishMaster} />
                 <ProjectBloc backImg="line1.svg" />
-                <div></div>
-                <div></div>
                 <ProjectBloc backImg="" frontImg={modeling} />
+                <div></div>
+                <div></div>
                 <div></div>
             </div>
         </div>
