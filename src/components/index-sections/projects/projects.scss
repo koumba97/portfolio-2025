@@ -29,7 +29,7 @@
             }
 
             &:nth-of-type(4) {
-                background-color: #43fabd;
+                background-color: #43fabd72;
                 grid-column: 1;
                 grid-row: 2/4;
             }
@@ -55,6 +55,19 @@
     }
 }
 
+.project-bloc {
+    background-position: center;
+    position: relative;
+
+    .front-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-inline: auto;
+        width: fit-content;
+    }
+}
 @media (max-width: $md-breakpoint) {
     .projects-section {
         .grid {
@@ -66,50 +79,41 @@
             grid-auto-columns: minmax(140px, auto);
 
             div {
-                background-color: grey;
                 border-radius: 15px;
 
                 &:nth-of-type(1) {
-                    background-color: pink;
                     grid-column: 1 / 3;
                 }
                 &:nth-of-type(2) {
-                    background-color: rgb(255, 241, 82);
                     grid-column: 1;
                 }
 
                 &:nth-of-type(3) {
-                    background-color: #a0b3ff;
                     grid-column: 2;
                     grid-row: 4/6;
                 }
 
                 &:nth-of-type(4) {
-                    background-color: #43fabd;
                     grid-column: 1;
                     grid-row: 2/4;
                 }
 
                 &:nth-of-type(5) {
-                    background-color: #6146ff;
                     grid-column: 2;
                     grid-row: 2;
                 }
 
                 &:nth-of-type(6) {
-                    background-color: #eaeaea;
                     grid-column: 1;
                     grid-row: 5;
                 }
 
                 &:nth-of-type(7) {
-                    background-color: #ffdbf3;
                     grid-column: 2;
                     grid-row: 3;
                 }
 
                 &:nth-of-type(8) {
-                    background-color: $brand-color;
                     grid-column: 1/3;
                     grid-row: 6;
                 }

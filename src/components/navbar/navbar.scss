@@ -45,6 +45,7 @@
 
 .bottom-navbar {
     position: fixed;
+    z-index: 5;
     display: flex;
     align-items: center;
     gap: 20px;
