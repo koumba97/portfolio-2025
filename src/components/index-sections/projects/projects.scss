@@ -13,23 +13,29 @@
         div {
             background-color: grey;
             border-radius: 20px;
+            background-size: cover;
 
             &:nth-of-type(1) {
                 background-color: pink;
+                background-image: url("../../../assets/images/music-library.png");
                 grid-column: 1 / 3;
             }
             &:nth-of-type(2) {
                 background-color: rgb(255, 241, 82);
+                background-image: url("../../../assets/images/illustration.png");
+                background-size: 150%;
             }
 
             &:nth-of-type(3) {
                 background-color: #a0b3ff;
+                background-image: url("../../../assets/images/line2.svg");
                 grid-column: 4;
                 grid-row: 1/3;
             }
 
             &:nth-of-type(4) {
                 background-color: #43fabd72;
+                background-image: url("../../../assets/images/line1.svg");
                 grid-column: 1;
                 grid-row: 2/4;
             }
@@ -44,6 +50,9 @@
 
             &:nth-of-type(7) {
                 background-color: #ffdbf3;
+                .front-image {
+                    max-height: 170px;
+                }
             }
 
             &:nth-of-type(8) {
@@ -66,6 +75,7 @@
         transform: translate(-50%, -50%);
         margin-inline: auto;
         width: fit-content;
+        border: solid;
     }
 }
 @media (max-width: $md-breakpoint) {

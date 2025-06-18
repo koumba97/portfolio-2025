@@ -1,5 +1,7 @@
 import "./projects.scss";
 import cookishMaster from "@/assets/images/cookish-master.png";
+import illustration from "@/assets/images/illustration.png";
+import modeling from "@/assets/images/3d.png";
 import Image, { StaticImageData } from "next/image";
 
 export default function Projects() {
@@ -7,12 +9,12 @@ export default function Projects() {
         <div className="projects-section section">
             <div className="grid">
                 <div></div>
-                <div></div>
+                <ProjectBloc />
                 <ProjectBloc backImg="line2.svg" frontImg={cookishMaster} />
                 <ProjectBloc backImg="line1.svg" />
                 <div></div>
                 <div></div>
-                <div></div>
+                <ProjectBloc backImg="" frontImg={modeling} />
                 <div></div>
             </div>
         </div>
@@ -20,7 +22,7 @@ export default function Projects() {
 }
 
 interface ProjectBlocInterface {
-    backImg: string;
+    backImg?: string | StaticImageData;
     frontImg?: StaticImageData;
 }
 
@@ -28,9 +30,11 @@ function ProjectBloc({ backImg, frontImg }: ProjectBlocInterface) {
     return (
         <div
             className="project-bloc"
-            style={{
-                backgroundImage: `url("${backImg}")`,
-            }}
+            style={
+                {
+                    //backgroundImage: `url("${backImg}")`,
+                }
+            }
         >
             {frontImg ? (
                 <Image

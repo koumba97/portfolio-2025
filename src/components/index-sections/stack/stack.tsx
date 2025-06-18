@@ -1,4 +1,4 @@
-import CompetenceBox from "@/components/competence-box/competence-box";
+import CompetenceBox from "@/ui/competence-box/competence-box";
 import "./stack.scss";
 import { Tool } from "@/utils/tool-list";
 
