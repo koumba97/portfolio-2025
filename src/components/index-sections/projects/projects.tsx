@@ -1,21 +1,36 @@
+"use client";
+
 import "./projects.scss";
 import cookishMaster from "@/assets/images/cookish-master.png";
 import illustration from "@/assets/images/illustration.png";
 import modeling from "@/assets/images/3d.png";
 import Image, { StaticImageData } from "next/image";
+import { ProjectsList } from "@/utils/projects";
+import { useEffect } from "react";
 
 export default function Projects() {
+    useEffect(() => {
+        console.log(ProjectsList[0].coverImage.back);
+    }, []);
     return (
         <div className="projects-section section">
             <div className="grid">
-                <div></div>
-                <ProjectBloc />
-                <ProjectBloc backImg="line2.svg" frontImg={cookishMaster} />
-                <ProjectBloc backImg="line1.svg" />
-                <ProjectBloc backImg="" frontImg={modeling} />
-                <div></div>
-                <div></div>
-                <div></div>
+                {ProjectsList.map((project) => {
+                    return (
+                        <ProjectBloc
+                            frontImg={
+                                project.coverImage.front
+                                    ? project.coverImage.front
+                                    : undefined
+                            }
+                            backImg={
+                                project.coverImage.back
+                                    ? project.coverImage.back.src
+                                    : undefined
+                            }
+                        />
+                    );
+                })}
             </div>
         </div>
     );
@@ -30,11 +45,11 @@ function ProjectBloc({ backImg, frontImg }: ProjectBlocInterface) {
     return (
         <div
             className="project-bloc"
-            style={
-                {
-                    //backgroundImage: `url("${backImg}")`,
-                }
-            }
+            style={{
+                backgroundImage: `url("${backImg}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+            }}
         >
             {frontImg ? (
                 <Image

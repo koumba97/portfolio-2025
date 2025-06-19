@@ -22,7 +22,7 @@
             }
             &:nth-of-type(2) {
                 background-color: rgb(255, 241, 82);
-                background-image: url("../../../assets/images/illustration.png");
+                background-image: url("../../../assets/images/digital-drawings.png");
                 background-size: 150%;
             }
 
@@ -91,7 +91,7 @@
             display: grid;
             grid-template-columns: repeat(2, 2fr);
             gap: 20px;
-            grid-auto-rows: minmax(140px, auto);
+            grid-auto-rows: minmax(160px, auto);
             grid-auto-columns: minmax(140px, auto);
 
             div {
