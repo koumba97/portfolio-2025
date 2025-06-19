@@ -99,7 +99,7 @@ export const ProjectsList: ProjectInterface[] = [
     },
     {
         name: 'Undefined',
-        id: 'undefined',
+        id: 'undefined2',
         coverImage: {
         },
         description: '',

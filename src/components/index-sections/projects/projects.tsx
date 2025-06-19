@@ -28,6 +28,7 @@ export default function Projects() {
                                     ? project.coverImage.back.src
                                     : undefined
                             }
+                            key={project.id}
                         />
                     );
                 })}
