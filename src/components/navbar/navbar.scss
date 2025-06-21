@@ -79,7 +79,7 @@
         }
 
         &.active {
-            background-color: $grey-800;
+            background-color: $brand-color-secondary;
             svg {
                 filter: invert(99%) sepia(50%) saturate(2%) hue-rotate(199deg)
                     brightness(110%) contrast(101%);
@@ -87,7 +87,9 @@
         }
 
         &:hover {
-            background-color: $grey-100;
+            &:not(.active) {
+                background-color: $grey-100;
+            }
         }
 
         &:active {
