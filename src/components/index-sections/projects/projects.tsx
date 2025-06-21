@@ -28,6 +28,9 @@ export default function Projects() {
                                     ? project.coverImage.back.src
                                     : undefined
                             }
+                            frontHeight={project.coverImage.frontHeight}
+                            top={project.coverImage.top}
+                            left={project.coverImage.left}
                             key={project.id}
                         />
                     );
@@ -40,9 +43,18 @@ export default function Projects() {
 interface ProjectBlocInterface {
     backImg?: string | StaticImageData;
     frontImg?: StaticImageData;
+    frontHeight?: number;
+    top?: `${number}%`;
+    left?: `${number}%`;
 }
 
-function ProjectBloc({ backImg, frontImg }: ProjectBlocInterface) {
+function ProjectBloc({
+    backImg,
+    frontImg,
+    frontHeight,
+    top,
+    left,
+}: ProjectBlocInterface) {
     return (
         <div
             className="project-bloc"
@@ -56,8 +68,12 @@ function ProjectBloc({ backImg, frontImg }: ProjectBlocInterface) {
                 <Image
                     src={frontImg}
                     alt=""
-                    height={300}
+                    height={frontHeight ? frontHeight : 300}
                     className="front-image"
+                    style={{
+                        top: top ? top : "50%",
+                        left: left ? left : "50%",
+                    }}
                 />
             ) : null}
         </div>
