@@ -99,17 +99,25 @@ function BottomNavbar({ scrollPosition, pathname }: NavbarProp) {
                 </Tooltip>
             </Link>
 
-            <Tooltip title="Experience" placement="top">
-                <Button className="nav-button" color="inherit">
-                    <SuitcaseSVG width={24} height={24} viewBox="2 2 30 30" />
-                </Button>
-            </Tooltip>
+            <Link href="/experience">
+                <Tooltip title="Experience" placement="top">
+                    <Button className="nav-button" color="inherit">
+                        <SuitcaseSVG
+                            width={24}
+                            height={24}
+                            viewBox="2 2 30 30"
+                        />
+                    </Button>
+                </Tooltip>
+            </Link>
 
-            <Tooltip title="Skills" placement="top">
-                <Button className="nav-button" color="inherit">
-                    <ToolSVG width={24} height={24} viewBox="0 0 37 37" />
-                </Button>
-            </Tooltip>
+            <Link href="/skills">
+                <Tooltip title="Skills" placement="top">
+                    <Button className="nav-button" color="inherit">
+                        <ToolSVG width={24} height={24} viewBox="0 0 37 37" />
+                    </Button>
+                </Tooltip>
+            </Link>
         </div>
     );
 }

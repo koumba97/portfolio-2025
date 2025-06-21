@@ -5,6 +5,7 @@ import "./styles.scss";
 import { ViewTransitions } from "next-view-transitions";
 //import { unstable_ViewTransition as ViewTransition } from "react";
 import NavBar from "@/components/navbar/navbar";
+import LogoLink from "@/ui/logo-link/logo-link";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
         <ViewTransitions>
             <html lang="en">
                 <body className={`${geistSans.variable} ${geistMono.variable}`}>
+                    <LogoLink />
                     <NavBar />
                     <div
                         className="page-body"

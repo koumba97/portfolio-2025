@@ -64,36 +64,43 @@
         opacity: 1;
     }
 
-    .nav-button {
-        width: 34px !important;
-        height: 34px !important;
-        min-width: unset;
-        display: flex;
-        align-items: center;
-        border-radius: 8px;
-        transition: background-color 0.5s, scale 0.5s;
-        cursor: pointer;
-        svg {
-            margin: auto;
-            transition: filter 0.5s;
+    a {
+        &:has(> .active) {
+            pointer-events: none;
         }
 
-        &.active {
-            background-color: $brand-color-secondary;
+        .nav-button {
+            width: 34px !important;
+            height: 34px !important;
+            min-width: unset;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            transition: background-color 0.5s, scale 0.5s;
+            cursor: pointer;
+
             svg {
-                filter: invert(99%) sepia(50%) saturate(2%) hue-rotate(199deg)
-                    brightness(110%) contrast(101%);
+                margin: auto;
+                transition: filter 0.5s;
             }
-        }
 
-        &:hover {
-            &:not(.active) {
-                background-color: $grey-100;
+            &.active {
+                background-color: $brand-color-secondary;
+                svg {
+                    filter: invert(99%) sepia(50%) saturate(2%)
+                        hue-rotate(199deg) brightness(110%) contrast(101%);
+                }
             }
-        }
 
-        &:active {
-            scale: 0.9;
+            &:hover {
+                &:not(.active) {
+                    background-color: $grey-100;
+                }
+            }
+
+            &:active {
+                scale: 0.9;
+            }
         }
     }
 }
