@@ -2,7 +2,7 @@
 
 import LogoLink from "@/ui/logo-link/logo-link";
 import "./navbar.scss";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import ButtonUI from "../../ui/button/button";
 import SideMenu from "../side-menu/side-menu";
 import { useEffect, useState } from "react";
@@ -36,8 +36,7 @@ export default function NavBar() {
 
     return (
         <>
-            <TopNavbar scrollPosition={scrollPosition} pathname={pathname} />
-            {pathname}
+            {/* <TopNavbar scrollPosition={scrollPosition} pathname={pathname} /> */}
             <BottomNavbar scrollPosition={scrollPosition} pathname={pathname} />
         </>
     );
@@ -61,9 +60,9 @@ function TopNavbar({ scrollPosition, pathname }: NavbarProp) {
                 <LogoLink />
 
                 <div className="links-container">
-                    <Link href="">Home</Link>
-                    <Link href="">About me</Link>
-                    <Link href="">Projects</Link>
+                    {/* <Link href="">Home</Link> */}
+                    <Link href="about-me">About me</Link>
+                    {/* <Link href="/project">Projects</Link> */}
                     <Link href="">Skills</Link>
                     <Link href="">Experience</Link>
                     <ButtonUI>Contact me</ButtonUI>
@@ -75,25 +74,30 @@ function TopNavbar({ scrollPosition, pathname }: NavbarProp) {
 }
 function BottomNavbar({ scrollPosition, pathname }: NavbarProp) {
     return (
-        <div
-            className={`bottom-navbar ${
-                scrollPosition > 90 ? "slideup" : null
-            }`}
-        >
-            <Tooltip title="Home" placement="top">
-                <Button
-                    className={`${pathname === "" ? "active" : null}
+        <div className="bottom-navbar">
+            <Link href="/">
+                <Tooltip title="Home" placement="top">
+                    <Button
+                        className={`${pathname === "" ? "active" : null}
                         nav-button`}
-                    color="inherit"
-                >
-                    <HomeSVG width={24} height={24} viewBox="0 0 32 32" />
-                </Button>
-            </Tooltip>
-            <Tooltip title="About me" placement="top">
-                <Button className="nav-button" color="inherit">
-                    <UserSVG width={24} height={24} viewBox="0 0 24 24" />
-                </Button>
-            </Tooltip>
+                        color="inherit"
+                    >
+                        <HomeSVG width={24} height={24} viewBox="0 0 32 32" />
+                    </Button>
+                </Tooltip>
+            </Link>
+
+            <Link href="about-me">
+                <Tooltip title="About me" placement="top">
+                    <Button
+                        className={`${pathname === "about-me" ? "active" : null}
+                        nav-button`}
+                        color="inherit"
+                    >
+                        <UserSVG width={24} height={24} viewBox="0 0 24 24" />
+                    </Button>
+                </Tooltip>
+            </Link>
 
             <Tooltip title="Experience" placement="top">
                 <Button className="nav-button" color="inherit">
@@ -101,11 +105,6 @@ function BottomNavbar({ scrollPosition, pathname }: NavbarProp) {
                 </Button>
             </Tooltip>
 
-            <Tooltip title="Projects" placement="top">
-                <Button className="nav-button" color="inherit">
-                    <FolderSVG width={22} height={22} viewBox="0 0 20 18" />
-                </Button>
-            </Tooltip>
             <Tooltip title="Skills" placement="top">
                 <Button className="nav-button" color="inherit">
                     <ToolSVG width={24} height={24} viewBox="0 0 37 37" />

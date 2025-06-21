@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./styles.scss";
+import { ViewTransitions } from "next-view-transitions";
+//import { unstable_ViewTransition as ViewTransition } from "react";
 import NavBar from "@/components/navbar/navbar";
 
 const geistSans = Geist({
@@ -25,11 +27,18 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable}`}>
-                <NavBar />
-                {children}
-            </body>
-        </html>
+        <ViewTransitions>
+            <html lang="en">
+                <body className={`${geistSans.variable} ${geistMono.variable}`}>
+                    <NavBar />
+                    <div
+                        className="page-body"
+                        style={{ viewTransitionName: "page-body" }}
+                    >
+                        {children}
+                    </div>
+                </body>
+            </html>
+        </ViewTransitions>
     );
 }

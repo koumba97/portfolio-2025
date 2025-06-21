@@ -1,0 +1,107 @@
+@import "../../utils/variables.scss";
+
+.hero-section {
+    align-items: center;
+    //display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    //margin: 70px auto;
+
+    #koum-img {
+        flex: 2;
+        img {
+            max-width: 450px;
+            width: 100%;
+            height: auto;
+            position: relative;
+            right: 30px;
+        }
+    }
+
+    .text-container {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: -webkit-fill-available;
+
+        h2 {
+            font-size: 30px;
+            width: fit-content;
+        }
+        .title {
+            font-size: 78px;
+            font-family: "Lost Days";
+            width: fit-content;
+
+            .brand {
+                color: $brand-color;
+            }
+            .mw-w:nth-child(2) {
+                color: $brand-color;
+            }
+        }
+        p {
+            font-size: 18px;
+            width: auto;
+            //max-width: 320px;
+        }
+        .buttons-container {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: $md-breakpoint) {
+    .hero-section {
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        #koum-img {
+            max-width: 450px;
+            width: 100%;
+            height: auto;
+            position: relative;
+            right: 0px;
+        }
+
+        .text-container {
+            h2,
+            p {
+                margin: auto;
+            }
+            h2,
+            .title,
+            p {
+                text-align: center;
+            }
+
+            .buttons-container {
+                width: max-content;
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: $sm-breakpoint) {
+    .hero-section {
+        .text-container {
+            h2 {
+                font-size: 24px;
+            }
+            .title {
+                font-size: 50px;
+            }
+        }
+
+        #koum-img {
+            img {
+                right: 0px;
+            }
+        }
+    }
+}
