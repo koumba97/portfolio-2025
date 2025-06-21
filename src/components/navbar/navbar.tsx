@@ -14,9 +14,12 @@ import ToolSVG from "@/svg/Tool";
 import UserSVG from "@/svg/User";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
     const [scrollPosition, setScrollPosition] = useState(0);
+    const pathname =
+        usePathname().split("/")[usePathname().split("/").length - 1];
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll, { passive: true });
@@ -33,17 +36,21 @@ export default function NavBar() {
 
     return (
         <>
-            <TopNavbar scrollPosition={scrollPosition} />
-            <BottomNavbar scrollPosition={scrollPosition} />
+            <TopNavbar scrollPosition={scrollPosition} pathname={pathname} />
+            {pathname}
+            <BottomNavbar scrollPosition={scrollPosition} pathname={pathname} />
         </>
     );
 }
 
 interface NavbarProp {
     scrollPosition: number;
+    pathname: string;
 }
 
-function TopNavbar({ scrollPosition }: NavbarProp) {
+function TopNavbar({ scrollPosition, pathname }: NavbarProp) {
+    useEffect(() => {}, []);
+
     return (
         <div
             className={`navbar-content ${
@@ -66,7 +73,7 @@ function TopNavbar({ scrollPosition }: NavbarProp) {
         </div>
     );
 }
-function BottomNavbar({ scrollPosition }: NavbarProp) {
+function BottomNavbar({ scrollPosition, pathname }: NavbarProp) {
     return (
         <div
             className={`bottom-navbar ${
@@ -74,7 +81,11 @@ function BottomNavbar({ scrollPosition }: NavbarProp) {
             }`}
         >
             <Tooltip title="Home" placement="top">
-                <Button className="nav-button" color="inherit">
+                <Button
+                    className={`${pathname === "" ? "active" : null}
+                        nav-button`}
+                    color="inherit"
+                >
                     <HomeSVG width={24} height={24} viewBox="0 0 32 32" />
                 </Button>
             </Tooltip>
