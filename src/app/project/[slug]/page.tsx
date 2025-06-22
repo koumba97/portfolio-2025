@@ -1,5 +1,6 @@
 "use client";
 
+import "./style.scss";
 import { use } from "react";
 
 export default function ProjectPage({
@@ -9,5 +10,18 @@ export default function ProjectPage({
 }) {
     const { slug } = use(params);
 
-    return <div className="project-section">{slug}</div>;
+    return (
+        <div className="project-section">
+            <div className="grid">
+                <div>
+                    <div className="back"></div>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    );
 }
