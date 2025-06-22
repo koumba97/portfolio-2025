@@ -1,17 +1,11 @@
 "use client";
 
 import "./projects.scss";
-import cookishMaster from "@/assets/images/cookish-master.png";
-import illustration from "@/assets/images/illustration.png";
-import modeling from "@/assets/images/3d.png";
 import Image, { StaticImageData } from "next/image";
 import { ProjectsList } from "@/utils/projects";
-import { useEffect } from "react";
+import { Link } from "next-view-transitions";
 
 export default function Projects() {
-    useEffect(() => {
-        console.log(ProjectsList[0].coverImage.back);
-    }, []);
     return (
         <div className="projects-section section">
             <div className="grid">
@@ -56,7 +50,8 @@ function ProjectBloc({
     left,
 }: ProjectBlocInterface) {
     return (
-        <div
+        <Link
+            href={"/project"}
             className="project-bloc"
             style={{
                 backgroundImage: `url("${backImg}")`,
@@ -76,6 +71,6 @@ function ProjectBloc({
                     }}
                 />
             ) : null}
-        </div>
+        </Link>
     );
 }
