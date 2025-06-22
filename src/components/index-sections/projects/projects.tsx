@@ -25,6 +25,7 @@ export default function Projects() {
                             frontHeight={project.coverImage.frontHeight}
                             top={project.coverImage.top}
                             left={project.coverImage.left}
+                            id={project.id}
                             key={project.id}
                         />
                     );
@@ -40,6 +41,7 @@ interface ProjectBlocInterface {
     frontHeight?: number;
     top?: `${number}%`;
     left?: `${number}%`;
+    id: string;
 }
 
 function ProjectBloc({
@@ -48,10 +50,11 @@ function ProjectBloc({
     frontHeight,
     top,
     left,
+    id,
 }: ProjectBlocInterface) {
     return (
         <Link
-            href={"/project"}
+            href={`/project/${id}`}
             className="project-bloc"
             style={{
                 backgroundImage: `url("${backImg}")`,

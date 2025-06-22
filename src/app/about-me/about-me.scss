@@ -1,6 +1,6 @@
 @import "../../utils/variables.scss";
 
-.hero-section {
+.about-me-section {
     align-items: center;
     //display: flex;
     justify-content: space-between;
@@ -54,7 +54,7 @@
 }
 
 @media (max-width: $md-breakpoint) {
-    .hero-section {
+    .about-me-section {
         padding-top: 30px;
         flex-direction: column;
         align-items: center;
@@ -88,7 +88,7 @@
 }
 
 @media (max-width: $sm-breakpoint) {
-    .hero-section {
+    .about-me-section {
         .text-container {
             h2 {
                 font-size: 24px;

@@ -18,12 +18,12 @@ import { usePathname } from "next/navigation";
 
 export default function NavBar() {
     const [scrollPosition, setScrollPosition] = useState(0);
-    const pathname =
-        usePathname().split("/")[usePathname().split("/").length - 1];
+    let pathname = usePathname();
+    pathname = pathname === "/" ? "" : pathname.split("/")[1];
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll, { passive: true });
-
+        console.log(pathname);
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
@@ -78,7 +78,11 @@ function BottomNavbar({ scrollPosition, pathname }: NavbarProp) {
             <Link href="/">
                 <Tooltip title="Home" placement="top">
                     <Button
-                        className={`${pathname === "" ? "active" : null}
+                        className={`${
+                            pathname === "" || pathname === "project"
+                                ? "active"
+                                : null
+                        }
                         nav-button`}
                         color="inherit"
                     >
@@ -87,7 +91,7 @@ function BottomNavbar({ scrollPosition, pathname }: NavbarProp) {
                 </Tooltip>
             </Link>
 
-            <Link href="about-me">
+            <Link href="/about-me">
                 <Tooltip title="About me" placement="top">
                     <Button
                         className={`${pathname === "about-me" ? "active" : null}

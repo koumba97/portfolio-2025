@@ -8,7 +8,7 @@ import Movinwords from "movinwords";
 import "movinwords/styles";
 import { useEffect, useRef, useState } from "react";
 
-export default function Hero() {
+export default function AboutMe() {
     const titleRef = useRef<Movinwords | null>(null);
     const roles = [
         "UI/UX Designer",
@@ -53,7 +53,7 @@ export default function Hero() {
     }, [currentRole]);
 
     return (
-        <div className="hero-section section">
+        <div className="about-me-section section">
             <div id="koum-img">
                 <Image src={koumImg} alt="Koum image" />
             </div>

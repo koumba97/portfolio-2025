@@ -41,7 +41,7 @@ body {
 .page-body {
     margin-top: 20px;
 
-    &:has(> .hero-section) {
+    &:has(> .about-me-section) {
         flex: 1;
         display: flex;
         align-items: center;
@@ -54,14 +54,14 @@ body {
 }
 
 ::view-transition-old(page-body) {
-    animation-name: fade-out;
+    animation-name: slide-out;
 }
 
 ::view-transition-new(page-body) {
-    animation-name: fade-in;
+    animation-name: slide-in;
 }
 
-@keyframes fade-in {
+@keyframes slide-in {
     from {
         opacity: 0;
         transform: translateX(800px);
@@ -72,7 +72,7 @@ body {
     }
 }
 
-@keyframes fade-out {
+@keyframes slide-out {
     from {
         opacity: 1;
         transform: translateX(0);
