@@ -66,7 +66,9 @@ export default function ProjectPage({
         <div className="project-section section">
             <div className="grid">
                 <div className="grid-section">
-                    <div className="back"></div>
+                    <div className="back-wrapper">
+                        <div className="back"></div>
+                    </div>
                     <ImageGallery
                         ref={galleryRef}
                         items={images}
