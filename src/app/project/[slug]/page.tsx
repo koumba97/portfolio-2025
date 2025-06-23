@@ -3,7 +3,11 @@
 import "./style.scss";
 import { use, useEffect, useRef, useState } from "react";
 import ImageGallery from "react-image-gallery";
+import Button from "@mui/material/Button";
+import { Tooltip } from "@mui/material";
 import "react-image-gallery/styles/css/image-gallery.css";
+import ArrowLeftSVG from "@/svg/ArrowLeft";
+import { Link } from "next-view-transitions";
 
 const images = [
     {
@@ -67,7 +71,17 @@ export default function ProjectPage({
             <div className="grid">
                 <div className="grid-section">
                     <div className="back-wrapper">
-                        <div className="back"></div>
+                        <Link href="/">
+                            <Tooltip title="Home" placement="top">
+                                <Button className="back-button" color="inherit">
+                                    <ArrowLeftSVG
+                                        width={30}
+                                        height={30}
+                                        viewBox="5 5 50 50"
+                                    />
+                                </Button>
+                            </Tooltip>
+                        </Link>
                     </div>
                     <ImageGallery
                         ref={galleryRef}
@@ -75,7 +89,18 @@ export default function ProjectPage({
                         autoPlay={false}
                     />
                 </div>
-                <div className="grid-section"></div>
+                <div className="grid-section">
+                    <h1>
+                        Project's <span className="brand-color">title</span>
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vivamus rhoncus, magna et venenatis tempor, metus ipsum
+                        imperdiet dolor, vel elementum arcu ante ac risus. Nulla
+                        varius sagittis aliquam. In sollicitudin metus ac
+                        lacinia dapibus...
+                    </p>
+                </div>
                 <div className="grid-section"></div>
                 <div className="grid-section"></div>
                 <div className="grid-section"></div>
