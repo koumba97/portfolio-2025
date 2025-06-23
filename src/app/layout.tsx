@@ -16,22 +16,25 @@ export default function RootLayout({
     const pathname = usePathname();
     const currentPage = pathname.split("/")[1] || "home";
     const [transition, setTransition] = useState("");
+    const menuItemsOrder = ["home", "about-me", "experience", "skills"];
 
     useEffect(() => {
         const previousPage = sessionStorage.getItem("previousPage");
         const from = previousPage || "home";
         const to = currentPage;
 
-        // Exemple : project ➜ home
         if (from === "project" && to === "home") {
             setTransition("project-to-home");
-        } else {
-            setTransition(`${from}-to-${to}`);
+        } else if (from === "home" && to === "project") {
+            setTransition("project-to-home");
+        } else if (menuItemsOrder.indexOf(from) < menuItemsOrder.indexOf(to)) {
+            setTransition("right-to-left");
+        } else if (menuItemsOrder.indexOf(from) > menuItemsOrder.indexOf(to)) {
+            setTransition("left-to-right");
         }
 
-        // Mémoriser la page actuelle pour la prochaine navigation
         sessionStorage.setItem("previousPage", currentPage);
-    }, [currentPage]);
+    }, [pathname]);
 
     return (
         <ViewTransitions>
@@ -42,7 +45,6 @@ export default function RootLayout({
             >
                 <body>
                     <LogoLink />
-                    {currentPage} {transition}
                     <NavBar />
                     <div
                         className={`page-body ${currentPage}`}

@@ -10,7 +10,6 @@ import puff from "@/assets/images/puff.png";
 import eCommerce from "@/assets/images/e-commerce.png";
 import modeling from "@/assets/images/modeling.png";
 import designSystem from "@/assets/images/design-system.png";
-import krush from "@/assets/images/krush.png";
 import { StaticImageData } from "next/image";
 
 export interface ProjectInterface {

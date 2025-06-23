@@ -53,21 +53,22 @@ html::view-transition-new(page-body) {
     animation-timing-function: ease-in-out;
 }
 
-// PROJECT TO HOME <-
-html[data-transition="project-to-home"]::view-transition-old(page-body) {
-    animation-name: slide-in-left;
+// <-
+html[data-transition="right-to-left"]::view-transition-new(page-body) {
+    animation-name: slide-in-right;
 }
-html[data-transition="project-to-home"]::view-transition-new(page-body) {
-    animation-name: slide-out-right;
+html[data-transition="right-to-left"]::view-transition-old(page-body) {
+    animation-name: slide-out-left;
 }
 
 // HOME TO PROJECT ->
-html[data-transition="home-to-project"]::view-transition-new(page-body) {
-    animation-name: slide-in-right;
+html[data-transition="left-to-right"]::view-transition-new(page-body) {
+    animation-name: slide-out-right;
 }
-html[data-transition="home-to-project"]::view-transition-old(page-body) {
-    animation-name: slide-out-left;
+html[data-transition="left-to-right"]::view-transition-old(page-body) {
+    animation-name: slide-in-left;
 }
+
 @keyframes slide-in-right {
     from {
         opacity: 0;

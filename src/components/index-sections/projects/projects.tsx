@@ -57,7 +57,7 @@ function ProjectBloc({
             href={`/project/${id}`}
             className="project-bloc"
             style={{
-                backgroundImage: `url("${backImg}")`,
+                backgroundImage: backImg ? `url("${backImg}")` : undefined,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}

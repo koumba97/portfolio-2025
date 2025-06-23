@@ -1,8 +1,17 @@
-const vw = window.innerWidth;;
-const vh = window.innerHeight;
+export const getViewport = () => {
+    if (typeof window !== 'undefined') {
+      return {
+        vw: window.innerWidth,
+        vh: window.innerHeight
+      };
+    }
+  
+    return {
+      vw: 0,
+      vh: 0
+    };
+};
 
-const SM_BREAKPOINT = 480;
-const MD_BREAKPOINT = 768;
-const LG_BREAKPOINT = 900;
-
-export { vw, vh, SM_BREAKPOINT, MD_BREAKPOINT, LG_BREAKPOINT };
+export const SM_BREAKPOINT = 480;
+export const MD_BREAKPOINT = 768;
+export const LG_BREAKPOINT = 900;

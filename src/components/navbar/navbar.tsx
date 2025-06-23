@@ -6,7 +6,7 @@ import { Link } from "next-view-transitions";
 import ButtonUI from "../../ui/button/button";
 import SideMenu from "../side-menu/side-menu";
 import { useEffect, useState } from "react";
-import { MD_BREAKPOINT } from "@/utils/dimensions";
+import { getViewport, MD_BREAKPOINT } from "@/utils/dimensions";
 import FolderSVG from "@/svg/Folder";
 import HomeSVG from "@/svg/Home";
 import SuitcaseSVG from "@/svg/Suitcase";
