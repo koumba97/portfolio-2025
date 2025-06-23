@@ -1,13 +1,7 @@
 "use client";
 
-import LogoLink from "@/ui/logo-link/logo-link";
 import "./navbar.scss";
 import { Link } from "next-view-transitions";
-import ButtonUI from "../../ui/button/button";
-import SideMenu from "../side-menu/side-menu";
-import { useEffect, useState } from "react";
-import { getViewport, MD_BREAKPOINT } from "@/utils/dimensions";
-import FolderSVG from "@/svg/Folder";
 import HomeSVG from "@/svg/Home";
 import SuitcaseSVG from "@/svg/Suitcase";
 import ToolSVG from "@/svg/Tool";
@@ -17,62 +11,9 @@ import Button from "@mui/material/Button";
 import { usePathname } from "next/navigation";
 
 export default function NavBar() {
-    const [scrollPosition, setScrollPosition] = useState(0);
     let pathname = usePathname();
     pathname = pathname === "/" ? "" : pathname.split("/")[1];
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        console.log(pathname);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
-    const handleScroll = () => {
-        const position = window.pageYOffset;
-        setScrollPosition(position);
-    };
-
-    return (
-        <>
-            {/* <TopNavbar scrollPosition={scrollPosition} pathname={pathname} /> */}
-            <BottomNavbar scrollPosition={scrollPosition} pathname={pathname} />
-        </>
-    );
-}
-
-interface NavbarProp {
-    scrollPosition: number;
-    pathname: string;
-}
-
-function TopNavbar({ scrollPosition, pathname }: NavbarProp) {
-    useEffect(() => {}, []);
-
-    return (
-        <div
-            className={`navbar-content ${
-                scrollPosition > 90 ? "slideup" : null
-            }`}
-        >
-            <div className="navbar">
-                <LogoLink />
-
-                <div className="links-container">
-                    {/* <Link href="">Home</Link> */}
-                    <Link href="about-me">About me</Link>
-                    {/* <Link href="/project">Projects</Link> */}
-                    <Link href="">Skills</Link>
-                    <Link href="">Experience</Link>
-                    <ButtonUI>Contact me</ButtonUI>
-                </div>
-                <SideMenu maxSize={MD_BREAKPOINT} />
-            </div>
-        </div>
-    );
-}
-function BottomNavbar({ scrollPosition, pathname }: NavbarProp) {
     return (
         <div className="bottom-navbar">
             <Link href="/">

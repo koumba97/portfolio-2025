@@ -1,4 +1,3 @@
-import { ToolInterface } from "@/utils/tool-list";
 import "./tool.scss";
 import Image, { StaticImageData } from "next/image";
 

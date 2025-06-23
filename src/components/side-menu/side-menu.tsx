@@ -27,10 +27,6 @@ export default function SideMenu({ maxSize }: Prop) {
         };
     }, []);
 
-    function toggleSideMenu() {
-        setIsOpen(!isOpen);
-    }
-
     return (
         <div className="side-menu">
             {!isOpen ? (

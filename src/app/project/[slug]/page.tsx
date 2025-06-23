@@ -1,7 +1,7 @@
 "use client";
 
 import "./style.scss";
-import { use, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ImageGallery from "react-image-gallery";
 import Button from "@mui/material/Button";
 import { Tooltip } from "@mui/material";
@@ -32,19 +32,13 @@ const images = [
     },
 ];
 
-export default function ProjectPage({
-    params,
-}: {
-    params: Promise<{ slug: string }>;
-}) {
-    const { slug } = use(params);
+export default function ProjectPage() {
     const galleryRef = useRef<ImageGallery | null>(null);
     const [isFullscreen, setIsFullscreen] = useState(false);
 
     useEffect(() => {
         const handleFullscreenChange = () => {
-            const isFullscreen = !!document.fullscreenElement;
-            setIsFullscreen(isFullscreen);
+            setIsFullscreen(!!document.fullscreenElement);
             if (isFullscreen) {
                 document
                     .getElementsByClassName("image-gallery")[0]

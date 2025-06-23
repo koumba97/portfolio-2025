@@ -2,7 +2,7 @@ import "./button.scss";
 import Button from "@mui/material/Button";
 
 interface Prop {
-    children: any;
+    children: string;
     type?: "contained" | "outlined";
 }
 

@@ -1,5 +1,4 @@
-import { Html } from "next/document"
-import { Tool, ToolInterface } from "./tool-list"
+import { ToolInterface } from "./tool-list"
 import lettering from "@/assets/images/lettering.png";
 import digitalDrawings from "@/assets/images/digital-drawings-cut.png";
 import abstractLine from "@/assets/images/line1.svg";
