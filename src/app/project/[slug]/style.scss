@@ -17,47 +17,51 @@
             bottom: 0;
             box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 
-            .image-gallery:not(.fullscreen) {
+            .image-gallery {
                 height: 100%;
+                display: flex;
 
                 .image-gallery-content {
+                    margin: auto;
+                    width: 100%;
+                }
+                .image-gallery-content:not(.fullscreen) {
                     height: 100%;
                     border-radius: 20px 20px 0 0;
                     overflow: hidden;
-                }
+                    .image-gallery-slide-wrapper {
+                        height: 80%;
+                        overflow: hidden;
+                    }
 
-                .image-gallery-slide-wrapper {
-                    height: 80%;
-                    overflow: hidden;
-                }
+                    .image-gallery-thumbnails-wrapper {
+                        height: 20%;
+                        border-radius: 0 0 20px 20px;
+                        overflow: hidden;
 
-                .image-gallery-thumbnails-wrapper {
-                    height: 20%;
-                    border-radius: 0 0 20px 20px;
-                    overflow: hidden;
-
-                    .image-gallery-thumbnails,
-                    .image-gallery-thumbnails-container {
-                        padding: 0;
-                        height: 100%;
-
-                        button,
-                        span,
-                        img {
+                        .image-gallery-thumbnails,
+                        .image-gallery-thumbnails-container {
+                            padding: 0;
                             height: 100%;
-                            margin: 0;
-                        }
 
-                        button {
-                            &:not(.active) {
-                                opacity: 0.5;
+                            button,
+                            span,
+                            img {
+                                height: 100%;
+                                margin: 0;
+                            }
+
+                            button {
+                                &:not(.active) {
+                                    opacity: 0.5;
+                                }
                             }
                         }
                     }
-                }
-                .image-gallery-image {
-                    height: 300px;
-                    object-fit: cover;
+                    .image-gallery-image {
+                        height: 300px;
+                        object-fit: cover;
+                    }
                 }
             }
 

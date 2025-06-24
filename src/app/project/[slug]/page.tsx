@@ -43,10 +43,22 @@ export default function ProjectPage() {
                 document
                     .getElementsByClassName("image-gallery")[0]
                     .classList.add("fullscreen");
+
+                (
+                    document.getElementsByClassName(
+                        "bottom-navbar"
+                    )[0] as HTMLElement
+                ).style.display = "none";
             } else {
                 document
                     .getElementsByClassName("image-gallery")[0]
                     .classList.remove("fullscreen");
+
+                (
+                    document.getElementsByClassName(
+                        "bottom-navbar"
+                    )[0] as HTMLElement
+                ).style.display = "flex";
             }
         };
 

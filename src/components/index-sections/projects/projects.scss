@@ -84,6 +84,8 @@
         margin-inline: auto;
         width: fit-content;
         border: solid;
+        user-select: none;
+        pointer-events: none;
     }
 }
 @media (max-width: $md-breakpoint) {
@@ -142,6 +144,15 @@
                     grid-row: 6;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: $sm-breakpoint) {
+    .project-bloc {
+        .front-image {
+            width: 160px;
+            height: auto;
         }
     }
 }
