@@ -40,20 +40,12 @@ export default function ProjectPage() {
         const handleFullscreenChange = () => {
             setIsFullscreen(!!document.fullscreenElement);
             if (isFullscreen) {
-                document
-                    .getElementsByClassName("image-gallery")[0]
-                    .classList.add("fullscreen");
-
                 (
                     document.getElementsByClassName(
                         "bottom-navbar"
                     )[0] as HTMLElement
                 ).style.display = "none";
             } else {
-                document
-                    .getElementsByClassName("image-gallery")[0]
-                    .classList.remove("fullscreen");
-
                 (
                     document.getElementsByClassName(
                         "bottom-navbar"
@@ -90,6 +82,9 @@ export default function ProjectPage() {
                         </Link>
                     </div>
                     <ImageGallery
+                        additionalClass={
+                            isFullscreen ? "fullscreen" : undefined
+                        }
                         ref={galleryRef}
                         items={images}
                         autoPlay={false}
