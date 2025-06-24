@@ -1,6 +1,6 @@
 "use client";
 
-import koumImg from "@/assets/images/koum.png";
+import koumImg from "@/assets/images/about-me/koum.png";
 import Image from "next/image";
 import "./about-me.scss";
 import ButtonUI from "@/ui/button/button";

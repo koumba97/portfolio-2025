@@ -1,13 +1,14 @@
 "use client";
 
 import "./style.scss";
-import { useEffect, useRef, useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import ImageGallery from "react-image-gallery";
 import Button from "@mui/material/Button";
 import { Tooltip } from "@mui/material";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ArrowLeftSVG from "@/svg/ArrowLeft";
 import { Link } from "next-view-transitions";
+import { ProjectInterface, ProjectsList } from "@/utils/projects";
 
 const images = [
     {
@@ -32,9 +33,28 @@ const images = [
     },
 ];
 
-export default function ProjectPage() {
+type Props = {
+    params: Promise<{ slug: string }>;
+};
+
+export default function ProjectPage({ params }: Props) {
+    const { slug } = use(params);
     const galleryRef = useRef<ImageGallery | null>(null);
     const [isFullscreen, setIsFullscreen] = useState(false);
+    const [project, setProject] = useState<ProjectInterface>();
+
+    useEffect(() => {
+        const getProjectInfo = () => {
+            const foundProject = ProjectsList.find(
+                (project) => project.id === slug
+            );
+            if (foundProject) {
+                setProject(foundProject);
+            }
+        };
+
+        getProjectInfo();
+    }, [params]);
 
     useEffect(() => {
         const handleFullscreenChange = () => {
@@ -91,9 +111,7 @@ export default function ProjectPage() {
                     />
                 </div>
                 <div className="grid-section">
-                    <h1>
-                        Project's <span className="brand-color">title</span>
-                    </h1>
+                    <h1>{project?.name}</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Vivamus rhoncus, magna et venenatis tempor, metus ipsum
