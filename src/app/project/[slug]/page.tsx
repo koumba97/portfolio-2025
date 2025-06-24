@@ -42,6 +42,7 @@ export default function ProjectPage({ params }: Props) {
     const galleryRef = useRef<ImageGallery | null>(null);
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [project, setProject] = useState<ProjectInterface>();
+    const [titleHTML, setTitleHTML] = useState<string>();
 
     useEffect(() => {
         const getProjectInfo = () => {
@@ -50,6 +51,16 @@ export default function ProjectPage({ params }: Props) {
             );
             if (foundProject) {
                 setProject(foundProject);
+                if (foundProject.name.split(" ").length > 1) {
+                    console.log("okok");
+                    setTitleHTML(
+                        `${
+                            foundProject.name.split(" ")[0]
+                        } <span class="brand-color">${
+                            foundProject.name.split(" ")[1]
+                        }</span>`
+                    );
+                }
             }
         };
 
@@ -111,7 +122,14 @@ export default function ProjectPage({ params }: Props) {
                     />
                 </div>
                 <div className="grid-section">
-                    <h1>{project?.name}</h1>
+                    <div className="name-wrapper">
+                        <h1
+                            dangerouslySetInnerHTML={{
+                                __html: titleHTML || "",
+                            }}
+                        />
+                        <div className="arrow"></div>
+                    </div>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Vivamus rhoncus, magna et venenatis tempor, metus ipsum

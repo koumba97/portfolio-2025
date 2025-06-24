@@ -157,9 +157,26 @@
                 grid-row: 1/3;
             }
             &:nth-of-type(2) {
+                .name-wrapper {
+                    display: flex;
+                    margin-bottom: 20px;
+                    .arrow {
+                        content: " ";
+                        background-image: url("../../../assets/images/abstract/arrow.png");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        position: relative;
+                        left: 20px;
+                        top: 10px;
+                        width: 80px;
+                        //height: calc(auto - 20px);
+                    }
+                }
+
                 h1 {
                     font-family: "Lost Days";
                     font-size: 60px;
+                    width: min-content;
                     .brand-color {
                         color: $brand-color-secondary;
                     }
