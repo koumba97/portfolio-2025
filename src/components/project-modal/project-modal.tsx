@@ -25,7 +25,7 @@ export default function ProjectModal({
             aria-describedby="modal-modal-description"
         >
             <div className="modal-description">
-                <div className="header-modal">
+                <div className="modal-header">
                     <h3 className="title">{project?.name}</h3>
                     <Button
                         className="close-button"
@@ -40,6 +40,12 @@ export default function ProjectModal({
                     </Button>
                 </div>
                 <p className="content">{project?.description}</p>
+                <div className="modal-footer">
+                    <div className="link-container">links</div>
+                    <Button color="inherit" onClick={handleModal}>
+                        Ok
+                    </Button>
+                </div>
             </div>
         </Modal>
     );

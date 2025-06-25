@@ -8,15 +8,14 @@
     background-color: white;
     max-width: 500px;
     margin: auto;
-    padding: 20px;
+    padding: 15px 20px 20px 20px;
     border-radius: 20px;
 
-    .header-modal {
+    .modal-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: solid 1px $grey-200;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
 
         h3 {
             font-size: 24px;
@@ -29,15 +28,23 @@
     }
     .content {
         overflow: scroll;
-        max-height: 400px;
+        max-height: 300px;
         padding: 20px 0;
+        border-top: solid 2px $grey-100;
+        border-bottom: solid 2px $grey-100;
+    }
+    .modal-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
     }
 }
 
 @media (max-width: $sm-breakpoint) {
     .modal-description {
         .header-modal {
-            padding-bottom: 12px;
             h3 {
                 font-size: 20px;
             }
