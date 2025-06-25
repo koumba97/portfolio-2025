@@ -1,13 +1,12 @@
 import { Button, Modal } from "@mui/material";
 import "./project-modal.scss";
 import { ProjectInterface } from "@/utils/projects";
-import ArrowLeftSVG from "@/svg/ArrowLeft";
 import CloseSVG from "@/svg/Close";
 
 interface Prop {
     project: ProjectInterface;
     isOpen: boolean;
-    handleDescriptionModal: Function;
+    handleDescriptionModal: () => void;
 }
 
 export default function ProjectModal({

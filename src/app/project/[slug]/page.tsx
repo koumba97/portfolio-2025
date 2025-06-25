@@ -4,7 +4,7 @@ import "./style.scss";
 import { use, useEffect, useRef, useState } from "react";
 import ImageGallery from "react-image-gallery";
 import Button from "@mui/material/Button";
-import { Modal, Tooltip } from "@mui/material";
+import { Tooltip } from "@mui/material";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ArrowLeftSVG from "@/svg/ArrowLeft";
 import { Link } from "next-view-transitions";
@@ -101,10 +101,6 @@ export default function ProjectPage({ params }: Props) {
         };
     }, []);
 
-    function showFullText() {
-        console.log("okok");
-    }
-
     function handleDescriptionModal() {
         setDescriptionModalIsVisible(!descriptionModalIsVisible);
     }
@@ -152,7 +148,7 @@ export default function ProjectPage({ params }: Props) {
                         className="show-more-text-container"
                         anchorClass="show-more-less-clickable"
                         expanded={false}
-                        //@ts-ignore
+                        // @ts-expect-error type avaible in the API but mistyped in the component
                         expandByClick={false}
                         onClick={handleDescriptionModal}
                         truncatedEndingComponent={"... "}
