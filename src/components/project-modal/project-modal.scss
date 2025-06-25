@@ -33,3 +33,15 @@
         padding: 20px 0;
     }
 }
+
+@media (max-width: $sm-breakpoint) {
+    .modal-description {
+        .header-modal {
+            padding-bottom: 12px;
+            h3 {
+                font-size: 20px;
+            }
+        }
+        max-width: 80vw;
+    }
+}
