@@ -1,0 +1,35 @@
+@import "../../utils/variables.scss";
+
+[aria-labelledby="modal-modal-title"] {
+    display: flex;
+    align-items: center;
+}
+.modal-description {
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+
+    .header-modal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px $grey-200;
+        padding-bottom: 20px;
+
+        h3 {
+            font-size: 24px;
+        }
+        .close-button {
+            min-width: unset;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .content {
+        overflow: scroll;
+        max-height: 400px;
+        padding: 20px 0;
+    }
+}

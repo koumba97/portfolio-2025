@@ -44,7 +44,7 @@ export const ProjectsList: ProjectInterface[] = [
         coverImage: {
             back: lettering
         },
-        description: '',
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [''],
         link: '',
         tool: []
@@ -55,7 +55,7 @@ export const ProjectsList: ProjectInterface[] = [
         coverImage: {
             back: digitalDrawings
         },
-        description: '',
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [''],
         link: '',
         tool: []
@@ -67,7 +67,7 @@ export const ProjectsList: ProjectInterface[] = [
             front: cookishMaster,
             back: abstractLine2
         },
-        description: '',
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [''],
         link: '',
         tool: []
@@ -80,7 +80,7 @@ export const ProjectsList: ProjectInterface[] = [
             back: abstractLine,
             frontHeight: 230
         },
-        description: '',
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [''],
         link: '',
         tool: []
@@ -91,7 +91,7 @@ export const ProjectsList: ProjectInterface[] = [
         coverImage: {
             back: puff
         },
-        description: '',
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [''],
         link: '',
         tool: []
@@ -102,7 +102,7 @@ export const ProjectsList: ProjectInterface[] = [
         coverImage: {
             back: designSystem
         },
-        description: '',
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [''],
         link: '',
         tool: []
@@ -116,7 +116,7 @@ export const ProjectsList: ProjectInterface[] = [
             left: '65%',
             top: '65%',
         },
-        description: '',
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [''],
         link: '',
         tool: []
@@ -128,7 +128,7 @@ export const ProjectsList: ProjectInterface[] = [
         coverImage: {
             back: eCommerce
         },
-        description: '',
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [''],
         link: '',
         tool: []

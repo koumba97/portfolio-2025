@@ -4,11 +4,13 @@ import "./style.scss";
 import { use, useEffect, useRef, useState } from "react";
 import ImageGallery from "react-image-gallery";
 import Button from "@mui/material/Button";
-import { Tooltip } from "@mui/material";
+import { Modal, Tooltip } from "@mui/material";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ArrowLeftSVG from "@/svg/ArrowLeft";
 import { Link } from "next-view-transitions";
 import { ProjectInterface, ProjectsList } from "@/utils/projects";
+import ShowMoreText from "react-show-more-text";
+import ProjectModal from "@/components/project-modal/project-modal";
 
 const images = [
     {
@@ -43,6 +45,8 @@ export default function ProjectPage({ params }: Props) {
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [project, setProject] = useState<ProjectInterface>();
     const [titleHTML, setTitleHTML] = useState<string>();
+    const [descriptionModalIsVisible, setDescriptionModalIsVisible] =
+        useState(false);
 
     useEffect(() => {
         const getProjectInfo = () => {
@@ -51,7 +55,7 @@ export default function ProjectPage({ params }: Props) {
             );
             if (foundProject) {
                 setProject(foundProject);
-                if (foundProject.name.split(" ").length > 1) {
+                if (foundProject.name.split(" ").length === 2) {
                     console.log("okok");
                     setTitleHTML(
                         `${
@@ -60,6 +64,8 @@ export default function ProjectPage({ params }: Props) {
                             foundProject.name.split(" ")[1]
                         }</span>`
                     );
+                } else {
+                    setTitleHTML(foundProject.name);
                 }
             }
         };
@@ -94,6 +100,14 @@ export default function ProjectPage({ params }: Props) {
             );
         };
     }, []);
+
+    function showFullText() {
+        console.log("okok");
+    }
+
+    function handleDescriptionModal() {
+        setDescriptionModalIsVisible(!descriptionModalIsVisible);
+    }
 
     return (
         <div className="project-section section">
@@ -130,13 +144,27 @@ export default function ProjectPage({ params }: Props) {
                         />
                         <div className="arrow"></div>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vivamus rhoncus, magna et venenatis tempor, metus ipsum
-                        imperdiet dolor, vel elementum arcu ante ac risus. Nulla
-                        varius sagittis aliquam. In sollicitudin metus ac
-                        lacinia dapibus...
-                    </p>
+                    <ShowMoreText
+                        /* Default options */
+                        lines={6}
+                        more="Show more"
+                        less="Show less"
+                        className="show-more-text-container"
+                        anchorClass="show-more-less-clickable"
+                        expanded={false}
+                        //@ts-ignore
+                        expandByClick={false}
+                        onClick={handleDescriptionModal}
+                        truncatedEndingComponent={"... "}
+                    >
+                        {project?.description}
+                    </ShowMoreText>
+
+                    <ProjectModal
+                        project={project!}
+                        isOpen={descriptionModalIsVisible}
+                        handleDescriptionModal={handleDescriptionModal}
+                    />
                 </div>
                 <div className="grid-section"></div>
                 <div className="grid-section"></div>
