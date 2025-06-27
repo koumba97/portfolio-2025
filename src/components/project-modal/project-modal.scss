@@ -39,6 +39,12 @@
         justify-content: space-between;
         align-items: center;
         padding-top: 10px;
+
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 }
 

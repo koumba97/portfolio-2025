@@ -1,0 +1,28 @@
+@import "../../utils/variables.scss";
+
+.link {
+    font-weight: bold;
+    display: flex;
+    gap: 4px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    width: max-content;
+    transition: color 0.3s, background-color 0.3s;
+    color: $brand-color-secondary;
+    border-radius: 5px;
+    padding: 0 4px;
+    svg {
+        filter: invert(33%) sepia(98%) saturate(4735%) hue-rotate(242deg)
+            brightness(100%) contrast(104%);
+    }
+
+    &:hover {
+        color: black;
+        background-color: $grey-100;
+        text-decoration: none;
+        svg {
+            filter: invert(0%) sepia(0%) saturate(5076%) hue-rotate(350deg)
+                brightness(107%) contrast(102%);
+        }
+    }
+}
