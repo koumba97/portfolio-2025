@@ -169,7 +169,7 @@ export default function ProjectPage({ params }: Props) {
                     <div className="bottom">
                         <div className="tool-list-container">
                             {project ? (
-                                <ToolContainer max={2} tools={project?.tool} />
+                                <ToolContainer max={3} tools={project?.tool} />
                             ) : null}
                         </div>
                         <div className="link-container">

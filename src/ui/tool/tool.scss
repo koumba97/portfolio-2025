@@ -1,27 +1,44 @@
 @import "../../utils/variables.scss";
 
-.tool {
+// .tool {
+//     display: flex;
+//     align-items: center;
+//     height: max-content;
+//     gap: 10px;
+.icon-container {
+    overflow: hidden;
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    height: max-content;
-    gap: 10px;
-    .icon-container {
-        overflow: hidden;
-        width: 36px;
-        height: 36px;
-        background-color: white;
-        background-position: center;
-        background-size: cover;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        img {
-            margin: auto;
+    transition: scale 0.3s;
+    img {
+        margin: auto;
+    }
+
+    &:active {
+        scale: 95%;
+    }
+
+    &.plus {
+        background-color: black;
+        color: white;
+        span {
+            font-weight: 800;
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+            user-select: none;
         }
     }
 }
+//}
 
 .tool-container {
     display: flex;
-    gap: 8px;
+    gap: 6px;
 }

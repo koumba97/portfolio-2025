@@ -198,13 +198,13 @@
                 .bottom {
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
 
                     .tool-list-container {
-                        border: solid;
                         display: flex;
+                        height: max-content;
                     }
                     .link-container {
-                        margin-top: 20px;
                         display: flex;
                         flex-direction: column;
                         gap: 10px;

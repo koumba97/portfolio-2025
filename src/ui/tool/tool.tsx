@@ -1,3 +1,4 @@
+import { Tooltip } from "@mui/material";
 import "./tool.scss";
 import Image, { StaticImageData } from "next/image";
 
@@ -14,17 +15,19 @@ export default function Tool({
     showName = false,
 }: ToolProp) {
     return (
-        <div className="tool">
-            <div
-                className="icon-container"
-                style={{
-                    backgroundImage: `url("${image.src}")`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
-            ></div>
-            {showName ? <h2 className="tool-name">{name}</h2> : null}
-        </div>
+        <Tooltip title={name}>
+            <div className="tool">
+                <div
+                    className="icon-container"
+                    style={{
+                        backgroundImage: `url("${image.src}")`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                    }}
+                ></div>
+                {showName ? <h2 className="tool-name">{name}</h2> : null}
+            </div>
+        </Tooltip>
     );
 }
 
@@ -52,6 +55,11 @@ export function ToolContainer({
                         />
                     );
                 })}
+            {max && tools.length > max ? (
+                <div className="icon-container plus">
+                    <span>+{tools.length - max}</span>
+                </div>
+            ) : null}
         </div>
     );
 }

@@ -27,6 +27,7 @@ import figmaLogo from "@/assets/images/logo/laravel.png";
 import canvaLogo from "@/assets/images/logo/node.png";
 import microsoftOfficeSuiteLogo from "@/assets/images/logo/symfony.png";
 import procreateLogo from "@/assets/images/logo/storybook.png";
+import nomadSculptLogo from "@/assets/images/logo/storybook.png";
 //import cypressLogo from "@/assets/images/logo/cypress.png";
 //import angularLogo from "@/assets/images/logo/angular.png";
 
@@ -109,51 +110,55 @@ export const Tool: Record<string, ToolInterface> = {
 
     //DESIGN
     photoshop: {
-        name: '',
+        name: 'Photoshop',
         image: photoshopLogo
     },
     indesign: {
-        name: '',
+        name: 'InDesign',
         image: inDesignLogo
     },
     illustrator: {
-        name: '',
+        name: 'Illustrator',
         image: illustratorLogo
     },
     afterEffects: {
-        name: '',
+        name: 'After Effects',
         image: afterEffectsLogo
     },
     adobeXD: {
-        name: '',
+        name: 'Adobe Xd',
         image: adobeXDLogo
     },
     quarkExpress: {
-        name: '',
+        name: 'Quark Express',
         image: quarkExpressLogo
     },
     wordpress: {
-        name: '',
+        name: 'Wordpress',
         image: wordpressLogo
     },
     sitecore: {
-        name: '',
+        name: 'Sitecore',
         image: sitecoreLogo
     },
     figma: {
-        name: '',
+        name: 'Figma',
         image: figmaLogo
     },
     canva: {
-        name: '',
+        name: 'Canva',
         image: canvaLogo
     },
     procreate: {
-        name: '',
+        name: 'Procreate',
         image: procreateLogo
     },
+    nomadSculpt: {
+        name: 'Nomad Sculpt',
+        image: nomadSculptLogo
+    },
     microsoftOfficeSuite: {
-        name: '',
+        name: 'Microsoft Office Suite',
         image: microsoftOfficeSuiteLogo
     },
 

@@ -7,7 +7,7 @@
     text-decoration: underline;
     text-underline-offset: 4px;
     width: max-content;
-    transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s, scale 0.3s;
     color: $brand-color-secondary;
     border-radius: 5px;
     padding: 0 4px;
@@ -24,5 +24,9 @@
             filter: invert(0%) sepia(0%) saturate(5076%) hue-rotate(350deg)
                 brightness(107%) contrast(102%);
         }
+    }
+
+    &:active {
+        scale: 95%;
     }
 }

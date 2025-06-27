@@ -92,7 +92,7 @@ export const ProjectsList: ProjectInterface[] = [
             github: 'https://github.com/koumba97/music-library',
             live: 'https://music-library-koum.vercel.app/'
         },
-        tool: []
+        tool: [Tool.react, Tool.typescript, Tool.firebase, Tool.sass, Tool.sass]
     },
     {
         name: 'Puff',
