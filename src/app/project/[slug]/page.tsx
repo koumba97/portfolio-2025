@@ -11,6 +11,10 @@ import { Link } from "next-view-transitions";
 import { ProjectInterface, ProjectsList } from "@/utils/projects";
 import ShowMoreText from "react-show-more-text";
 import ProjectModal from "@/components/project-modal/project-modal";
+import LinkUI from "@/ui/links/link";
+import GithubSVG from "@/svg/Github";
+import LinkSVG from "@/svg/Link";
+import Tool, { ToolContainer } from "@/ui/tool/tool";
 
 const images = [
     {
@@ -161,6 +165,45 @@ export default function ProjectPage({ params }: Props) {
                         isOpen={descriptionModalIsVisible}
                         handleDescriptionModal={handleDescriptionModal}
                     />
+
+                    <div className="bottom">
+                        <div className="tool-list-container">
+                            {project ? (
+                                <ToolContainer max={2} tools={project?.tool} />
+                            ) : null}
+                        </div>
+                        <div className="link-container">
+                            {project?.link
+                                ? Object.entries(project.link).map(
+                                      ([key, value]) => (
+                                          <LinkUI key={key} href={value}>
+                                              <>
+                                                  {key === "github" ? (
+                                                      <>
+                                                          <GithubSVG
+                                                              width={20}
+                                                              height={20}
+                                                              viewBox="6 0 25 35"
+                                                          />
+                                                          See the code
+                                                      </>
+                                                  ) : key === "live" ? (
+                                                      <>
+                                                          <LinkSVG
+                                                              width={20}
+                                                              height={20}
+                                                              viewBox="6 0 25 35"
+                                                          />
+                                                          See the project
+                                                      </>
+                                                  ) : null}
+                                              </>
+                                          </LinkUI>
+                                      )
+                                  )
+                                : null}
+                        </div>
+                    </div>
                 </div>
                 <div className="grid-section"></div>
                 <div className="grid-section"></div>

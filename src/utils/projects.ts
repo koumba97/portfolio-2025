@@ -1,4 +1,4 @@
-import { ToolInterface } from "./tool-list"
+import { Tool, ToolInterface } from "./tool-list"
 import lettering from "@/assets/images/projects/lettering/lettering.png";
 import digitalDrawings from "@/assets/images/projects/digital-drawings/digital-drawings-cut.png";
 import abstractLine from "@/assets/images/abstract/line1.svg";
@@ -105,7 +105,7 @@ export const ProjectsList: ProjectInterface[] = [
         link: {
             github: 'https://github.com/koumba97/puff',
         },
-        tool: []
+        tool: [Tool.reactNative, Tool.figma, Tool.procreate, Tool.firebase, Tool.illustrator]
     },
     {
         name: 'Design System',

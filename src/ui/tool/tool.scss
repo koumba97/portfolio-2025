@@ -10,6 +10,8 @@
         width: 36px;
         height: 36px;
         background-color: white;
+        background-position: center;
+        background-size: cover;
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -17,4 +19,9 @@
             margin: auto;
         }
     }
+}
+
+.tool-container {
+    display: flex;
+    gap: 8px;
 }

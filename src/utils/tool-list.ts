@@ -5,12 +5,14 @@ import jsLogo from "@/assets/images/logo/javascript.png";
 import tsLogo from "@/assets/images/logo/typescript.png";
 import tailwindLogo from "@/assets/images/logo/tailwind.png";
 import reactLogo from "@/assets/images/logo/react.png";
+import reactNativeLogo from "@/assets/images/logo/react-native.png";
 import vueLogo from "@/assets/images/logo/vue.png";
 import laravelLogo from "@/assets/images/logo/laravel.png";
 import nodeLogo from "@/assets/images/logo/node.png";
 import cypressLogo from "@/assets/images/logo/cypress.png";
 import symfonyLogo from "@/assets/images/logo/symfony.png";
 import storybookLogo from "@/assets/images/logo/storybook.png";
+import firebaseLogo from "@/assets/images/logo/storybook.png";
 import angularLogo from "@/assets/images/logo/angular.png";
 
 import photoshopLogo from "@/assets/images/logo/html.png";
@@ -70,7 +72,7 @@ export const Tool: Record<string, ToolInterface> = {
     },
     reactNative: {
         name: 'React Native',
-        image: reactLogo,
+        image: reactNativeLogo,
     },
     vue: {
         name: 'Vue',
@@ -95,6 +97,10 @@ export const Tool: Record<string, ToolInterface> = {
     cypress: {
         name: 'Cypress',
         image: cypressLogo,
+    },
+    firebase: {
+        name: 'Firebase',
+        image: firebaseLogo,
     },
     storybook: {
         name: 'Storybook',
