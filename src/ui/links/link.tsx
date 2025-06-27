@@ -7,7 +7,7 @@ interface Prop {
 
 export default function LinkUI({ children, href }: Prop) {
     return (
-        <a className="link" href={href}>
+        <a className="link" target="_blank" href={href}>
             {children}
         </a>
     );
