@@ -62,7 +62,7 @@ export const ProjectsList: ProjectInterface[] = [
         link: {
             live: 'https://www.instagram.com/koum.97'
         },
-        tool: []
+        tool: [Tool.procreate, Tool.procreateDreams, Tool.photoshop]
     },
     {
         name: 'Cookish master',
@@ -76,7 +76,7 @@ export const ProjectsList: ProjectInterface[] = [
         link: {
             github: 'https://github.com/EpitechIT2020/W-WEB-320-PAR-4-3-app-koumba.keita'
         },
-        tool: []
+        tool: [Tool.reactNative, Tool.firebase, Tool.figma, Tool.illustrator]
     },
     {
         name: 'Music library',
@@ -92,7 +92,7 @@ export const ProjectsList: ProjectInterface[] = [
             github: 'https://github.com/koumba97/music-library',
             live: 'https://music-library-koum.vercel.app/'
         },
-        tool: [Tool.react, Tool.typescript, Tool.firebase, Tool.sass, Tool.sass]
+        tool: [Tool.react, Tool.typescript, Tool.firebase, Tool.sass]
     },
     {
         name: 'Puff',
@@ -116,7 +116,7 @@ export const ProjectsList: ProjectInterface[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [''],
 
-        tool: []
+        tool: [Tool.react, Tool.typescript, Tool.sass, Tool.storybook, Tool.figma]
     },
     {
         name: '3D Modeling',
@@ -129,7 +129,7 @@ export const ProjectsList: ProjectInterface[] = [
         },
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [''],
-        tool: []
+        tool: [Tool.nomadSculpt]
     }
     ,
     {
@@ -144,7 +144,7 @@ export const ProjectsList: ProjectInterface[] = [
             github: 'https://github.com/koumba97/krush-ecommerce',
             live: 'https://krush-koum.vercel.app/'
         },
-        tool: []
+        tool: [Tool.react, Tool.sass, Tool.typescript]
     }
 
 ]

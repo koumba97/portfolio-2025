@@ -12,22 +12,23 @@ import nodeLogo from "@/assets/images/logo/node.png";
 import cypressLogo from "@/assets/images/logo/cypress.png";
 import symfonyLogo from "@/assets/images/logo/symfony.png";
 import storybookLogo from "@/assets/images/logo/storybook.png";
-import firebaseLogo from "@/assets/images/logo/storybook.png";
+import firebaseLogo from "@/assets/images/logo/firebase.png";
 import angularLogo from "@/assets/images/logo/angular.png";
 
-import photoshopLogo from "@/assets/images/logo/html.png";
+import photoshopLogo from "@/assets/images/logo/photoshop.png";
 import inDesignLogo from "@/assets/images/logo/css.png";
-import illustratorLogo from "@/assets/images/logo/sass.png";
+import illustratorLogo from "@/assets/images/logo/illustrator.png";
 import afterEffectsLogo from "@/assets/images/logo/javascript.png";
 import adobeXDLogo from "@/assets/images/logo/typescript.png";
 import quarkExpressLogo from "@/assets/images/logo/tailwind.png";
 import wordpressLogo from "@/assets/images/logo/react.png";
 import sitecoreLogo from "@/assets/images/logo/vue.png";
-import figmaLogo from "@/assets/images/logo/laravel.png";
+import figmaLogo from "@/assets/images/logo/figma.png";
 import canvaLogo from "@/assets/images/logo/node.png";
 import microsoftOfficeSuiteLogo from "@/assets/images/logo/symfony.png";
-import procreateLogo from "@/assets/images/logo/storybook.png";
-import nomadSculptLogo from "@/assets/images/logo/storybook.png";
+import procreateLogo from "@/assets/images/logo/procreate.png";
+import procreateDreamsLogo from "@/assets/images/logo/procreate-dreams.png";
+import nomadSculptLogo from "@/assets/images/logo/nomadsculpt.jpeg";
 //import cypressLogo from "@/assets/images/logo/cypress.png";
 //import angularLogo from "@/assets/images/logo/angular.png";
 
@@ -152,6 +153,10 @@ export const Tool: Record<string, ToolInterface> = {
     procreate: {
         name: 'Procreate',
         image: procreateLogo
+    },
+    procreateDreams: {
+        name: 'Procreate Dreams',
+        image: procreateDreamsLogo
     },
     nomadSculpt: {
         name: 'Nomad Sculpt',
