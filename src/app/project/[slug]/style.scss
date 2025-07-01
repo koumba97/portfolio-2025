@@ -37,9 +37,9 @@
                 .image-gallery-content:not(.fullscreen) {
                     height: 100%;
                     border-radius: 20px 20px 0 0;
+                    max-height: 360px;
                     overflow: hidden;
                     .image-gallery-slide-wrapper {
-                        height: 80%;
                         overflow: hidden;
                     }
 
@@ -65,10 +65,14 @@
                                     opacity: 0.5;
                                 }
                             }
+
+                            .image-gallery-thumbnail-image {
+                                object-fit: cover;
+                            }
                         }
                     }
                     .image-gallery-image {
-                        height: 300px;
+                        // height: 300px;
                         object-fit: cover;
                     }
                 }
@@ -201,8 +205,12 @@
                     align-items: center;
 
                     .tool-list-container {
-                        display: flex;
                         height: max-content;
+                        h5 {
+                            font-size: 20px;
+                            font-family: "Lost days";
+                            margin-bottom: 5px;
+                        }
                     }
                     .link-container {
                         display: flex;

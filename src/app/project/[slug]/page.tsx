@@ -126,14 +126,16 @@ export default function ProjectPage({ params }: Props) {
                             </Tooltip>
                         </Link>
                     </div>
-                    <ImageGallery
-                        additionalClass={
-                            isFullscreen ? "fullscreen" : undefined
-                        }
-                        ref={galleryRef}
-                        items={images}
-                        autoPlay={false}
-                    />
+                    {project ? (
+                        <ImageGallery
+                            additionalClass={
+                                isFullscreen ? "fullscreen" : undefined
+                            }
+                            ref={galleryRef}
+                            items={project.gallery}
+                            autoPlay={false}
+                        />
+                    ) : null}
                 </div>
                 <div className="grid-section">
                     <div className="name-wrapper">
@@ -146,7 +148,7 @@ export default function ProjectPage({ params }: Props) {
                     </div>
                     <ShowMoreText
                         /* Default options */
-                        lines={6}
+                        lines={5}
                         more="Show more"
                         less="Show less"
                         className="show-more-text-container"
@@ -168,6 +170,7 @@ export default function ProjectPage({ params }: Props) {
 
                     <div className="bottom">
                         <div className="tool-list-container">
+                            <h5>Tools</h5>
                             {project ? (
                                 <ToolContainer max={3} tools={project?.tool} />
                             ) : null}
