@@ -3,6 +3,8 @@ import "./tool.scss";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import ToolModal from "@/components/tool-modal/tool-modal";
+import LinkUI from "../links/link";
+import LinkSVG from "@/svg/Link";
 
 export interface ToolProp {
     name: string;
@@ -17,7 +19,7 @@ export default function Tool({
     showName = false,
 }: ToolProp) {
     return (
-        <Tooltip title={name}>
+        <Tooltip title={name} disableHoverListener={showName}>
             <div className="tool">
                 <div
                     className="icon-container"
@@ -28,6 +30,11 @@ export default function Tool({
                     }}
                 ></div>
                 {showName ? <h2 className="tool-name">{name}</h2> : null}
+                {showName ? (
+                    <LinkUI href="">
+                        <LinkSVG width={20} height={20} viewBox="6 0 25 35" />
+                    </LinkUI>
+                ) : null}
             </div>
         </Tooltip>
     );

@@ -35,7 +35,7 @@ export default function ToolModal({ tools, isOpen, handleToolModal }: Prop) {
                         />
                     </Button>
                 </div>
-                <p className="content">
+                <div className="content">
                     {tools.map((tool, index) => (
                         <Tool
                             name={tool.name}
@@ -44,7 +44,7 @@ export default function ToolModal({ tools, isOpen, handleToolModal }: Prop) {
                             showName
                         />
                     ))}
-                </p>
+                </div>
                 <div className="modal-footer">
                     <Button color="inherit" onClick={handleModal}>
                         Ok
