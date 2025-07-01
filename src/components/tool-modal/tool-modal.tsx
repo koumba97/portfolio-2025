@@ -40,6 +40,7 @@ export default function ToolModal({ tools, isOpen, handleToolModal }: Prop) {
                         <Tool
                             name={tool.name}
                             image={tool.image}
+                            link={tool.link}
                             key={`${tool}-${index}`}
                             showName
                         />

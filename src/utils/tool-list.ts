@@ -37,6 +37,7 @@ import { StaticImageData } from "next/image";
 export interface ToolInterface {
     name: string;
     image: StaticImageData;
+    link: string;
     full?: boolean;
 }
 
@@ -45,126 +46,156 @@ export const Tool: Record<string, ToolInterface> = {
     html: {
         name: 'HTML',
         image: htmlLogo,
+        link: 'https://www.w3schools.com/html/default.asp',
     },
     css: {
         name: 'CSS',
         image: cssLogo,
+        link: 'https://www.w3schools.com/css/'
     },
     sass: {
         name: 'Sass',
         image: sassLogo,
+        link: 'https://sass-lang.com/'
     },
     javascript: {
         name: 'JavaScript',
         image: jsLogo,
         full: true,
+        link: 'https://www.w3schools.com/js/'
     },
     typescript: {
         name: 'TypeScript',
         image: tsLogo,
         full: true,
+        link: 'https://www.typescriptlang.org/'
     },
     tailwind: {
         name: 'Tailwind',
         image: tailwindLogo,
+        link: 'https://tailwindcss.com/'
     },
     react: {
         name: 'React',
         image: reactLogo,
+        link: 'https://react.dev/'
     },
     reactNative: {
         name: 'React Native',
         image: reactNativeLogo,
+        link: 'https://reactnative.dev/'
     },
     vue: {
         name: 'Vue',
         image: vueLogo,
+        link: 'https://vuejs.org/'
     },
     angular: {
         name: 'Angular',
         image: angularLogo,
+        link: 'https://angular.dev/'
     },
     laravel: {
         name: 'Laravel',
         image: laravelLogo,
+        link: 'https://laravel.com/'
     },
     symfony: {
         name: 'Symfony',
         image: symfonyLogo,
+        link: 'https://symfony.com/'
     },
     node: {
         name: 'Node JS',
         image: nodeLogo,
+        link: 'https://nodejs.org/en'
     },
     cypress: {
         name: 'Cypress',
         image: cypressLogo,
+        link: 'https://www.cypress.io/'
     },
     firebase: {
         name: 'Firebase',
         image: firebaseLogo,
+        link: 'https://firebase.google.com/'
     },
     storybook: {
         name: 'Storybook',
         image: storybookLogo,
+        link: 'https://storybook.js.org/'
     },
 
     //DESIGN
     photoshop: {
         name: 'Photoshop',
-        image: photoshopLogo
+        image: photoshopLogo,
+        link: 'https://www.adobe.com/products/photoshop.html'
     },
     indesign: {
         name: 'InDesign',
-        image: inDesignLogo
+        image: inDesignLogo,
+        link: 'https://www.adobe.com/products/indesign.html'
     },
     illustrator: {
         name: 'Illustrator',
-        image: illustratorLogo
+        image: illustratorLogo,
+        link: 'https://www.adobe.com/products/illustrator.html'
     },
     afterEffects: {
         name: 'After Effects',
-        image: afterEffectsLogo
+        image: afterEffectsLogo,
+        link: 'https://www.adobe.com/products/aftereffects.html'
     },
     adobeXD: {
         name: 'Adobe Xd',
-        image: adobeXDLogo
+        image: adobeXDLogo,
+        link: 'https://www.adobe.com/products/xd.html'
     },
     quarkExpress: {
         name: 'Quark Express',
-        image: quarkExpressLogo
+        image: quarkExpressLogo,
+        link: 'https://www.quark.com/products/quarkxpress'
     },
     wordpress: {
         name: 'Wordpress',
-        image: wordpressLogo
+        image: wordpressLogo,
+        link: 'https://wordpress.com/fr/'
     },
     sitecore: {
         name: 'Sitecore',
-        image: sitecoreLogo
+        image: sitecoreLogo,
+        link: 'https://www.sitecore.com/'
     },
     figma: {
         name: 'Figma',
-        image: figmaLogo
+        image: figmaLogo,
+        link: 'https://www.figma.com/'
     },
     canva: {
         name: 'Canva',
-        image: canvaLogo
+        image: canvaLogo,
+        link: 'https://www.canva.com/'
     },
     procreate: {
         name: 'Procreate',
-        image: procreateLogo
+        image: procreateLogo,
+        link: 'https://procreate.com/'
     },
     procreateDreams: {
         name: 'Procreate Dreams',
-        image: procreateDreamsLogo
+        image: procreateDreamsLogo,
+        link: 'https://procreate.com/dreams'
     },
     nomadSculpt: {
         name: 'Nomad Sculpt',
-        image: nomadSculptLogo
+        image: nomadSculptLogo,
+        link: 'https://nomadsculpt.com/'
     },
     microsoftOfficeSuite: {
         name: 'Microsoft Office Suite',
-        image: microsoftOfficeSuiteLogo
+        image: microsoftOfficeSuiteLogo,
+        link: 'https://www.office.com/'
     },
 
 

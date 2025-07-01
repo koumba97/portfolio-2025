@@ -9,24 +9,32 @@ import LinkSVG from "@/svg/Link";
 export interface ToolProp {
     name: string;
     image: StaticImageData;
+    link: string;
     full?: boolean;
     showName?: boolean;
 }
-export default function Tool({ name, image, showName = false }: ToolProp) {
+export default function Tool({
+    name,
+    image,
+    link,
+    showName = false,
+}: ToolProp) {
     return (
         <Tooltip title={name} disableHoverListener={showName}>
             <div className="tool">
-                <div
-                    className="icon-container"
-                    style={{
-                        backgroundImage: `url("${image.src}")`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                    }}
-                ></div>
+                <a href={link} target="_blank">
+                    <div
+                        className="icon-container"
+                        style={{
+                            backgroundImage: `url("${image.src}")`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                        }}
+                    ></div>
+                </a>
                 {showName ? <h2 className="tool-name">{name}</h2> : null}
                 {showName ? (
-                    <LinkUI href="">
+                    <LinkUI href={link}>
                         <LinkSVG width={20} height={20} viewBox="6 0 25 35" />
                     </LinkUI>
                 ) : null}
@@ -57,6 +65,7 @@ export function ToolContainer({ max, tools }: ToolContainerProp) {
                                 key={tool.name || index}
                                 name={tool.name}
                                 image={tool.image}
+                                link={tool.link}
                                 showName={tool.showName}
                             />
                         );
