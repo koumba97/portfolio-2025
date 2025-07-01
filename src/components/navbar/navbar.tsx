@@ -9,6 +9,7 @@ import UserSVG from "@/svg/User";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
 import { usePathname } from "next/navigation";
+import GridSVG from "@/svg/Grid";
 
 export default function NavBar() {
     let pathname = usePathname();
@@ -27,7 +28,14 @@ export default function NavBar() {
                         nav-button`}
                         color="inherit"
                     >
-                        <HomeSVG width={24} height={24} viewBox="0 0 32 32" />
+                        <GridSVG
+                            width={40}
+                            height={40}
+                            viewBox="0 35 80 80"
+                            filled={pathname === "" || pathname === "project"}
+                        />
+
+                        {/* <HomeSVG width={24} height={24} viewBox="0 0 32 32" /> */}
                     </Button>
                 </Tooltip>
             </Link>
@@ -39,7 +47,12 @@ export default function NavBar() {
                         nav-button`}
                         color="inherit"
                     >
-                        <UserSVG width={24} height={24} viewBox="0 0 24 24" />
+                        <UserSVG
+                            width={24}
+                            height={24}
+                            viewBox="2 2 20 20"
+                            filled={pathname === "about-me"}
+                        />
                     </Button>
                 </Tooltip>
             </Link>

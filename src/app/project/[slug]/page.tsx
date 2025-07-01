@@ -15,6 +15,7 @@ import LinkUI from "@/ui/links/link";
 import GithubSVG from "@/svg/Github";
 import LinkSVG from "@/svg/Link";
 import { ToolContainer } from "@/ui/tool/tool";
+import GridSVG from "@/svg/Grid";
 
 const images = [
     {
@@ -117,10 +118,11 @@ export default function ProjectPage({ params }: Props) {
                         <Link href="/">
                             <Tooltip title="Home" placement="top">
                                 <Button className="back-button" color="inherit">
-                                    <ArrowLeftSVG
-                                        width={30}
-                                        height={30}
-                                        viewBox="5 5 50 50"
+                                    <GridSVG
+                                        width={40}
+                                        height={40}
+                                        viewBox="0 20 80 80"
+                                        filled
                                     />
                                 </Button>
                             </Tooltip>

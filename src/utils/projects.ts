@@ -17,6 +17,7 @@ import queenKing from "@/assets/images/projects/digital-drawings/queen-king.jpg"
 import blackSwan from "@/assets/images/projects/digital-drawings/black-swan.jpg";
 import sunday from "@/assets/images/projects/digital-drawings/sunday.jpg";
 import headInTheClouds from "@/assets/images/projects/digital-drawings/head-in-the-clouds.jpg";
+import starterPack from "@/assets/images/projects/digital-drawings/starter-pack.jpg";
 
 export enum ProjectID {
     lettering = 'lettering',
@@ -106,6 +107,10 @@ export const ProjectsList: ProjectInterface[] = [
             {
                 original:sunday.src,
                 thumbnail: sunday.src
+            },
+            {
+                original: starterPack.src,
+                thumbnail: starterPack.src
             }
         ],
         link: {

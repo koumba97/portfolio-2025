@@ -2,6 +2,7 @@
 export interface SVGProp {
     width: number;
     height: number;
+    filled?: boolean;
     viewBox?: viewBox;
     color?: string;
 }
