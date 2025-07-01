@@ -1,6 +1,6 @@
 import { Tooltip } from "@mui/material";
 import "./tool.scss";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import { useState } from "react";
 import ToolModal from "@/components/tool-modal/tool-modal";
 import LinkUI from "../links/link";
@@ -12,12 +12,7 @@ export interface ToolProp {
     full?: boolean;
     showName?: boolean;
 }
-export default function Tool({
-    name,
-    image,
-    full,
-    showName = false,
-}: ToolProp) {
+export default function Tool({ name, image, showName = false }: ToolProp) {
     return (
         <Tooltip title={name} disableHoverListener={showName}>
             <div className="tool">
@@ -45,11 +40,7 @@ interface ToolContainerProp {
     handleFullList?: () => void;
     tools: ToolProp[];
 }
-export function ToolContainer({
-    max,
-    handleFullList,
-    tools,
-}: ToolContainerProp) {
+export function ToolContainer({ max, tools }: ToolContainerProp) {
     const [modalIsVisible, setModalIsVisible] = useState(false);
     function handleToolModal() {
         setModalIsVisible(!modalIsVisible);

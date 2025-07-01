@@ -14,7 +14,7 @@ import ProjectModal from "@/components/project-modal/project-modal";
 import LinkUI from "@/ui/links/link";
 import GithubSVG from "@/svg/Github";
 import LinkSVG from "@/svg/Link";
-import Tool, { ToolContainer } from "@/ui/tool/tool";
+import { ToolContainer } from "@/ui/tool/tool";
 
 const images = [
     {
