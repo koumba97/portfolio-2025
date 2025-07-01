@@ -1,0 +1,59 @@
+@import "../../utils/variables.scss";
+
+[aria-labelledby="modal-modal-title"] {
+    display: flex;
+    align-items: center;
+}
+.modal-tool {
+    background-color: white;
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+    padding: 15px 20px 20px 20px;
+    border-radius: 20px;
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+
+        h3 {
+            font-size: 24px;
+        }
+        .close-button {
+            min-width: unset;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .content {
+        overflow: scroll;
+        max-height: 300px;
+        padding: 20px 0;
+        border-top: solid 2px $grey-100;
+        border-bottom: solid 2px $grey-100;
+    }
+    .modal-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+
+        button {
+            margin-left: auto;
+        }
+    }
+}
+
+@media (max-width: $sm-breakpoint) {
+    .modal-tool {
+        .header-modal {
+            h3 {
+                font-size: 20px;
+            }
+        }
+        max-width: 80vw;
+    }
+}

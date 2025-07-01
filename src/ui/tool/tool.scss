@@ -21,12 +21,13 @@
     }
 
     &:active {
-        scale: 95%;
+        scale: 90%;
     }
 
     &.plus {
         background-color: black;
         color: white;
+        cursor: pointer;
         span {
             font-weight: 800;
             font-size: 20px;
