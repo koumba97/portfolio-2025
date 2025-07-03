@@ -1,0 +1,23 @@
+@import "../../utils/variables.scss";
+
+.project-bloc {
+    border-radius: 20px;
+    background-color: $grey-100;
+    img {
+        max-height: 200px;
+    }
+
+    animation-name: slide-in;
+    animation-duration: 0.7s;
+    position: relative;
+}
+
+@keyframes slide-in {
+    0% {
+        right: -200px;
+    }
+
+    100% {
+        right: 0;
+    }
+}
