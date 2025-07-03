@@ -16,6 +16,7 @@ import GithubSVG from "@/svg/Github";
 import LinkSVG from "@/svg/Link";
 import { ToolContainer } from "@/ui/tool/tool";
 import GridSVG from "@/svg/Grid";
+import OtherProjects from "@/components/other-projects/other-projects";
 
 type Props = {
     params: Promise<{ slug: string }>;
@@ -30,10 +31,7 @@ export default function ProjectPage({ params }: Props) {
     const [titleHTML, setTitleHTML] = useState<string>();
     const [descriptionModalIsVisible, setDescriptionModalIsVisible] =
         useState(false);
-    const [otherProjectSlicePos, setOtherProjectSlicePos] = useState([0, 0]);
-    const [restartOtherProjectLoop, setRestartOtherProjectLoop] =
-        useState(false);
-    const NUMBER_OTHER_PROJECTS = 4;
+
     useEffect(() => {
         const getProjectInfo = () => {
             let nextProjectIndex: number = 1;
@@ -41,6 +39,7 @@ export default function ProjectPage({ params }: Props) {
                 if (project.id === slug) {
                     nextProjectIndex = index + 1;
                     setProjectIndex(index);
+                    console.log(index);
                     return project;
                 }
             });
@@ -56,23 +55,6 @@ export default function ProjectPage({ params }: Props) {
                     );
                 } else {
                     setTitleHTML(foundProject.name);
-                }
-
-                if (
-                    nextProjectIndex + NUMBER_OTHER_PROJECTS >
-                    ProjectsList.length
-                ) {
-                    setRestartOtherProjectLoop(true);
-                    setOtherProjectSlicePos([
-                        nextProjectIndex,
-                        ProjectsList.length,
-                    ]);
-                } else {
-                    console.log(nextProjectIndex);
-                    setOtherProjectSlicePos([
-                        nextProjectIndex,
-                        nextProjectIndex + NUMBER_OTHER_PROJECTS,
-                    ]);
                 }
             }
         };
@@ -212,58 +194,9 @@ export default function ProjectPage({ params }: Props) {
                         </div>
                     </div>
                 </div>
-                {ProjectsList.slice(
-                    otherProjectSlicePos[0],
-                    otherProjectSlicePos[1]
-                ).map((project) => {
-                    return (
-                        <ProjectBloc
-                            frontImg={
-                                project.coverImage.front
-                                    ? project.coverImage.front
-                                    : undefined
-                            }
-                            backImg={
-                                project.coverImage.back
-                                    ? project.coverImage.back.src
-                                    : undefined
-                            }
-                            frontHeight={project.coverImage.frontHeight}
-                            top={project.coverImage.top}
-                            left={project.coverImage.left}
-                            id={project.id}
-                            key={project.id}
-                        />
-                    );
-                })}
-
-                {restartOtherProjectLoop
-                    ? ProjectsList.slice(
-                          0,
-                          NUMBER_OTHER_PROJECTS -
-                              (ProjectsList.length - (projectIndex + 1))
-                      ).map((project) => {
-                          return (
-                              <ProjectBloc
-                                  frontImg={
-                                      project.coverImage.front
-                                          ? project.coverImage.front
-                                          : undefined
-                                  }
-                                  backImg={
-                                      project.coverImage.back
-                                          ? project.coverImage.back.src
-                                          : undefined
-                                  }
-                                  frontHeight={project.coverImage.frontHeight}
-                                  top={project.coverImage.top}
-                                  left={project.coverImage.left}
-                                  id={project.id}
-                                  key={project.id}
-                              />
-                          );
-                      })
-                    : null}
+                {project ? (
+                    <OtherProjects currentProjectIndex={projectIndex} />
+                ) : null}
             </div>
         </div>
     );
