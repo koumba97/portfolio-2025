@@ -10,7 +10,6 @@ import { Link } from "next-view-transitions";
 import { ProjectInterface, ProjectsList } from "@/utils/projects";
 import ShowMoreText from "react-show-more-text";
 import ProjectModal from "@/components/project-modal/project-modal";
-import { ProjectBloc } from "@/components/index-sections/projects/projects";
 import LinkUI from "@/ui/links/link";
 import GithubSVG from "@/svg/Github";
 import LinkSVG from "@/svg/Link";
@@ -34,10 +33,8 @@ export default function ProjectPage({ params }: Props) {
 
     useEffect(() => {
         const getProjectInfo = () => {
-            let nextProjectIndex: number = 1;
             const foundProject = ProjectsList.find((project, index) => {
                 if (project.id === slug) {
-                    nextProjectIndex = index + 1;
                     setProjectIndex(index);
                     console.log(index);
                     return project;

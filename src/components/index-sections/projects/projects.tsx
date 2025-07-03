@@ -56,6 +56,7 @@ export function ProjectBloc({
         <Link
             href={`/project/${id}`}
             className="project-bloc"
+            aria-labelledby={id}
             style={{
                 backgroundImage: backImg ? `url("${backImg}")` : undefined,
                 backgroundSize: "cover",
