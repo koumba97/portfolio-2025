@@ -44,7 +44,7 @@ interface ProjectBlocInterface {
     id: string;
 }
 
-function ProjectBloc({
+export function ProjectBloc({
     backImg,
     frontImg,
     frontHeight,

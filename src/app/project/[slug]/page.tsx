@@ -6,39 +6,16 @@ import ImageGallery from "react-image-gallery";
 import Button from "@mui/material/Button";
 import { Tooltip } from "@mui/material";
 import "react-image-gallery/styles/css/image-gallery.css";
-import ArrowLeftSVG from "@/svg/ArrowLeft";
 import { Link } from "next-view-transitions";
 import { ProjectInterface, ProjectsList } from "@/utils/projects";
 import ShowMoreText from "react-show-more-text";
 import ProjectModal from "@/components/project-modal/project-modal";
+import { ProjectBloc } from "@/components/index-sections/projects/projects";
 import LinkUI from "@/ui/links/link";
 import GithubSVG from "@/svg/Github";
 import LinkSVG from "@/svg/Link";
 import { ToolContainer } from "@/ui/tool/tool";
 import GridSVG from "@/svg/Grid";
-
-const images = [
-    {
-        original: "https://picsum.photos/id/1018/1000/600/",
-        thumbnail: "https://picsum.photos/id/1018/250/150/",
-    },
-    {
-        original: "https://picsum.photos/id/1015/1000/600/",
-        thumbnail: "https://picsum.photos/id/1015/250/150/",
-    },
-    {
-        original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
-    },
-    {
-        original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
-    },
-    {
-        original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
-    },
-];
 
 type Props = {
     params: Promise<{ slug: string }>;
@@ -49,19 +26,27 @@ export default function ProjectPage({ params }: Props) {
     const galleryRef = useRef<ImageGallery | null>(null);
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [project, setProject] = useState<ProjectInterface>();
+    const [projectIndex, setProjectIndex] = useState<number>(0);
     const [titleHTML, setTitleHTML] = useState<string>();
     const [descriptionModalIsVisible, setDescriptionModalIsVisible] =
         useState(false);
-
+    const [otherProjectSlicePos, setOtherProjectSlicePos] = useState([0, 0]);
+    const [restartOtherProjectLoop, setRestartOtherProjectLoop] =
+        useState(false);
+    const NUMBER_OTHER_PROJECTS = 4;
     useEffect(() => {
         const getProjectInfo = () => {
-            const foundProject = ProjectsList.find(
-                (project) => project.id === slug
-            );
+            let nextProjectIndex: number = 1;
+            const foundProject = ProjectsList.find((project, index) => {
+                if (project.id === slug) {
+                    nextProjectIndex = index + 1;
+                    setProjectIndex(index);
+                    return project;
+                }
+            });
             if (foundProject) {
                 setProject(foundProject);
                 if (foundProject.name.split(" ").length === 2) {
-                    console.log("okok");
                     setTitleHTML(
                         `${
                             foundProject.name.split(" ")[0]
@@ -71,6 +56,23 @@ export default function ProjectPage({ params }: Props) {
                     );
                 } else {
                     setTitleHTML(foundProject.name);
+                }
+
+                if (
+                    nextProjectIndex + NUMBER_OTHER_PROJECTS >
+                    ProjectsList.length
+                ) {
+                    setRestartOtherProjectLoop(true);
+                    setOtherProjectSlicePos([
+                        nextProjectIndex,
+                        ProjectsList.length,
+                    ]);
+                } else {
+                    console.log(nextProjectIndex);
+                    setOtherProjectSlicePos([
+                        nextProjectIndex,
+                        nextProjectIndex + NUMBER_OTHER_PROJECTS,
+                    ]);
                 }
             }
         };
@@ -210,10 +212,58 @@ export default function ProjectPage({ params }: Props) {
                         </div>
                     </div>
                 </div>
-                <div className="grid-section"></div>
-                <div className="grid-section"></div>
-                <div className="grid-section"></div>
-                <div className="grid-section"></div>
+                {ProjectsList.slice(
+                    otherProjectSlicePos[0],
+                    otherProjectSlicePos[1]
+                ).map((project) => {
+                    return (
+                        <ProjectBloc
+                            frontImg={
+                                project.coverImage.front
+                                    ? project.coverImage.front
+                                    : undefined
+                            }
+                            backImg={
+                                project.coverImage.back
+                                    ? project.coverImage.back.src
+                                    : undefined
+                            }
+                            frontHeight={project.coverImage.frontHeight}
+                            top={project.coverImage.top}
+                            left={project.coverImage.left}
+                            id={project.id}
+                            key={project.id}
+                        />
+                    );
+                })}
+
+                {restartOtherProjectLoop
+                    ? ProjectsList.slice(
+                          0,
+                          NUMBER_OTHER_PROJECTS -
+                              (ProjectsList.length - (projectIndex + 1))
+                      ).map((project) => {
+                          return (
+                              <ProjectBloc
+                                  frontImg={
+                                      project.coverImage.front
+                                          ? project.coverImage.front
+                                          : undefined
+                                  }
+                                  backImg={
+                                      project.coverImage.back
+                                          ? project.coverImage.back.src
+                                          : undefined
+                                  }
+                                  frontHeight={project.coverImage.frontHeight}
+                                  top={project.coverImage.top}
+                                  left={project.coverImage.left}
+                                  id={project.id}
+                                  key={project.id}
+                              />
+                          );
+                      })
+                    : null}
             </div>
         </div>
     );

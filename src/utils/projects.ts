@@ -40,7 +40,7 @@ export interface ProjectInterface {
         left?: `${number}%`
     },
     description: string
-    gallery: {original: any, thumbnail:any}[],
+    gallery: {original: string, thumbnail:string}[],
     link?: {
         github?: string,
         live?: string

@@ -22,7 +22,6 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                //border: solid 20px pink;
 
                 .image-gallery-content {
                     align-self: center;
@@ -238,6 +237,14 @@
             }
             &:nth-of-type(6) {
                 background-color: #b8ffe7;
+            }
+        }
+
+        .project-bloc {
+            border-radius: 20px;
+            background-color: $grey-100;
+            img {
+                max-height: 200px;
             }
         }
     }

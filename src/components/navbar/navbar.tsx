@@ -2,7 +2,6 @@
 
 import "./navbar.scss";
 import { Link } from "next-view-transitions";
-import HomeSVG from "@/svg/Home";
 import SuitcaseSVG from "@/svg/Suitcase";
 import ToolSVG from "@/svg/Tool";
 import UserSVG from "@/svg/User";
@@ -34,8 +33,6 @@ export default function NavBar() {
                             viewBox="0 35 80 80"
                             filled={pathname === "" || pathname === "project"}
                         />
-
-                        {/* <HomeSVG width={24} height={24} viewBox="0 0 32 32" /> */}
                     </Button>
                 </Tooltip>
             </Link>
