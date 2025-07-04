@@ -25,6 +25,11 @@ export default function NavBar() {
                                 : null
                         }
                         nav-button`}
+                        style={
+                            pathname === "project"
+                                ? { pointerEvents: "initial" }
+                                : { pointerEvents: "none" }
+                        }
                         color="inherit"
                     >
                         <GridSVG

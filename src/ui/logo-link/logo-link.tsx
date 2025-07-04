@@ -3,8 +3,8 @@ import "./logo-link.scss";
 
 export default function LogoLink() {
     return (
-        <Link href="/">
-            <h1 className="logo-link">Koum.</h1>
+        <Link href="/" className="logo-link">
+            Koum.
         </Link>
     );
 }

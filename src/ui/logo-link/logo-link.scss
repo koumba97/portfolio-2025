@@ -1,5 +1,14 @@
+@import "../../utils/variables.scss";
+
 .logo-link {
     font-family: "Lost Days";
     width: max-content;
-    margin: auto;
+    margin: 0 auto;
+    font-size: 38px;
+}
+
+@media (max-width: $md-breakpoint) {
+    .logo-link {
+        margin-bottom: 20px;
+    }
 }

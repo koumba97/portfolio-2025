@@ -1,0 +1,16 @@
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    svg {
+        filter: invert(65%) sepia(94%) saturate(2%) hue-rotate(360deg)
+            brightness(95%) contrast(93%);
+        transition: filter 0.3s;
+
+        &:hover {
+            filter: invert(29%) sepia(55%) saturate(4745%) hue-rotate(241deg)
+                brightness(98%) contrast(106%);
+        }
+    }
+}

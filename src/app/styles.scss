@@ -32,6 +32,22 @@ body {
     gap: 20px;
     flex: 1;
 }
+footer {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: $md-breakpoint) {
+    .section {
+        margin-bottom: 30px;
+    }
+    footer {
+        margin-bottom: 80px;
+    }
+}
 
 @media (max-width: $sm-breakpoint) {
     body {
@@ -49,6 +65,11 @@ body {
         display: flex;
         align-items: center;
     }
+}
+.credit {
+    color: $grey-300;
+    font-size: 14px;
+    user-select: none;
 }
 html::view-transition-old(page-body),
 html::view-transition-new(page-body) {

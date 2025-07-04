@@ -1,45 +1,47 @@
 @import "../../utils/variables.scss";
 
-.project-bloc {
-    border-radius: 20px;
-    background-color: $grey-100;
-    img {
-        max-height: 200px;
+.project-section {
+    .project-bloc {
+        border-radius: 20px;
+        background-color: $grey-100;
+        img {
+            max-height: 200px;
+        }
+
+        &[aria-labelledby="cookish-master"] {
+            background-color: #a0b3ff;
+        }
+
+        &[aria-labelledby="music-library"] {
+            background-color: #43fabd72;
+        }
+
+        &[aria-labelledby="design-system"] {
+            background-color: #b8ffe7;
+        }
+
+        &[aria-labelledby="3d-modeling"] {
+            background-color: #ffff5e;
+        }
+
+        animation-name: slide-in;
+        animation-duration: 1s;
+        position: relative;
     }
 
-    &[aria-labelledby="cookish-master"] {
-        background-color: #a0b3ff;
-    }
+    @keyframes slide-in {
+        0% {
+            right: -200px;
+        }
 
-    &[aria-labelledby="music-library"] {
-        background-color: #43fabd72;
-    }
-
-    &[aria-labelledby="design-system"] {
-        background-color: #b8ffe7;
-    }
-
-    &[aria-labelledby="3d-modeling"] {
-        background-color: #ffff5e;
-    }
-
-    animation-name: slide-in;
-    animation-duration: 1s;
-    position: relative;
-}
-
-@keyframes slide-in {
-    0% {
-        right: -200px;
-    }
-
-    60% {
-        right: 20px;
-    }
-    80% {
-        right: -20px;
-    }
-    100% {
-        right: 0;
+        60% {
+            right: 20px;
+        }
+        80% {
+            right: -20px;
+        }
+        100% {
+            right: 0;
+        }
     }
 }
