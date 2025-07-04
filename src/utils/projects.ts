@@ -19,6 +19,18 @@ import sunday from "@/assets/images/projects/digital-drawings/sunday.jpg";
 import headInTheClouds from "@/assets/images/projects/digital-drawings/head-in-the-clouds.jpg";
 import starterPack from "@/assets/images/projects/digital-drawings/starter-pack.jpg";
 
+//LETTERING
+import letteringBook from "@/assets/images/projects/lettering/lettering.png";
+import hybridation from "@/assets/images/projects/lettering/hybridation.png";
+import hybridation2 from "@/assets/images/projects/lettering/hybridation2.png";
+import hybridation3 from "@/assets/images/projects/lettering/hybridation3.jpg";
+
+//MUSIC LIBRARY
+import musicLibrary2 from "@/assets/images/projects/music-library/music-library2.png";
+import musicLibrary3 from "@/assets/images/projects/music-library/music-library3.png";
+import musicLibrary4 from "@/assets/images/projects/music-library/music-library4.png";
+import musicLibrary5 from "@/assets/images/projects/music-library/music-library5.png";
+
 export enum ProjectID {
     lettering = 'lettering',
     digitalDrawings = 'digital-drawings',
@@ -58,27 +70,23 @@ export const ProjectsList: ProjectInterface[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [
             {
-                original:goodDays.src,
-                thumbnail: goodDays.src
+                original:letteringBook.src,
+                thumbnail: letteringBook.src
             }, 
             {
-                original:queenKing.src, 
-                thumbnail: queenKing.src
+                original:hybridation.src, 
+                thumbnail: hybridation.src
             },
             {
-                original:blackSwan.src, 
-                thumbnail: blackSwan.src
+                original:hybridation2.src, 
+                thumbnail: hybridation2.src
             },
             {
-                original:headInTheClouds.src, 
-                thumbnail: headInTheClouds.src
+                original:hybridation3.src, 
+                thumbnail: hybridation3.src
             },
-            {
-                original:sunday.src,
-                thumbnail: sunday.src
-            }
         ],
-        tool: []
+        tool: [Tool.illustrator, Tool.indesign, Tool.photoshop]
     },
     {
         name: 'Digital drawings',
@@ -164,25 +172,21 @@ export const ProjectsList: ProjectInterface[] = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
         gallery: [
             {
-                original:goodDays.src,
-                thumbnail: goodDays.src
+                original:musicLibrary2.src,
+                thumbnail: musicLibrary2.src
             }, 
             {
-                original:queenKing.src, 
-                thumbnail: queenKing.src
+                original:musicLibrary3.src,
+                thumbnail: musicLibrary3.src
             },
             {
-                original:blackSwan.src, 
-                thumbnail: blackSwan.src
+                original:musicLibrary4.src, 
+                thumbnail: musicLibrary4.src
             },
             {
-                original:headInTheClouds.src, 
-                thumbnail: headInTheClouds.src
+                original:musicLibrary5.src, 
+                thumbnail: musicLibrary5.src
             },
-            {
-                original:sunday.src,
-                thumbnail: sunday.src
-            }
         ],
         link: {
             github: 'https://github.com/koumba97/music-library',

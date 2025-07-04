@@ -25,7 +25,7 @@ body {
 .section {
     margin: auto;
     max-width: 800px;
-    min-height: 400px;
+    min-height: 570px;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -61,7 +61,7 @@ footer {
     flex: 0.5;
 
     &:has(> .about-me-section) {
-        flex: 1;
+        //flex: 1;
         display: flex;
         align-items: center;
     }

@@ -25,17 +25,20 @@ export default function NavBar() {
                                 : null
                         }
                         nav-button`}
-                        style={
-                            pathname === "project"
-                                ? { pointerEvents: "initial" }
-                                : { pointerEvents: "none" }
-                        }
+                        style={{
+                            pointerEvents:
+                                pathname === "project"
+                                    ? "initial"
+                                    : pathname === ""
+                                    ? "none"
+                                    : undefined,
+                        }}
                         color="inherit"
                     >
                         <GridSVG
                             width={40}
                             height={40}
-                            viewBox="0 35 80 80"
+                            viewBox="-5 40 90 90"
                             filled={pathname === "" || pathname === "project"}
                         />
                     </Button>

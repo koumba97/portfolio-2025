@@ -169,7 +169,7 @@ export default function ProjectPage({ params }: Props) {
                                                           <GithubSVG
                                                               width={20}
                                                               height={20}
-                                                              viewBox="6 0 25 35"
+                                                              viewBox="0 0 60 60"
                                                           />
                                                           See the code
                                                       </>
