@@ -7,10 +7,6 @@ import NavBar from "@/components/navbar/navbar";
 import LogoLink from "@/ui/logo-link/logo-link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import BehanceSVG from "@/svg/Behance";
-import DribbbleSVG from "@/svg/Dribbble";
-import GithubSVG from "@/svg/Github";
-import InstagramSVG from "@/svg/Instagram";
 import SocialMedia from "@/components/social-media/SocialMedia";
 
 export default function RootLayout({
