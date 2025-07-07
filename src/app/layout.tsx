@@ -8,6 +8,7 @@ import LogoLink from "@/ui/logo-link/logo-link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import SocialMedia from "@/components/social-media/SocialMedia";
+import { LanguageProvider } from "@/context/language-context";
 
 export default function RootLayout({
     children,
@@ -38,28 +39,30 @@ export default function RootLayout({
     }, [pathname]);
 
     return (
-        <ViewTransitions>
-            <html
-                lang="en"
-                data-page={currentPage}
-                data-transition={transition}
-            >
-                <body>
-                    <LogoLink />
-                    <NavBar />
-                    <div
-                        className={`page-body ${currentPage}`}
-                        style={{ viewTransitionName: "page-body" }}
-                        data-page={currentPage}
-                    >
-                        {children}
-                    </div>
-                    <footer>
-                        <p className="credit">© 2025, Koumba Keita</p>
-                        <SocialMedia />
-                    </footer>
-                </body>
-            </html>
-        </ViewTransitions>
+        <LanguageProvider>
+            <ViewTransitions>
+                <html
+                    lang="en"
+                    data-page={currentPage}
+                    data-transition={transition}
+                >
+                    <body>
+                        <LogoLink />
+                        <NavBar />
+                        <div
+                            className={`page-body ${currentPage}`}
+                            style={{ viewTransitionName: "page-body" }}
+                            data-page={currentPage}
+                        >
+                            {children}
+                        </div>
+                        <footer>
+                            <p className="credit">© 2025, Koumba Keita</p>
+                            <SocialMedia />
+                        </footer>
+                    </body>
+                </html>
+            </ViewTransitions>
+        </LanguageProvider>
     );
 }

@@ -9,15 +9,18 @@ import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
 import { usePathname } from "next/navigation";
 import GridSVG from "@/svg/Grid";
+import { Locals } from "@/utils/locals";
+import { useLang } from "@/context/language-context";
 
 export default function NavBar() {
+    const { lang } = useLang();
     let pathname = usePathname();
     pathname = pathname === "/" ? "" : pathname.split("/")[1];
 
     return (
         <div className="bottom-navbar">
             <Link href="/">
-                <Tooltip title="Home" placement="top">
+                <Tooltip title={Locals.home[lang]} placement="top">
                     <Button
                         className={`${
                             pathname === "" || pathname === "project"
@@ -46,7 +49,7 @@ export default function NavBar() {
             </Link>
 
             <Link href="/about-me">
-                <Tooltip title="About me" placement="top">
+                <Tooltip title={Locals.aboutMe[lang]} placement="top">
                     <Button
                         className={`${pathname === "about-me" ? "active" : null}
                         nav-button`}
@@ -63,7 +66,7 @@ export default function NavBar() {
             </Link>
 
             <Link href="/experience">
-                <Tooltip title="Experience" placement="top">
+                <Tooltip title={Locals.experience[lang]} placement="top">
                     <Button className="nav-button" color="inherit">
                         <SuitcaseSVG
                             width={24}
@@ -75,7 +78,7 @@ export default function NavBar() {
             </Link>
 
             <Link href="/skills">
-                <Tooltip title="Skills" placement="top">
+                <Tooltip title={Locals.skills[lang]} placement="top">
                     <Button className="nav-button" color="inherit">
                         <ToolSVG width={24} height={24} viewBox="0 0 37 37" />
                     </Button>

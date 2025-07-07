@@ -7,14 +7,17 @@ import ButtonUI from "@/ui/button/button";
 import Movinwords from "movinwords";
 import "movinwords/styles";
 import { useEffect, useRef, useState } from "react";
+import { Locals } from "@/utils/locals";
+import { useLang } from "@/context/language-context";
 
 export default function AboutMe() {
+    const { lang } = useLang();
     const titleRef = useRef<Movinwords | null>(null);
     const roles = [
-        "UI/UX Designer",
-        "Digital Artist",
-        "Graphic Designer",
-        "Frontend engineer",
+        Locals.uiUxDesigner[lang],
+        Locals.digitalArtist[lang],
+        Locals.graphicDesigner[lang],
+        Locals.frontendEngineer[lang],
     ];
     const [currentRole, setCurrentRole] = useState(roles[3]);
     const INTERVAL_TIME = 3000;
@@ -60,7 +63,7 @@ export default function AboutMe() {
 
             <div className="text-container">
                 <div>
-                    <h2>Hi I'm Koum and I'm a</h2>
+                    <h2>{Locals.aboutMeRoleIntro[lang]}</h2>
                     <h1 className="title test"></h1>
                 </div>
                 <p>

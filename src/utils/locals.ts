@@ -10,7 +10,7 @@ type LocalLang = {
 };
   
   
-  const Locals: LocalLang = {
+export const Locals: LocalLang = {
     //MENU ITEMS
     home: {
         en: "Home",
@@ -49,6 +49,28 @@ type LocalLang = {
     tools: {
         en: "Tools",
         fr: "Outils"
+    },
+
+    //PAGE ABOUT ME
+    aboutMeRoleIntro:  {
+        en: "I'm Koumba and I'm a",
+        fr: "Je m'appelle Koumba et je suis une"
+    },
+    uiUxDesigner: {
+        en: "UI/UX Designer",
+        fr: "UI/UX Designer"
+    },
+    digitalArtist: {
+        en: "Digital Artiste",
+        fr: "Artiste digital"
+    },
+    graphicDesigner: {
+        en: "Graphic Designer",
+        fr: "Designer Graphique"
+    },
+    frontendEngineer: {
+        en: "Frontend Engineer",
+        fr: "Ingénieur Frontend"
     },
 }
   

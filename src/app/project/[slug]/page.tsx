@@ -16,6 +16,8 @@ import LinkSVG from "@/svg/Link";
 import { ToolContainer } from "@/ui/tool/tool";
 import GridSVG from "@/svg/Grid";
 import OtherProjects from "@/components/other-projects/other-projects";
+import { useLang } from "@/context/language-context";
+import { Locals } from "@/utils/locals";
 
 type Props = {
     params: Promise<{ slug: string }>;
@@ -23,6 +25,7 @@ type Props = {
 
 export default function ProjectPage({ params }: Props) {
     const { slug } = use(params);
+    const { lang } = useLang();
     const galleryRef = useRef<ImageGallery | null>(null);
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [project, setProject] = useState<ProjectInterface>();
@@ -132,8 +135,7 @@ export default function ProjectPage({ params }: Props) {
                     <ShowMoreText
                         /* Default options */
                         lines={5}
-                        more="Show more"
-                        less="Show less"
+                        more={Locals.showMore[lang]}
                         className="show-more-text-container"
                         anchorClass="show-more-less-clickable"
                         expanded={false}
@@ -153,7 +155,7 @@ export default function ProjectPage({ params }: Props) {
 
                     <div className="bottom">
                         <div className="tool-list-container">
-                            <h5>Tools</h5>
+                            <h5>{Locals.tools[lang]}</h5>
                             {project ? (
                                 <ToolContainer max={3} tools={project?.tool} />
                             ) : null}
@@ -171,7 +173,7 @@ export default function ProjectPage({ params }: Props) {
                                                               height={20}
                                                               viewBox="0 0 60 60"
                                                           />
-                                                          See the code
+                                                          {Locals.seeCode[lang]}
                                                       </>
                                                   ) : key === "live" ? (
                                                       <>
@@ -180,7 +182,11 @@ export default function ProjectPage({ params }: Props) {
                                                               height={20}
                                                               viewBox="6 0 25 35"
                                                           />
-                                                          See the project
+                                                          {
+                                                              Locals.seeProject[
+                                                                  lang
+                                                              ]
+                                                          }
                                                       </>
                                                   ) : null}
                                               </>
