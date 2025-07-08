@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import SocialMedia from "@/components/social-media/SocialMedia";
 import { LanguageProvider } from "@/context/language-context";
+import LangButton from "@/components/lang-button/lang-button";
 
 export default function RootLayout({
     children,
@@ -47,7 +48,11 @@ export default function RootLayout({
                     data-transition={transition}
                 >
                     <body>
-                        <LogoLink />
+                        <menu className="menu-bar">
+                            <p>Portfolio</p>
+                            <LogoLink />
+                            <LangButton />
+                        </menu>
                         <NavBar />
                         <div
                             className={`page-body ${currentPage}`}

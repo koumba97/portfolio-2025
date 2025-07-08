@@ -11,6 +11,15 @@ type LocalLang = {
   
   
 export const Locals: LocalLang = {
+    //LANG
+    en: {
+        en: "English",
+        fr: "Anglais",
+    },
+    fr: {
+        en: "French",
+        fr: "Français",
+    },
     //MENU ITEMS
     home: {
         en: "Home",
