@@ -5,7 +5,7 @@ interface Prop {
     children: React.ReactNode;
     type?: "contained" | "outlined";
     className?: string;
-    onClick?: Function;
+    onClick?: () => void;
 }
 
 export default function ButtonUI({
