@@ -1,7 +1,7 @@
 "use client";
 
 import "./lang-button.scss";
-import { useEffect, useState, RefObject } from "react";
+import { useEffect, useState } from "react";
 import { useLang } from "@/context/language-context";
 import EarthSVG from "@/svg/Earth";
 import ButtonUI from "@/ui/button/button";
