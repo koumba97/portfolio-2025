@@ -13,7 +13,7 @@ import frenchLang from "@/assets/images/lang/french.png";
 export default function LangButton() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [isSlidingOut, setIsSlidingOut] = useState<boolean>(false);
-    const { lang } = useLang();
+    const { lang, setLang } = useLang();
 
     useEffect(() => {
         document.addEventListener("mousedown", handleClickOutside);
@@ -61,12 +61,12 @@ export default function LangButton() {
                 <ul
                     className={`lang-list ${isSlidingOut ? "slide-out" : null}`}
                 >
-                    <li>
+                    <li onClick={() => setLang("en")}>
                         {" "}
                         <Image src={englishLang} height={20} alt="uk flag" />
                         {Locals.en[lang]}
                     </li>
-                    <li>
+                    <li onClick={() => setLang("fr")}>
                         {" "}
                         <Image src={frenchLang} height={20} alt="france flag" />
                         {Locals.fr[lang]}

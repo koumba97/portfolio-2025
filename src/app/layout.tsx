@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import SocialMedia from "@/components/social-media/SocialMedia";
 import { LanguageProvider } from "@/context/language-context";
-import LangButton from "@/components/lang-button/lang-button";
+import LangButton from "@/ui/lang-button/lang-button";
 
 export default function RootLayout({
     children,
