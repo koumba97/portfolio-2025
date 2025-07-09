@@ -10,30 +10,19 @@ import Image from "next/image";
 import englishLang from "@/assets/images/lang/english.png";
 import frenchLang from "@/assets/images/lang/french.png";
 
-export default function LangButton(
-    ref: RefObject<HTMLElement>,
-    onClickOutside: () => void
-) {
-    const [isOpen, setIsOpen] = useState<boolean>(true);
+export default function LangButton() {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
     const [isSlidingOut, setIsSlidingOut] = useState<boolean>(false);
     const { lang } = useLang();
 
     useEffect(() => {
-        function handleClickOutside(event: MouseEvent) {
-            const target = event.target as HTMLElement;
-
-            // Vérifie si le clic est *en dehors* d’un élément avec la classe `.lang-button`
-            if (!target.closest(".lang-list") && !target.closest(".button")) {
-                toggleButton();
-            }
-        }
-
         document.addEventListener("mousedown", handleClickOutside);
 
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
+
     const toggleButton = () => {
         if (isOpen) {
             setIsSlidingOut(true);
@@ -43,6 +32,22 @@ export default function LangButton(
             }, 500);
         } else {
             setIsOpen(!isOpen);
+        }
+    };
+
+    const handleClickOutside = (event: MouseEvent) => {
+        const target = event.target as HTMLElement;
+        const langList = document.getElementsByClassName("lang-list")[0];
+        if (
+            !target.closest(".lang-list") &&
+            !target.closest(".button") &&
+            langList
+        ) {
+            setIsSlidingOut(true);
+            setTimeout(() => {
+                setIsSlidingOut(false);
+                setIsOpen(false);
+            }, 500);
         }
     };
 
