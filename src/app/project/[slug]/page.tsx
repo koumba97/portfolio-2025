@@ -100,7 +100,7 @@ export default function ProjectPage({ params }: Props) {
                 <div className="grid-section">
                     <div className="back-wrapper">
                         <Link href="/">
-                            <Tooltip title="Home" placement="top">
+                            <Tooltip title={Locals.home[lang]} placement="top">
                                 <Button className="back-button" color="inherit">
                                     <GridSVG
                                         width={40}
