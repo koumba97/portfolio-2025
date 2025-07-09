@@ -14,10 +14,16 @@ const LanguageContext = createContext<{
 }>({ lang: "en", setLang: () => {} });
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-    const defaultLang = localStorage.getItem("koum-portfolio-lang")
-        ? (localStorage.getItem("koum-portfolio-lang") as Lang)
-        : "en";
-    const [lang, setLang] = useState<Lang>(defaultLang);
+    const [lang, setLang] = useState<Lang>("en");
+
+    useEffect(() => {
+        const storedLang = localStorage.getItem(
+            "koum-portfolio-lang"
+        ) as Lang | null;
+        if (storedLang === "en" || storedLang === "fr") {
+            setLang(storedLang);
+        }
+    }, []);
 
     useEffect(() => {
         localStorage.setItem("koum-portfolio-lang", lang);
