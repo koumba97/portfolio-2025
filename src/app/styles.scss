@@ -68,11 +68,23 @@ footer {
     footer {
         margin-bottom: 80px;
     }
+
+    .menu-bar {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: $sm-breakpoint) {
     body {
         padding: 20px;
+    }
+    .menu-bar {
+        p {
+            display: none;
+        }
+        a {
+            text-align: left;
+        }
     }
 }
 

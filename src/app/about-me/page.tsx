@@ -70,13 +70,15 @@ export default function AboutMe() {
                     Lorem ipsum dolor sit amet, consectet adipiscing elit.
                     Integer porttitor ligula sit amet turpis congue, at faucibus
                     tellus auctor. Fusce molestie scelerisque ligula in varius.
-                    In diam dui, molestie ut gravida et, sodales eu odio.
                 </p>
                 <div className="buttons-container">
                     <ButtonUI>Learn more</ButtonUI>
                     <ButtonUI type="outlined">Projects</ButtonUI>
                 </div>
             </div>
+            <div className="get-in-touch">Get in touch</div>
+            <div className="interests">Interests</div>
+            <div className="soft-skills">Soft skills</div>
         </div>
     );
 }
