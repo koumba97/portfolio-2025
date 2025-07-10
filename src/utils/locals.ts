@@ -81,5 +81,83 @@ export const Locals: LocalLang = {
         en: "Frontend Engineer",
         fr: "Ingénieur Frontend"
     },
+    projects: {
+        en: "Projects",
+        fr: "Projets"
+    },
+    learnMore: {
+        en: "Learn more",
+        fr: "En savoir plus"
+    },
+    getInTouch: {
+        en: "Get in touch",
+        fr: "Rester en contact"
+    },
+
+    interests: {
+        en: "Interets",
+        fr: "Centres d'intérêt"
+    },
+
+
+    softSkills: {
+        en: "Soft skills",
+        fr: "Qualités"
+    },
+
+    creative: {
+        en: "Creative",
+        fr: "Créative"
+    },
+
+    fastLeaner: {
+        en: "Fast learner",
+        fr: "Apprend vite"
+    },
+
+    stressManagement: {
+        en: "Stress management",
+        fr: "Gestion du stress"
+    },
+
+    autonomy: {
+        en: "Autonomy",
+        fr: "Autonomie"
+    },
+
+    multitasking: {
+        en: "Multitasking",
+        fr: "Multitâche"
+    },
+
+    criticalThinking: {
+        en: "criticalThinking",
+        fr: "Esprit critique"
+    },
+    problemSolving: {
+        en: "Problem solving",
+        fr: "Résolution de problèmes"
+    },
+    prioritizeIssues: {
+        en: "Prioritize issues",
+        fr: "Priorisation des enjeux"
+    },
+    attentionToDetail: {
+        en: "Attention to detail",
+        fr: "Rigueur"
+    },
+    teamSpirit: {
+        en: "Team spirit",
+        fr: "Esprit d'équipe"
+    },
+    adaptability: {
+        en: "Adaptability",
+        fr: "Capacité d’adaptation"
+    },
+    positiveAttitude: {
+        en: "Attitude positive",
+        fr: "Positive attitude"
+    }
+
 }
   

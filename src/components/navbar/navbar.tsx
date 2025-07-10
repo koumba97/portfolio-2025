@@ -58,7 +58,7 @@ export default function NavBar() {
                         <UserSVG
                             width={24}
                             height={24}
-                            viewBox="2 2 20 20"
+                            viewBox="2 4 20 20"
                             filled={pathname === "about-me"}
                         />
                     </Button>
@@ -67,11 +67,18 @@ export default function NavBar() {
 
             <Link href="/experience">
                 <Tooltip title={Locals.experience[lang]} placement="top">
-                    <Button className="nav-button" color="inherit">
+                    <Button
+                        className={`${
+                            pathname === "experience" ? "active" : null
+                        }
+                        nav-button`}
+                        color="inherit"
+                    >
                         <SuitcaseSVG
-                            width={24}
-                            height={24}
-                            viewBox="2 2 30 30"
+                            width={20}
+                            height={20}
+                            viewBox="0 1 20 20"
+                            filled={pathname === "experience"}
                         />
                     </Button>
                 </Tooltip>

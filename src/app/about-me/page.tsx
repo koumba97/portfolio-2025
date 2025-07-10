@@ -9,6 +9,8 @@ import "movinwords/styles";
 import { useEffect, useRef, useState } from "react";
 import { Locals } from "@/utils/locals";
 import { useLang } from "@/context/language-context";
+import { Link } from "next-view-transitions";
+import { Chip } from "@mui/material";
 
 export default function AboutMe() {
     const { lang } = useLang();
@@ -19,6 +21,22 @@ export default function AboutMe() {
         Locals.graphicDesigner[lang],
         Locals.frontendEngineer[lang],
     ];
+
+    const softSkills = [
+        Locals.creative[lang],
+        Locals.fastLeaner[lang],
+        Locals.stressManagement[lang],
+        Locals.autonomy[lang],
+        Locals.multitasking[lang],
+        Locals.criticalThinking[lang],
+        Locals.problemSolving[lang],
+        Locals.prioritizeIssues[lang],
+        Locals.attentionToDetail[lang],
+        Locals.teamSpirit[lang],
+        Locals.adaptability[lang],
+        Locals.positiveAttitude[lang],
+    ];
+
     const [currentRole, setCurrentRole] = useState(roles[3]);
     const INTERVAL_TIME = 3000;
     const ROLE_JUMP = 1;
@@ -72,13 +90,49 @@ export default function AboutMe() {
                     tellus auctor. Fusce molestie scelerisque ligula in varius.
                 </p>
                 <div className="buttons-container">
-                    <ButtonUI>Learn more</ButtonUI>
-                    <ButtonUI type="outlined">Projects</ButtonUI>
+                    <Link href="/experience">
+                        <ButtonUI>{Locals.learnMore[lang]}</ButtonUI>
+                    </Link>
+                    <Link href="/">
+                        <ButtonUI type="outlined">
+                            {Locals.projects[lang]}
+                        </ButtonUI>
+                    </Link>
                 </div>
             </div>
-            <div className="get-in-touch">Get in touch</div>
-            <div className="interests">Interests</div>
-            <div className="soft-skills">Soft skills</div>
+            <div className="get-in-touch">
+                <h3>{Locals.getInTouch[lang]}</h3>
+                <div
+                    id="email-contact-container"
+                    className="contact-container"
+                ></div>
+                <div
+                    id="linkedin-contact-container"
+                    className="contact-container"
+                ></div>
+            </div>
+            <div className="interests">
+                <h3>{Locals.interests[lang]}</h3>
+                <div className="interest"></div>
+                <div className="interest"></div>
+                <div className="interest"></div>
+                <div className="interest"></div>
+            </div>
+            <div className="soft-skills">
+                <h3>{Locals.softSkills[lang]}</h3>
+                <div className="list-container">
+                    {softSkills.map((skill) => {
+                        return (
+                            <Chip
+                                className="chip"
+                                size="small"
+                                label={skill}
+                                key={skill}
+                            />
+                        );
+                    })}
+                </div>
+            </div>
         </div>
     );
 }
