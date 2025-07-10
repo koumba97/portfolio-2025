@@ -18,7 +18,10 @@ export default function NavBar() {
     pathname = pathname === "/" ? "" : pathname.split("/")[1];
 
     return (
-        <div className="bottom-navbar">
+        <div
+            className="bottom-navbar"
+            style={{ viewTransitionName: "anything" }}
+        >
             <Link href="/">
                 <Tooltip title={Locals.home[lang]} placement="top">
                     <Button
@@ -39,9 +42,9 @@ export default function NavBar() {
                         color="inherit"
                     >
                         <GridSVG
-                            width={40}
-                            height={40}
-                            viewBox="-5 40 90 90"
+                            width={20}
+                            height={20}
+                            viewBox="-5 -5 90 90"
                             filled={pathname === "" || pathname === "project"}
                         />
                     </Button>

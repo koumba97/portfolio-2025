@@ -1,6 +1,6 @@
 "use client";
 
-import koumImg from "@/assets/images/about-me/koum.png";
+import koumImg from "@/assets/images/about-me/koum2.png";
 import Image from "next/image";
 import "./about-me.scss";
 import ButtonUI from "@/ui/button/button";
@@ -11,6 +11,8 @@ import { Locals } from "@/utils/locals";
 import { useLang } from "@/context/language-context";
 import { Link } from "next-view-transitions";
 import { Chip } from "@mui/material";
+import LinkedinSVG from "@/svg/Linkedin";
+import MailSVG from "@/svg/Mail";
 
 export default function AboutMe() {
     const { lang } = useLang();
@@ -102,14 +104,15 @@ export default function AboutMe() {
             </div>
             <div className="get-in-touch">
                 <h3>{Locals.getInTouch[lang]}</h3>
-                <div
-                    id="email-contact-container"
-                    className="contact-container"
-                ></div>
+                <div id="email-contact-container" className="contact-container">
+                    <MailSVG width={50} height={50} viewBox="0 0 70 70" />
+                </div>
                 <div
                     id="linkedin-contact-container"
                     className="contact-container"
-                ></div>
+                >
+                    <LinkedinSVG width={50} height={50} viewBox="0 0 70 70" />
+                </div>
             </div>
             <div className="interests">
                 <h3>{Locals.interests[lang]}</h3>
