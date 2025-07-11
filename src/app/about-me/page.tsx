@@ -1,6 +1,10 @@
 "use client";
 
 import koumImg from "@/assets/images/about-me/koum2.png";
+import rollerSkate from "@/assets/images/about-me/interests/inline-skates.png";
+import museum from "@/assets/images/about-me/interests/mona-lisa.png";
+import paint from "@/assets/images/about-me/interests/paint.png";
+import baking from "@/assets/images/about-me/interests/cupcake.png";
 import Image from "next/image";
 import "./about-me.scss";
 import ButtonUI from "@/ui/button/button";
@@ -108,10 +112,18 @@ export default function AboutMe() {
 
             <div className="interests">
                 <h3>{Locals.interests[lang]}</h3>
-                <div className="interest"></div>
-                <div className="interest"></div>
-                <div className="interest"></div>
-                <div className="interest"></div>
+                <div className="interest">
+                    <Image src={rollerSkate} alt="rollerskate" />
+                </div>
+                <div className="interest">
+                    <Image src={museum} alt="Mona lisa" />
+                </div>
+                <div className="interest">
+                    <Image src={paint} alt="Color palet" />
+                </div>
+                <div className="interest">
+                    <Image src={baking} alt="Cupcake" />
+                </div>
             </div>
             <div className="soft-skills">
                 <h3>{Locals.softSkills[lang]}</h3>

@@ -136,6 +136,14 @@
         .interest {
             border-radius: 10px;
             background-color: $grey-100;
+            align-items: center;
+            display: flex;
+            img {
+                width: 60px;
+                height: auto;
+                margin: auto;
+                display: block;
+            }
         }
     }
 
