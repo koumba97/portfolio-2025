@@ -23,20 +23,23 @@ export default function AboutMe() {
         Locals.graphicDesigner[lang],
         Locals.frontendEngineer[lang],
     ];
-
-    const softSkills = [
-        Locals.creative[lang],
-        Locals.fastLeaner[lang],
-        Locals.stressManagement[lang],
-        Locals.autonomy[lang],
-        Locals.multitasking[lang],
-        Locals.criticalThinking[lang],
-        Locals.problemSolving[lang],
-        Locals.prioritizeIssues[lang],
-        Locals.attentionToDetail[lang],
-        Locals.teamSpirit[lang],
-        Locals.adaptability[lang],
-        Locals.positiveAttitude[lang],
+    type softSkills = {
+        name: string;
+        type: "cognitive" | "organizational" | "interpersonal" | "personal";
+    };
+    const softSkills: softSkills[] = [
+        { name: Locals.creative[lang], type: "cognitive" },
+        { name: Locals.stressManagement[lang], type: "personal" },
+        { name: Locals.fastLeaner[lang], type: "cognitive" },
+        { name: Locals.autonomy[lang], type: "organizational" },
+        { name: Locals.positiveAttitude[lang], type: "interpersonal" },
+        { name: Locals.multitasking[lang], type: "organizational" },
+        { name: Locals.problemSolving[lang], type: "cognitive" },
+        { name: Locals.prioritizeIssues[lang], type: "organizational" },
+        { name: Locals.criticalThinking[lang], type: "cognitive" },
+        { name: Locals.attentionToDetail[lang], type: "cognitive" },
+        { name: Locals.teamSpirit[lang], type: "interpersonal" },
+        { name: Locals.adaptability[lang], type: "personal" },
     ];
 
     const [currentRole, setCurrentRole] = useState(roles[3]);
@@ -102,18 +105,7 @@ export default function AboutMe() {
                     </Link>
                 </div>
             </div>
-            <div className="get-in-touch">
-                <h3>{Locals.getInTouch[lang]}</h3>
-                <div id="email-contact-container" className="contact-container">
-                    <MailSVG width={50} height={50} viewBox="0 0 70 70" />
-                </div>
-                <div
-                    id="linkedin-contact-container"
-                    className="contact-container"
-                >
-                    <LinkedinSVG width={50} height={50} viewBox="0 0 70 70" />
-                </div>
-            </div>
+
             <div className="interests">
                 <h3>{Locals.interests[lang]}</h3>
                 <div className="interest"></div>
@@ -127,14 +119,34 @@ export default function AboutMe() {
                     {softSkills.map((skill) => {
                         return (
                             <Chip
-                                className="chip"
+                                className={`chip ${skill.type}`}
                                 size="small"
-                                label={skill}
-                                key={skill}
+                                label={skill.name}
+                                key={skill.name}
                             />
                         );
                     })}
                 </div>
+            </div>
+
+            <div className="get-in-touch">
+                <h3>{Locals.getInTouch[lang]}</h3>
+                <Link
+                    href="mailto:koumbakeita47@gmail.com"
+                    id="email-contact-container"
+                    className="contact-container"
+                >
+                    <MailSVG width={40} height={40} viewBox="0 0 65 65" />
+                    <p>koumbakeita47@gmail.com</p>
+                </Link>
+                <Link
+                    href=""
+                    id="linkedin-contact-container"
+                    className="contact-container"
+                >
+                    <LinkedinSVG width={40} height={40} viewBox="0 0 50 50" />
+                    <p>Koumba Keita</p>
+                </Link>
             </div>
         </div>
     );
