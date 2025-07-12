@@ -99,6 +99,25 @@ export const Locals: LocalLang = {
         fr: "Centres d'intérêt"
     },
 
+    rollerskate: {
+        en: "Rollerskate",
+        fr: "Roller"
+    },
+
+    museum: {
+        en: "Museum",
+        fr: "Musée"
+    },
+
+    baking: {
+        en: "Baking",
+        fr: "Pâtisserie"
+    },
+
+    designDrawing: {
+        en: "Design/Drawing",
+        fr: "Design/Dessin"
+    },
 
     softSkills: {
         en: "Soft skills",

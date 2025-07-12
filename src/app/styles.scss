@@ -38,6 +38,10 @@ body {
         text-align: center;
     }
     div {
+        .logo-link {
+            margin: auto;
+            display: block;
+        }
         button {
             //margin-left: auto;
             width: max-content;
@@ -86,6 +90,11 @@ footer {
         }
         a {
             text-align: left;
+        }
+        div {
+            .logo-link {
+                margin: unset;
+            }
         }
     }
 }

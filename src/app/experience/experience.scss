@@ -1,0 +1,14 @@
+.experience-section {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    min-height: 570px;
+    gap: 30px;
+    grid-auto-rows: minmax(170px, auto);
+    grid-auto-columns: minmax(100px, auto);
+    justify-content: space-between;
+
+    .visit-card {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+}

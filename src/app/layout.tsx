@@ -49,8 +49,10 @@ export default function RootLayout({
                 >
                     <body>
                         <menu className="menu-bar">
-                            <p>Portfolio</p>
-                            <LogoLink />
+                            <p>Portfolio 2025</p>
+                            <div>
+                                <LogoLink />
+                            </div>
                             <LangButton />
                         </menu>
                         <NavBar />

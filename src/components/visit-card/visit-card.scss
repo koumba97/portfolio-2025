@@ -1,0 +1,45 @@
+@import "../../utils/variables.scss";
+
+.visit-card {
+    background-color: $grey-100;
+    padding: 14px 20px;
+    border-radius: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+
+    img {
+        height: 120px;
+        width: auto;
+    }
+    .info-card {
+        width: 100%;
+        h3 {
+            font-family: "Lost days";
+            font-weight: unset;
+            font-size: 28px;
+        }
+        a {
+            align-items: center;
+            display: flex;
+            gap: 10px;
+            font-size: 13px;
+        }
+    }
+    .location-container {
+        display: flex;
+        gap: 4px;
+        .chip {
+            background-color: $grey-800;
+            color: white;
+            font-size: 10px;
+            user-select: none;
+
+            svg {
+                filter: invert(96%) sepia(20%) saturate(279%) hue-rotate(282deg)
+                    brightness(113%) contrast(100%);
+            }
+        }
+    }
+}
