@@ -2,18 +2,22 @@
 
 .experience-details {
     display: grid;
-    align-items: center;
     gap: 10px;
     grid-template-columns: auto 1fr;
     gap: 10px;
     .image-container {
-        height: 80px;
-        width: 80px;
+        height: 90px;
+        width: 90px;
         background-color: $grey-100;
         border-radius: 20px;
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .experience-info {
         width: 100%;
+        display: flex;
+        flex-direction: column;
         h5 {
             font-size: 18px;
             font-weight: 800;
@@ -21,8 +25,8 @@
         h3 {
             font-weight: 800;
             font-family: "Nunito";
-            font-size: 14px;
-            margin: 0;
+            font-size: 16px;
+            margin-bottom: auto;
         }
         p {
             font-size: 12px;
@@ -35,6 +39,8 @@
             font-size: 10px;
             padding: 4px;
             height: max-content;
+            width: max-content;
+            margin-top: auto;
         }
     }
 }

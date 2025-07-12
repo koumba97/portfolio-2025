@@ -180,8 +180,8 @@ export const Locals: LocalLang = {
 
     //EXPERIENCE PAGE
     education: {
-        en: "Scolarité",
-        fr: "Education"
+        en: "Education",
+        fr: "Scolarité"
     },
 }
   
