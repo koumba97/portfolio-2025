@@ -176,7 +176,12 @@ export const Locals: LocalLang = {
     positiveAttitude: {
         en: "Attitude positive",
         fr: "Positive attitude"
-    }
+    },
 
+    //EXPERIENCE PAGE
+    education: {
+        en: "Scolarité",
+        fr: "Education"
+    },
 }
   

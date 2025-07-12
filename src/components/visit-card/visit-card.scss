@@ -2,19 +2,25 @@
 
 .visit-card {
     background-color: $grey-100;
-    padding: 14px 20px;
+    padding: 24px 18px;
     border-radius: 20px;
-    display: grid;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
     gap: 20px;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr;
+    // grid-template-columns: auto 1fr;
+    // grid-template-rows: 1fr;
 
     img {
-        height: 120px;
+        height: 100px;
         width: auto;
     }
     .info-card {
-        width: 100%;
+        //width: 100%;
+        display: flex;
+        gap: 4px;
+        flex-direction: column;
         h3 {
             font-family: "Lost days";
             font-weight: unset;
@@ -29,6 +35,9 @@
     }
     .location-container {
         display: flex;
+        margin-top: auto;
+        align-items: end;
+        flex: 1;
         gap: 4px;
         .chip {
             background-color: $grey-800;
