@@ -217,6 +217,24 @@ export const Locals: LocalLang = {
     highSchoolDegree: {
         en: 'High school diploma in Graphic Production',
         fr: 'Baccalauréat en Production Graphique'
-    }
+    },
+
+    //EXPERIENCE
+    tfoRole: {
+        en: 'Webmaster & Frontend Developer',
+        fr: 'Webmaster & Développeuse Frontend'
+    },
+    inkasRole: {
+        en: 'Frontend Developer & UI/UX Designer',
+        fr: 'Développeuse front-end & Designer UI/UX'
+    },
+    vadeRole: {
+        en: 'Frontend Engineer & UI/UX Engineer',
+        fr: 'Frontend Engineer & UI/UX Engineer'
+    },
+    leavyRole: {
+        en: 'Frontend Engineer & UI/UX Designer',
+        fr: 'Frontend Engineer & Designer UI/UX'
+    },
 }
   

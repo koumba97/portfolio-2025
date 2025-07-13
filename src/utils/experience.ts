@@ -16,7 +16,7 @@ export type Experience = {
  export const experienceList: Experience[] = [
         {
             companyName: "TFO",
-            roleName: "Webmaster",
+            roleName: "tfoRole",
             duration: {
                 start: new Date('2024, 07, 01'),
                 end: 'Présent',
@@ -27,7 +27,7 @@ export type Experience = {
         },
         {
             companyName: "Inkas",
-            roleName: "Développeusse Frontend & UX/UI Designer",
+            roleName: "inkasRole",
             duration: {
                 start: new Date('2024, 05, 01'),
                 end:new Date('2024, 07, 01'),
@@ -39,7 +39,7 @@ export type Experience = {
 
         {
             companyName: "Vade",
-            roleName: "Frontend Engineer",
+            roleName: "vadeRole",
             duration: {
                 start: new Date('2023, 03, 01'),
                 end:new Date('2023, 12, 01'),
@@ -51,7 +51,7 @@ export type Experience = {
 
         {
             companyName: "Leavy",
-            roleName: "Frontend Engineer",
+            roleName: "leavyRole",
             duration: {
                 start: new Date('2021, 12, 01'),
                 end:new Date('2023, 03, 01'),

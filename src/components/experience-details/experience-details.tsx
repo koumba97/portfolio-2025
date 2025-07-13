@@ -2,7 +2,6 @@ import { Chip } from "@mui/material";
 import "./experience-details.scss";
 import Link from "next/link";
 import { useLang } from "@/context/language-context";
-import LinkUI from "@/ui/links/link";
 
 type Prop = {
     name: string;
@@ -15,7 +14,6 @@ type Prop = {
 export default function ExperienceDetails({
     name,
     title,
-    description,
     duration,
     link,
     image,
@@ -53,7 +51,9 @@ export default function ExperienceDetails({
                         label={
                             duration
                                 ? typeof duration.end === "string"
-                                    ? duration.end
+                                    ? `${formatDate(duration.start)} - ${
+                                          duration.end
+                                      }`
                                     : `${formatDate(
                                           duration.start
                                       )} - ${formatDate(duration.end)}`

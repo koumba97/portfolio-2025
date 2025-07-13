@@ -1,8 +1,6 @@
 "use client";
 
 import "./visit-card.scss";
-import { Locals } from "@/utils/locals";
-import { useLang } from "@/context/language-context";
 import Image from "next/image";
 import koumImg from "@/assets/images/about-me/koum2.png";
 import LinkedinSVG from "@/svg/Linkedin";
@@ -12,7 +10,6 @@ import { Chip } from "@mui/material";
 import LocationSVG from "@/svg/Location";
 
 export default function VisitCard() {
-    const { lang } = useLang();
     return (
         <div className="visit-card">
             <Image src={koumImg} alt="Koum image" />

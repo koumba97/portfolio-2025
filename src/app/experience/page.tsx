@@ -40,7 +40,7 @@ export default function Experience() {
                         return (
                             <ExperienceDetails
                                 name={experience.companyName}
-                                title={experience.roleName}
+                                title={Locals[experience.roleName][lang]}
                                 image={experience.image.src}
                                 description={experience.description}
                                 duration={experience.duration}
