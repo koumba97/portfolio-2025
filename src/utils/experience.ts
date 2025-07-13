@@ -11,6 +11,7 @@ export type Experience = {
     description: string;
     image: StaticImageData;
     link: string;
+    location: string;
 } 
 
  export const experienceList: Experience[] = [
@@ -24,6 +25,7 @@ export type Experience = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
             image: tfo,
             link: 'https://www.tfo.org/',
+            location: 'Toronto, Canada'
         },
         {
             companyName: "Inkas",
@@ -35,6 +37,7 @@ export type Experience = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
             image: inkas,
             link: 'https://inkasarmored.com/',
+            location: 'Toronto, Canada'
         },
 
         {
@@ -47,6 +50,7 @@ export type Experience = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
             image: vade,
             link: 'https://www.vadesecure.com/',
+             location: 'Full remote'
         },
 
         {
@@ -59,6 +63,7 @@ export type Experience = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
             image: leavy,
             link: 'https://www.leavy.co/',
+            location: 'Paris, France'
         },
 
     ];

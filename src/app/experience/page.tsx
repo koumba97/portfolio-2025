@@ -7,6 +7,7 @@ import { useLang } from "@/context/language-context";
 import ExperienceDetails from "@/components/experience-details/experience-details";
 import { educationList } from "@/utils/education";
 import { experienceList } from "@/utils/experience";
+import { ResumeCard } from "@/components/resume-card/resume-card";
 
 export default function Experience() {
     const { lang } = useLang();
@@ -27,6 +28,7 @@ export default function Experience() {
                                 description={education.description}
                                 duration={education.duration}
                                 link={education.link}
+                                location={education.location}
                                 key={i}
                             />
                         );
@@ -45,6 +47,7 @@ export default function Experience() {
                                 description={experience.description}
                                 duration={experience.duration}
                                 link={experience.link}
+                                location={experience.location}
                                 key={i}
                             />
                         );
@@ -52,7 +55,7 @@ export default function Experience() {
                 </div>
             </div>
 
-            <div className="resume-container"></div>
+            <ResumeCard />
         </div>
     );
 }

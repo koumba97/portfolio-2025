@@ -11,6 +11,7 @@ export type Education = {
     description: string;
     image: StaticImageData;
     link: string;
+    location: string;
 } 
 
  export const educationList: Education[] = [
@@ -24,6 +25,7 @@ export type Education = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
             image: webacademie,
             link: 'https://www.webacademie.org/',
+            location: 'Kremelin-Bicêtre, France'
         },
         {
             schoolName: "corvisart",
@@ -35,6 +37,7 @@ export type Education = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
             image: corvisart,
             link: 'https://lycee-corvisart-tolbiac.fr/formations/formations-scolaires/les-fcil/fcil-illustration',
+            location: 'Paris, France'
         },
 
         {
@@ -47,6 +50,7 @@ export type Education = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
             image: garamont,
             link: 'https://www.lyceegaramont.fr/dn-made-graphisme/',
+            location: 'Colombes, France'
         },
 
         {
@@ -59,6 +63,7 @@ export type Education = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
             image: maxVox,
             link: 'https://www.lyceegaramont.fr/dn-made-graphisme/',
+            location: 'Paris, France'
         },
 
     ];

@@ -2,6 +2,7 @@ import { Chip } from "@mui/material";
 import "./experience-details.scss";
 import Link from "next/link";
 import { useLang } from "@/context/language-context";
+import LocationSVG from "@/svg/Location";
 
 type Prop = {
     name: string;
@@ -10,6 +11,7 @@ type Prop = {
     description: string;
     image: string;
     link: string;
+    location: string;
 };
 export default function ExperienceDetails({
     name,
@@ -17,6 +19,7 @@ export default function ExperienceDetails({
     duration,
     link,
     image,
+    location,
 }: Prop) {
     const { lang } = useLang();
     const formatDate = (date: Date) => {
@@ -44,7 +47,7 @@ export default function ExperienceDetails({
             <div className="experience-info">
                 <h5>{title}</h5>
                 <h3>{name}</h3>
-                <div>
+                <div className="chip-container">
                     <Chip
                         className="duration"
                         size="small"
@@ -59,7 +62,20 @@ export default function ExperienceDetails({
                                       )} - ${formatDate(duration.end)}`
                                 : null
                         }
-                    ></Chip>
+                    />{" "}
+                    <Chip
+                        className="location"
+                        size="small"
+                        label={location}
+                        icon={
+                            <LocationSVG
+                                width={20}
+                                height={20}
+                                viewBox="-3 -2 30 30"
+                                filled
+                            />
+                        }
+                    />
                     {/* <LinkUI href="">See more</LinkUI> */}
                 </div>
             </div>

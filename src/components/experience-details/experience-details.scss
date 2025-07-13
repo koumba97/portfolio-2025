@@ -30,24 +30,35 @@
             font-size: 14px;
             margin-bottom: auto;
         }
-        div {
+        .chip-container {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            gap: 5px;
+            .duration,
+            .location {
+                font-weight: bold;
+                font-size: 8px;
+                padding: 4px;
+                height: 20px;
+                width: auto;
+                margin-top: auto;
+                user-select: none;
+                span {
+                    padding: 0;
+                }
+            }
+            .duration {
+                background-color: $brand-color-secondary;
+                color: white;
+            }
+            .location {
+                //background-color: $grey-800;
+
+                //color: white;
+            }
         }
         p {
             font-size: 12px;
-        }
-        .duration {
-            background-color: $brand-color-secondary;
-            color: white;
-            font-weight: bold;
-            font-size: 8px;
-            padding: 4px;
-            height: max-content;
-            width: max-content;
-            margin-top: auto;
-            user-select: none;
         }
     }
 }
