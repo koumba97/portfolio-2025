@@ -2,11 +2,12 @@ import { Chip } from "@mui/material";
 import "./experience-details.scss";
 import Link from "next/link";
 import { useLang } from "@/context/language-context";
+import LinkUI from "@/ui/links/link";
 
 type Prop = {
     name: string;
     title: string;
-    duration: { start: Date; end: Date };
+    duration: { start: Date; end: Date | string };
     description: string;
     image: string;
     link: string;
@@ -45,18 +46,22 @@ export default function ExperienceDetails({
             <div className="experience-info">
                 <h5>{title}</h5>
                 <h3>{name}</h3>
-                <p>{description}</p>
-                <Chip
-                    className="duration"
-                    size="small"
-                    label={
-                        duration
-                            ? `${formatDate(duration.start)} - ${formatDate(
-                                  duration.end
-                              )}`
-                            : null
-                    }
-                ></Chip>
+                <div>
+                    <Chip
+                        className="duration"
+                        size="small"
+                        label={
+                            duration
+                                ? typeof duration.end === "string"
+                                    ? duration.end
+                                    : `${formatDate(
+                                          duration.start
+                                      )} - ${formatDate(duration.end)}`
+                                : null
+                        }
+                    ></Chip>
+                    {/* <LinkUI href="">See more</LinkUI> */}
+                </div>
             </div>
         </div>
     );

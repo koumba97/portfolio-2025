@@ -1,0 +1,64 @@
+import tfo from "@/assets/images/experience/tfo.avif";
+import inkas from "@/assets/images/experience/inkas.png";
+import vade from "@/assets/images/experience/vade.png";
+import leavy from "@/assets/images/experience/leavy.png";
+import { StaticImageData } from "next/image";
+
+export type Experience = {
+    companyName: string;
+    roleName: string;
+    duration: {start: Date, end: Date | string};
+    description: string;
+    image: StaticImageData;
+    link: string;
+} 
+
+ export const experienceList: Experience[] = [
+        {
+            companyName: "TFO",
+            roleName: "Webmaster",
+            duration: {
+                start: new Date('2024, 07, 01'),
+                end: 'Présent',
+            },
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+            image: tfo,
+            link: 'https://www.tfo.org/',
+        },
+        {
+            companyName: "Inkas",
+            roleName: "Développeusse Frontend & UX/UI Designer",
+            duration: {
+                start: new Date('2024, 05, 01'),
+                end:new Date('2024, 07, 01'),
+            },
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+            image: inkas,
+            link: 'https://inkasarmored.com/',
+        },
+
+        {
+            companyName: "Vade",
+            roleName: "Frontend Engineer",
+            duration: {
+                start: new Date('2023, 03, 01'),
+                end:new Date('2023, 12, 01'),
+            },
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+            image: vade,
+            link: 'https://www.vadesecure.com/',
+        },
+
+        {
+            companyName: "Leavy",
+            roleName: "Frontend Engineer",
+            duration: {
+                start: new Date('2021, 12, 01'),
+                end:new Date('2023, 03, 01'),
+            },
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+            image: leavy,
+            link: 'https://www.leavy.co/',
+        },
+
+    ];

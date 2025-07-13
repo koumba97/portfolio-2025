@@ -183,5 +183,40 @@ export const Locals: LocalLang = {
         en: "Education",
         fr: "Scolarité"
     },
+
+    //EDUCATION
+    webacademie: {
+        en: "Web@cademie by EPITECH",
+        fr: "Web@cademie by EPITECH"
+    },
+    webDegree: {
+        en: "Bachelor’s degree in Computer Science",
+        fr: "Licence en Développement Web"
+    },
+    corvisart: {
+        en: "Corvisart Tolbiac School",
+        fr: "Lycée Corvisart Tolbiac"
+    },
+        
+    prepaArt: {
+        en: "Preparatory class in Illustration",
+        fr: "Classe préparatoire en Illustration"
+    },
+    garamont: {
+        en: "Claude Garamont School",
+        fr: "Lycée Claude Garamont"
+    },
+    designDegree: {
+        en: 'Associate degree in Graphic Design',
+        fr: 'BTS Design Graphique en Medias Imprimés'
+    },
+    vox: {
+        en: "Maximilien Vox High School",
+        fr: "Lycée Maximilien Vox"
+    },
+    highSchoolDegree: {
+        en: 'High school diploma in Graphic Production',
+        fr: 'Baccalauréat en Production Graphique'
+    }
 }
   

@@ -1,9 +1,10 @@
 import webacademie from "@/assets/images/education/wac.png";
 import corvisart from "@/assets/images/education/corvisart.png";
 import garamont from "@/assets/images/education/garamont.png";
+import maxVox from "@/assets/images/education/vox.png";
 import { StaticImageData } from "next/image";
 
-type Education = {
+export type Education = {
     schoolName: string;
     degreeName: string;
     duration: {start: Date, end: Date};
@@ -14,8 +15,8 @@ type Education = {
 
  export const educationList: Education[] = [
         {
-            schoolName: "Web@cademie by EPITECH",
-            degreeName: "Licence développeur web",
+            schoolName: 'webacademie',
+            degreeName: "webDegree",
             duration: {
                 start: new Date('2019, 10, 01'),
                 end:new Date('2021, 11, 01'),
@@ -25,8 +26,8 @@ type Education = {
             link: 'https://www.webacademie.org/',
         },
         {
-            schoolName: "Lycée Corvisart Tolbiac",
-            degreeName: "École préparatoire en illustration",
+            schoolName: "corvisart",
+            degreeName: "prepaArt",
             duration: {
                 start: new Date('2018, 10, 01'),
                 end:new Date('2019, 07, 01'),
@@ -37,8 +38,8 @@ type Education = {
         },
 
         {
-            schoolName: "Lycée Claude Garamont",
-            degreeName: "BTS en Design Graphique",
+            schoolName: "garamont",
+            degreeName: "designDegree",
             duration: {
                 start: new Date('2016, 09, 01'),
                 end:new Date('2018, 07, 01'),
@@ -48,5 +49,16 @@ type Education = {
             link: 'https://www.lyceegaramont.fr/dn-made-graphisme/',
         },
 
+        {
+            schoolName: "vox",
+            degreeName: "highSchoolDegree",
+            duration: {
+                start: new Date('2012, 09, 01'),
+                end:new Date('2015, 07, 01'),
+            },
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+            image: maxVox,
+            link: 'https://www.lyceegaramont.fr/dn-made-graphisme/',
+        },
 
     ];
