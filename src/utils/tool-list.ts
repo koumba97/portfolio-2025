@@ -16,7 +16,7 @@ import firebaseLogo from '@/assets/images/logo/firebase.png';
 import angularLogo from '@/assets/images/logo/angular.png';
 
 import photoshopLogo from '@/assets/images/logo/photoshop.png';
-import inDesignLogo from '@/assets/images/logo/css.png';
+import inDesignLogo from '@/assets/images/logo/indesign.png';
 import illustratorLogo from '@/assets/images/logo/illustrator.png';
 import afterEffectsLogo from '@/assets/images/logo/javascript.png';
 import adobeXDLogo from '@/assets/images/logo/typescript.png';

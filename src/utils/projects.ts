@@ -5,7 +5,7 @@ import abstractLine from '@/assets/images/abstract/line1.svg';
 import musicLibrary from '@/assets/images/projects/music-library/music-library.png';
 import abstractLine2 from '@/assets/images/abstract/line2.svg';
 import cookishMaster from '@/assets/images/projects/cookish-master/cookish-master.png';
-import puff from '@/assets/images/projects/puff/puff.png';
+import puffCover from '@/assets/images/projects/puff/puff.png';
 import eCommerce from '@/assets/images/projects/krush/e-commerce.png';
 import modeling from '@/assets/images/projects/modeling/modeling.png';
 import designSystem from '@/assets/images/projects/design-system/design-system.png';
@@ -30,6 +30,34 @@ import musicLibrary2 from '@/assets/images/projects/music-library/music-library2
 import musicLibrary3 from '@/assets/images/projects/music-library/music-library3.png';
 import musicLibrary4 from '@/assets/images/projects/music-library/music-library4.png';
 import musicLibrary5 from '@/assets/images/projects/music-library/music-library5.png';
+
+//COOKISH MASTER
+import cookish from '@/assets/images/projects/cookish-master/cookish.png';
+import cookish2 from '@/assets/images/projects/cookish-master/cookish2.jpg';
+import cookish3 from '@/assets/images/projects/cookish-master/cookish3.jpg';
+import cookish4 from '@/assets/images/projects/cookish-master/cookish4.png';
+
+//PUFF
+import puff from '@/assets/images/projects/puff/puff.png';
+import puff2 from '@/assets/images/projects/puff/puff2.png';
+// import puff3 from '@/assets/images/projects/puff/puff3.png';
+import puff4 from '@/assets/images/projects/puff/puff4.png';
+import puff5 from '@/assets/images/projects/puff/puff5.png';
+
+//KRUSH
+import krush from '@/assets/images/projects/krush/krush.png';
+import krush2 from '@/assets/images/projects/krush/krush2.png';
+import krush3 from '@/assets/images/projects/krush/krush3.png';
+import krush4 from '@/assets/images/projects/krush/krush4.png';
+import krush5 from '@/assets/images/projects/krush/krush5.png';
+
+//MODELING
+import sketch from '@/assets/images/projects/modeling/sketch.jpg';
+import koum from '@/assets/images/projects/modeling/koum.png';
+import koum2 from '@/assets/images/projects/modeling/koum2.png';
+//import koum3 from '@/assets/images/projects/modeling/koum3.png';
+import koum4 from '@/assets/images/projects/modeling/koum4.png';
+import koum5 from '@/assets/images/projects/modeling/koum5.png';
 
 export enum ProjectID {
     lettering = 'lettering',
@@ -139,28 +167,25 @@ export const ProjectsList: ProjectInterface[] = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original: goodDays.src,
-                thumbnail: goodDays.src,
+                original: cookish.src,
+                thumbnail: cookish.src,
             },
             {
-                original: queenKing.src,
-                thumbnail: queenKing.src,
+                original: cookish2.src,
+                thumbnail: cookish2.src,
             },
             {
-                original: blackSwan.src,
-                thumbnail: blackSwan.src,
+                original: cookish3.src,
+                thumbnail: cookish3.src,
             },
             {
-                original: headInTheClouds.src,
-                thumbnail: headInTheClouds.src,
-            },
-            {
-                original: sunday.src,
-                thumbnail: sunday.src,
+                original: cookish4.src,
+                thumbnail: cookish4.src,
             },
         ],
         link: {
             github: 'https://github.com/EpitechIT2020/W-WEB-320-PAR-4-3-app-koumba.keita',
+            live: '/videos/cookish.mp4',
         },
         tool: [Tool.reactNative, Tool.firebase, Tool.figma, Tool.illustrator],
     },
@@ -208,16 +233,20 @@ export const ProjectsList: ProjectInterface[] = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original: goodDays.src,
-                thumbnail: goodDays.src,
+                original: puffCover.src,
+                thumbnail: puffCover.src,
             },
             {
-                original: queenKing.src,
-                thumbnail: queenKing.src,
+                original: puff2.src,
+                thumbnail: puff2.src,
             },
             {
-                original: blackSwan.src,
-                thumbnail: blackSwan.src,
+                original: puff4.src,
+                thumbnail: puff4.src,
+            },
+            {
+                original: puff5.src,
+                thumbnail: puff5.src,
             },
             {
                 original: headInTheClouds.src,
@@ -291,27 +320,31 @@ export const ProjectsList: ProjectInterface[] = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original: goodDays.src,
-                thumbnail: goodDays.src,
+                original: sketch.src,
+                thumbnail: sketch.src,
             },
             {
-                original: queenKing.src,
-                thumbnail: queenKing.src,
+                original: koum.src,
+                thumbnail: koum.src,
             },
             {
-                original: blackSwan.src,
-                thumbnail: blackSwan.src,
+                original: koum2.src,
+                thumbnail: koum2.src,
+            },
+
+            {
+                original: koum4.src,
+                thumbnail: koum4.src,
             },
             {
-                original: headInTheClouds.src,
-                thumbnail: headInTheClouds.src,
-            },
-            {
-                original: sunday.src,
-                thumbnail: sunday.src,
+                original: koum5.src,
+                thumbnail: koum5.src,
             },
         ],
-        tool: [Tool.nomadSculpt],
+        link: {
+            live: '/videos/3d-modeling.mp4',
+        },
+        tool: [Tool.nomadSculpt, Tool.procreate],
     },
     {
         name: 'Krush',
@@ -323,24 +356,24 @@ export const ProjectsList: ProjectInterface[] = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original: goodDays.src,
-                thumbnail: goodDays.src,
+                original: krush.src,
+                thumbnail: krush.src,
             },
             {
-                original: queenKing.src,
-                thumbnail: queenKing.src,
+                original: krush2.src,
+                thumbnail: krush2.src,
             },
             {
-                original: blackSwan.src,
-                thumbnail: blackSwan.src,
+                original: krush3.src,
+                thumbnail: krush3.src,
             },
             {
-                original: headInTheClouds.src,
-                thumbnail: headInTheClouds.src,
+                original: krush4.src,
+                thumbnail: krush4.src,
             },
             {
-                original: sunday.src,
-                thumbnail: sunday.src,
+                original: krush5.src,
+                thumbnail: krush5.src,
             },
         ],
         link: {
