@@ -3,6 +3,7 @@ import "./experience-details.scss";
 import Link from "next/link";
 import { useLang } from "@/context/language-context";
 import LocationSVG from "@/svg/Location";
+import { Locals } from "@/utils/locals";
 
 type Prop = {
     name: string;
@@ -12,6 +13,7 @@ type Prop = {
     image: string;
     link: string;
     location: string;
+    remote?: boolean;
 };
 export default function ExperienceDetails({
     name,
@@ -20,6 +22,7 @@ export default function ExperienceDetails({
     link,
     image,
     location,
+    remote,
 }: Prop) {
     const { lang } = useLang();
     const formatDate = (date: Date) => {
@@ -66,7 +69,11 @@ export default function ExperienceDetails({
                     <Chip
                         className="location"
                         size="small"
-                        label={location}
+                        label={
+                            remote
+                                ? `${Locals.remote[lang]} - ${location}`
+                                : location
+                        }
                         icon={
                             <LocationSVG
                                 width={20}

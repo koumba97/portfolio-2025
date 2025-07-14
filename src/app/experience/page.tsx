@@ -48,6 +48,7 @@ export default function Experience() {
                                 duration={experience.duration}
                                 link={experience.link}
                                 location={experience.location}
+                                remote={experience.remote}
                                 key={i}
                             />
                         );

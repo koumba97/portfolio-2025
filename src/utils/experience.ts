@@ -12,6 +12,7 @@ export type Experience = {
     image: StaticImageData;
     link: string;
     location: string;
+    remote?: boolean;
 } 
 
  export const experienceList: Experience[] = [
@@ -50,7 +51,8 @@ export type Experience = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
             image: vade,
             link: 'https://www.vadesecure.com/',
-             location: 'Full remote'
+            location: 'Paris, France',
+            remote: true
         },
 
         {

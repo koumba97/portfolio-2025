@@ -236,5 +236,22 @@ export const Locals: LocalLang = {
         en: 'Frontend Engineer & UI/UX Designer',
         fr: 'Frontend Engineer & Designer UI/UX'
     },
+    remote: {
+        en: 'Remote',
+        fr: 'En télétravail'
+    },
+
+    fullResumeTitle: {
+        en: 'View my full resume',
+        fr: 'Voir mon CV complet'
+    },
+    fullResumeDescription: {
+        en: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    },
+    download: {
+        en: 'Download',
+        fr: 'Télécharger'
+    }
 }
   
