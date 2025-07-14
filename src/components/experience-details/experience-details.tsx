@@ -59,11 +59,11 @@ export default function ExperienceDetails({
                                 ? typeof duration.end === 'string'
                                     ? `${formatDate(duration.start)} - ${duration.end}`
                                     : `${formatDate(
-                                          duration.start
+                                          duration?.start
                                       )} - ${formatDate(duration.end)}`
                                 : null
                         }
-                    />{' '}
+                    />
                     <Chip
                         className="location"
                         size="small"

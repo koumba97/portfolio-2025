@@ -20,7 +20,7 @@ export const experienceList: Experience[] = [
         companyName: 'TFO',
         roleName: 'tfoRole',
         duration: {
-            start: new Date('2024, 07, 01'),
+            start: new Date(2024, 6, 1),
             end: 'Présent',
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
@@ -32,8 +32,8 @@ export const experienceList: Experience[] = [
         companyName: 'Inkas',
         roleName: 'inkasRole',
         duration: {
-            start: new Date('2024, 05, 01'),
-            end: new Date('2024, 07, 01'),
+            start: new Date(2024, 4, 1),
+            end: new Date(2024, 6, 1),
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         image: inkas,
@@ -45,8 +45,8 @@ export const experienceList: Experience[] = [
         companyName: 'Vade',
         roleName: 'vadeRole',
         duration: {
-            start: new Date('2023, 03, 01'),
-            end: new Date('2023, 12, 01'),
+            start: new Date(2023, 2, 1),
+            end: new Date(2023, 11, 1),
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         image: vade,
@@ -59,8 +59,8 @@ export const experienceList: Experience[] = [
         companyName: 'Leavy',
         roleName: 'leavyRole',
         duration: {
-            start: new Date('2021, 12, 01'),
-            end: new Date('2023, 03, 01'),
+            start: new Date(2021, 11, 1),
+            end: new Date(2023, 2, 1),
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         image: leavy,

@@ -19,8 +19,8 @@ export const educationList: Education[] = [
         schoolName: 'webacademie',
         degreeName: 'webDegree',
         duration: {
-            start: new Date('2019, 10, 01'),
-            end: new Date('2021, 11, 01'),
+            start: new Date(2019, 9, 1),
+            end: new Date(2021, 10, 1),
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         image: webacademie,
@@ -31,8 +31,8 @@ export const educationList: Education[] = [
         schoolName: 'corvisart',
         degreeName: 'prepaArt',
         duration: {
-            start: new Date('2018, 10, 01'),
-            end: new Date('2019, 07, 01'),
+            start: new Date(2018, 8, 1),
+            end: new Date(2019, 6, 1),
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         image: corvisart,
@@ -44,8 +44,8 @@ export const educationList: Education[] = [
         schoolName: 'garamont',
         degreeName: 'designDegree',
         duration: {
-            start: new Date('2016, 09, 01'),
-            end: new Date('2018, 07, 01'),
+            start: new Date(2016, 8, 1),
+            end: new Date(2018, 6, 1),
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         image: garamont,
@@ -57,8 +57,8 @@ export const educationList: Education[] = [
         schoolName: 'vox',
         degreeName: 'highSchoolDegree',
         duration: {
-            start: new Date('2012, 09, 01'),
-            end: new Date('2015, 07, 01'),
+            start: new Date(2012, 8, 1),
+            end: new Date(2015, 6, 1),
         },
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
         image: maxVox,
