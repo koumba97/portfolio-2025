@@ -1,9 +1,9 @@
-import "./resume-card.scss";
-import Image from "next/image";
-import cvImg from "@/assets/images/experience/cv.png";
-import ButtonUI from "@/ui/button/button";
-import { Locals } from "@/utils/locals";
-import { useLang } from "@/context/language-context";
+import './resume-card.scss';
+import Image from 'next/image';
+import cvImg from '@/assets/images/experience/cv.png';
+import ButtonUI from '@/ui/button/button';
+import { Locals } from '@/utils/locals';
+import { useLang } from '@/context/language-context';
 
 export function ResumeCard() {
     const { lang } = useLang();

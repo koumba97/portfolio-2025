@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import "./other-projects.scss";
-import { useEffect, useState } from "react";
-import "react-image-gallery/styles/css/image-gallery.css";
-import { ProjectsList } from "@/utils/projects";
-import { ProjectBloc } from "@/components/index-sections/projects/projects";
+import './other-projects.scss';
+import { useEffect, useState } from 'react';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import { ProjectsList } from '@/utils/projects';
+import { ProjectBloc } from '@/components/index-sections/projects/projects';
 
 type Props = {
     currentProjectIndex: number;

@@ -1,5 +1,5 @@
-import { Link } from "next-view-transitions";
-import "./logo-link.scss";
+import { Link } from 'next-view-transitions';
+import './logo-link.scss';
 
 export default function LogoLink() {
     return (

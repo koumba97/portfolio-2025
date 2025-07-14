@@ -1,4 +1,4 @@
-import { SVGProp } from "@/utils/types";
+import { SVGProp } from '@/utils/types';
 
 export default function LocationSVG({ width, height, viewBox }: SVGProp) {
     return (

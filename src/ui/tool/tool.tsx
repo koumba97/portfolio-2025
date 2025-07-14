@@ -1,10 +1,10 @@
-import { Tooltip } from "@mui/material";
-import "./tool.scss";
-import { StaticImageData } from "next/image";
-import { useState } from "react";
-import ToolModal from "@/components/tool-modal/tool-modal";
-import LinkUI from "../links/link";
-import LinkSVG from "@/svg/Link";
+import { Tooltip } from '@mui/material';
+import './tool.scss';
+import { StaticImageData } from 'next/image';
+import { useState } from 'react';
+import ToolModal from '@/components/tool-modal/tool-modal';
+import LinkUI from '../links/link';
+import LinkSVG from '@/svg/Link';
 
 export interface ToolProp {
     name: string;
@@ -27,8 +27,8 @@ export default function Tool({
                         className="icon-container"
                         style={{
                             backgroundImage: `url("${image.src}")`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
                         }}
                     ></div>
                 </a>

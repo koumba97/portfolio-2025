@@ -1,22 +1,22 @@
-@import "../utils/variables.scss";
+@import '../utils/variables.scss';
 
 @font-face {
-    font-family: "Lost Days";
-    src: url("../assets/fonts/lost-days.ttf") format("opentype");
+    font-family: 'Lost Days';
+    src: url('../assets/fonts/lost-days.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Nunito";
-    src: url("../assets/fonts/nunito.ttf") format("opentype");
+    font-family: 'Nunito';
+    src: url('../assets/fonts/nunito.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
     padding: 20px 50px 70px 50px;
-    font-family: "Nunito";
+    font-family: 'Nunito';
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -122,18 +122,18 @@ html::view-transition-new(page-body) {
 }
 
 // <-
-html[data-transition="right-to-left"]::view-transition-new(page-body) {
+html[data-transition='right-to-left']::view-transition-new(page-body) {
     animation-name: slide-in-right;
 }
-html[data-transition="right-to-left"]::view-transition-old(page-body) {
+html[data-transition='right-to-left']::view-transition-old(page-body) {
     animation-name: slide-out-left;
 }
 
 // HOME TO PROJECT ->
-html[data-transition="left-to-right"]::view-transition-new(page-body) {
+html[data-transition='left-to-right']::view-transition-new(page-body) {
     animation-name: slide-out-right;
 }
-html[data-transition="left-to-right"]::view-transition-old(page-body) {
+html[data-transition='left-to-right']::view-transition-old(page-body) {
     animation-name: slide-in-left;
 }
 

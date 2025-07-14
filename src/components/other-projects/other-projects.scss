@@ -1,4 +1,4 @@
-@import "../../utils/variables.scss";
+@import '../../utils/variables.scss';
 
 .project-section {
     .project-bloc {
@@ -8,19 +8,19 @@
             max-height: 200px;
         }
 
-        &[aria-labelledby="cookish-master"] {
+        &[aria-labelledby='cookish-master'] {
             background-color: #a0b3ff;
         }
 
-        &[aria-labelledby="music-library"] {
+        &[aria-labelledby='music-library'] {
             background-color: #43fabd72;
         }
 
-        &[aria-labelledby="design-system"] {
+        &[aria-labelledby='design-system'] {
             background-color: #b8ffe7;
         }
 
-        &[aria-labelledby="3d-modeling"] {
+        &[aria-labelledby='3d-modeling'] {
             background-color: #ffff5e;
         }
 

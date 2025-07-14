@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import Projects from "@/components/index-sections/projects/projects";
+import Projects from '@/components/index-sections/projects/projects';
 
 export default function Home() {
     return <Projects />;

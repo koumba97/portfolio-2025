@@ -1,10 +1,10 @@
-import { Button, Modal } from "@mui/material";
-import "./project-modal.scss";
-import { ProjectInterface } from "@/utils/projects";
-import CloseSVG from "@/svg/Close";
-import LinkUI from "@/ui/links/link";
-import LinkSVG from "@/svg/Link";
-import GithubSVG from "@/svg/Github";
+import { Button, Modal } from '@mui/material';
+import './project-modal.scss';
+import { ProjectInterface } from '@/utils/projects';
+import CloseSVG from '@/svg/Close';
+import LinkUI from '@/ui/links/link';
+import LinkSVG from '@/svg/Link';
+import GithubSVG from '@/svg/Github';
 
 interface Prop {
     project: ProjectInterface;
@@ -50,7 +50,7 @@ export default function ProjectModal({
                                   ([key, value]) => (
                                       <LinkUI key={key} href={value}>
                                           <>
-                                              {key === "github" ? (
+                                              {key === 'github' ? (
                                                   <>
                                                       <GithubSVG
                                                           width={20}
@@ -59,7 +59,7 @@ export default function ProjectModal({
                                                       />
                                                       See the code
                                                   </>
-                                              ) : key === "live" ? (
+                                              ) : key === 'live' ? (
                                                   <>
                                                       <LinkSVG
                                                           width={20}

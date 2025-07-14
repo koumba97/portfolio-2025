@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import "./lang-button.scss";
-import { useEffect, useState } from "react";
-import { useLang } from "@/context/language-context";
-import EarthSVG from "@/svg/Earth";
-import ButtonUI from "@/ui/button/button";
-import { Locals } from "@/utils/locals";
-import Image from "next/image";
-import englishLang from "@/assets/images/lang/english.png";
-import frenchLang from "@/assets/images/lang/french.png";
+import './lang-button.scss';
+import { useEffect, useState } from 'react';
+import { useLang } from '@/context/language-context';
+import EarthSVG from '@/svg/Earth';
+import ButtonUI from '@/ui/button/button';
+import { Locals } from '@/utils/locals';
+import Image from 'next/image';
+import englishLang from '@/assets/images/lang/english.png';
+import frenchLang from '@/assets/images/lang/french.png';
 
 export default function LangButton() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -16,10 +16,10 @@ export default function LangButton() {
     const { lang, setLang } = useLang();
 
     useEffect(() => {
-        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener('mousedown', handleClickOutside);
 
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
 
@@ -37,10 +37,10 @@ export default function LangButton() {
 
     const handleClickOutside = (event: MouseEvent) => {
         const target = event.target as HTMLElement;
-        const langList = document.getElementsByClassName("lang-list")[0];
+        const langList = document.getElementsByClassName('lang-list')[0];
         if (
-            !target.closest(".lang-list") &&
-            !target.closest(".button") &&
+            !target.closest('.lang-list') &&
+            !target.closest('.button') &&
             langList
         ) {
             setIsSlidingOut(true);
@@ -55,19 +55,19 @@ export default function LangButton() {
         <div className="lang-button">
             <ButtonUI className="button" onClick={toggleButton} type="outlined">
                 <EarthSVG width={20} height={20} viewBox="0 0 20 20" />
-                {lang === "en" ? "EN" : "FR"}
+                {lang === 'en' ? 'EN' : 'FR'}
             </ButtonUI>
             {isOpen ? (
                 <ul
-                    className={`lang-list ${isSlidingOut ? "slide-out" : null}`}
+                    className={`lang-list ${isSlidingOut ? 'slide-out' : null}`}
                 >
-                    <li onClick={() => setLang("en")}>
-                        {" "}
+                    <li onClick={() => setLang('en')}>
+                        {' '}
                         <Image src={englishLang} height={20} alt="uk flag" />
                         {Locals.en[lang]}
                     </li>
-                    <li onClick={() => setLang("fr")}>
-                        {" "}
+                    <li onClick={() => setLang('fr')}>
+                        {' '}
                         <Image src={frenchLang} height={20} alt="france flag" />
                         {Locals.fr[lang]}
                     </li>

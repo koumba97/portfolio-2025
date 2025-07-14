@@ -1,23 +1,23 @@
-"use client";
+'use client';
 
-import "./style.scss";
-import { use, useEffect, useRef, useState } from "react";
-import ImageGallery from "react-image-gallery";
-import Button from "@mui/material/Button";
-import { Tooltip } from "@mui/material";
-import "react-image-gallery/styles/css/image-gallery.css";
-import { Link } from "next-view-transitions";
-import { ProjectInterface, ProjectsList } from "@/utils/projects";
-import ShowMoreText from "react-show-more-text";
-import ProjectModal from "@/components/project-modal/project-modal";
-import LinkUI from "@/ui/links/link";
-import GithubSVG from "@/svg/Github";
-import LinkSVG from "@/svg/Link";
-import { ToolContainer } from "@/ui/tool/tool";
-import GridSVG from "@/svg/Grid";
-import OtherProjects from "@/components/other-projects/other-projects";
-import { useLang } from "@/context/language-context";
-import { Locals } from "@/utils/locals";
+import './style.scss';
+import { use, useEffect, useRef, useState } from 'react';
+import ImageGallery from 'react-image-gallery';
+import Button from '@mui/material/Button';
+import { Tooltip } from '@mui/material';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import { Link } from 'next-view-transitions';
+import { ProjectInterface, ProjectsList } from '@/utils/projects';
+import ShowMoreText from 'react-show-more-text';
+import ProjectModal from '@/components/project-modal/project-modal';
+import LinkUI from '@/ui/links/link';
+import GithubSVG from '@/svg/Github';
+import LinkSVG from '@/svg/Link';
+import { ToolContainer } from '@/ui/tool/tool';
+import GridSVG from '@/svg/Grid';
+import OtherProjects from '@/components/other-projects/other-projects';
+import { useLang } from '@/context/language-context';
+import { Locals } from '@/utils/locals';
 
 type Props = {
     params: Promise<{ slug: string }>;
@@ -45,12 +45,10 @@ export default function ProjectPage({ params }: Props) {
             });
             if (foundProject) {
                 setProject(foundProject);
-                if (foundProject.name.split(" ").length === 2) {
+                if (foundProject.name.split(' ').length === 2) {
                     setTitleHTML(
-                        `${
-                            foundProject.name.split(" ")[0]
-                        } <span class="brand-color">${
-                            foundProject.name.split(" ")[1]
+                        `${foundProject.name.split(' ')[0]} <span class="brand-color">${
+                            foundProject.name.split(' ')[1]
                         }</span>`
                     );
                 } else {
@@ -68,23 +66,23 @@ export default function ProjectPage({ params }: Props) {
             if (isFullscreen) {
                 (
                     document.getElementsByClassName(
-                        "bottom-navbar"
+                        'bottom-navbar'
                     )[0] as HTMLElement
-                ).style.display = "none";
+                ).style.display = 'none';
             } else {
                 (
                     document.getElementsByClassName(
-                        "bottom-navbar"
+                        'bottom-navbar'
                     )[0] as HTMLElement
-                ).style.display = "flex";
+                ).style.display = 'flex';
             }
         };
 
-        document.addEventListener("fullscreenchange", handleFullscreenChange);
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
 
         return () => {
             document.removeEventListener(
-                "fullscreenchange",
+                'fullscreenchange',
                 handleFullscreenChange
             );
         };
@@ -115,7 +113,7 @@ export default function ProjectPage({ params }: Props) {
                     {project ? (
                         <ImageGallery
                             additionalClass={
-                                isFullscreen ? "fullscreen" : undefined
+                                isFullscreen ? 'fullscreen' : undefined
                             }
                             ref={galleryRef}
                             items={project.gallery}
@@ -127,7 +125,7 @@ export default function ProjectPage({ params }: Props) {
                     <div className="name-wrapper">
                         <h1
                             dangerouslySetInnerHTML={{
-                                __html: titleHTML || "",
+                                __html: titleHTML || '',
                             }}
                         />
                         <div className="arrow"></div>
@@ -142,7 +140,7 @@ export default function ProjectPage({ params }: Props) {
                         // @ts-expect-error type avaible in the API but mistyped in the component
                         expandByClick={false}
                         onClick={handleDescriptionModal}
-                        truncatedEndingComponent={"... "}
+                        truncatedEndingComponent={'... '}
                     >
                         {project?.description}
                     </ShowMoreText>
@@ -166,7 +164,7 @@ export default function ProjectPage({ params }: Props) {
                                       ([key, value]) => (
                                           <LinkUI key={key} href={value}>
                                               <>
-                                                  {key === "github" ? (
+                                                  {key === 'github' ? (
                                                       <>
                                                           <GithubSVG
                                                               width={20}
@@ -175,7 +173,7 @@ export default function ProjectPage({ params }: Props) {
                                                           />
                                                           {Locals.seeCode[lang]}
                                                       </>
-                                                  ) : key === "live" ? (
+                                                  ) : key === 'live' ? (
                                                       <>
                                                           <LinkSVG
                                                               width={20}

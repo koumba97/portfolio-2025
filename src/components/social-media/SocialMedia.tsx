@@ -1,9 +1,9 @@
-import BehanceSVG from "@/svg/Behance";
-import "./social-media.scss";
-import DribbbleSVG from "@/svg/Dribbble";
-import GithubSVG from "@/svg/Github";
-import InstagramSVG from "@/svg/Instagram";
-import LinkedinSVG from "@/svg/Linkedin";
+import BehanceSVG from '@/svg/Behance';
+import './social-media.scss';
+import DribbbleSVG from '@/svg/Dribbble';
+import GithubSVG from '@/svg/Github';
+import InstagramSVG from '@/svg/Instagram';
+import LinkedinSVG from '@/svg/Linkedin';
 
 export default function SocialMedia() {
     return (

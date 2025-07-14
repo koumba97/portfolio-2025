@@ -1,4 +1,4 @@
-import { SVGProp } from "@/utils/types";
+import { SVGProp } from '@/utils/types';
 
 export default function ArrowLeftSVG({ width, height, viewBox }: SVGProp) {
     return (

@@ -1,20 +1,20 @@
-"use client";
+'use client';
 
-import koumImg from "@/assets/images/koum.png";
-import Image from "next/image";
-import "./hero.scss";
-import ButtonUI from "@/ui/button/button";
-import Movinwords from "movinwords";
-import "movinwords/styles";
-import { useEffect, useRef, useState } from "react";
+import koumImg from '@/assets/images/koum.png';
+import Image from 'next/image';
+import './hero.scss';
+import ButtonUI from '@/ui/button/button';
+import Movinwords from 'movinwords';
+import 'movinwords/styles';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Hero() {
     const titleRef = useRef<Movinwords | null>(null);
     const roles = [
-        "UI/UX Designer",
-        "Digital Artist",
-        "Graphic Designer",
-        "Frontend engineer",
+        'UI/UX Designer',
+        'Digital Artist',
+        'Graphic Designer',
+        'Frontend engineer',
     ];
     const [currentRole, setCurrentRole] = useState(roles[3]);
     const INTERVAL_TIME = 3000;
@@ -39,9 +39,9 @@ export default function Hero() {
         }
 
         titleRef.current = new Movinwords({
-            el: ".test",
+            el: '.test',
             sentence: currentRole,
-            transition: "revealInBottom",
+            transition: 'revealInBottom',
         });
 
         titleRef.current.start();

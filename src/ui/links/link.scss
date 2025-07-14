@@ -1,4 +1,4 @@
-@import "../../utils/variables.scss";
+@import '../../utils/variables.scss';
 
 .link {
     font-weight: bold;
@@ -7,7 +7,10 @@
     text-decoration: underline;
     text-underline-offset: 4px;
     width: max-content;
-    transition: color 0.3s, background-color 0.3s, scale 0.3s;
+    transition:
+        color 0.3s,
+        background-color 0.3s,
+        scale 0.3s;
     color: $brand-color-secondary;
     border-radius: 5px;
     padding: 0 4px;

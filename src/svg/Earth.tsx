@@ -1,4 +1,4 @@
-import { SVGProp } from "@/utils/types";
+import { SVGProp } from '@/utils/types';
 
 export default function EarthSVG({ width, height, viewBox }: SVGProp) {
     return (

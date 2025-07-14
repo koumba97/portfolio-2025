@@ -1,9 +1,9 @@
-import { Chip } from "@mui/material";
-import "./experience-details.scss";
-import Link from "next/link";
-import { useLang } from "@/context/language-context";
-import LocationSVG from "@/svg/Location";
-import { Locals } from "@/utils/locals";
+import { Chip } from '@mui/material';
+import './experience-details.scss';
+import Link from 'next/link';
+import { useLang } from '@/context/language-context';
+import LocationSVG from '@/svg/Location';
+import { Locals } from '@/utils/locals';
 
 type Prop = {
     name: string;
@@ -26,10 +26,10 @@ export default function ExperienceDetails({
 }: Prop) {
     const { lang } = useLang();
     const formatDate = (date: Date) => {
-        const langDate = lang === "fr" ? "fr-FR" : "en-EN";
+        const langDate = lang === 'fr' ? 'fr-FR' : 'en-EN';
         const formatted = new Intl.DateTimeFormat(langDate, {
-            month: "short",
-            year: "numeric",
+            month: 'short',
+            year: 'numeric',
         }).format(date);
 
         const finalDate = formatted[0].toUpperCase() + formatted.slice(1);
@@ -38,7 +38,7 @@ export default function ExperienceDetails({
     return (
         <div className="experience-details">
             <Link
-                href={link ? link : ""}
+                href={link ? link : ''}
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -56,16 +56,14 @@ export default function ExperienceDetails({
                         size="small"
                         label={
                             duration
-                                ? typeof duration.end === "string"
-                                    ? `${formatDate(duration.start)} - ${
-                                          duration.end
-                                      }`
+                                ? typeof duration.end === 'string'
+                                    ? `${formatDate(duration.start)} - ${duration.end}`
                                     : `${formatDate(
                                           duration.start
                                       )} - ${formatDate(duration.end)}`
                                 : null
                         }
-                    />{" "}
+                    />{' '}
                     <Chip
                         className="location"
                         size="small"

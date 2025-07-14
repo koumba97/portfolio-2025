@@ -1,6 +1,6 @@
-import { ToolInterface } from "@/utils/tool-list";
-import "./competence-box.scss";
-import Tool from "@/ui/tool/tool";
+import { ToolInterface } from '@/utils/tool-list';
+import './competence-box.scss';
+import Tool from '@/ui/tool/tool';
 
 interface Prop {
     title: string;

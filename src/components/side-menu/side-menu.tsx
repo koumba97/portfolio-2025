@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import "./side-menu.scss";
-import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import './side-menu.scss';
+import { useEffect, useState } from 'react';
 
 interface Prop {
     // defines the max screen where the sidemenu should be visible
@@ -20,10 +20,10 @@ export default function SideMenu({ maxSize }: Prop) {
             }
         };
 
-        window.addEventListener("resize", handleResize);
+        window.addEventListener('resize', handleResize);
 
         return () => {
-            window.removeEventListener("resize", handleResize);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
@@ -45,7 +45,7 @@ export default function SideMenu({ maxSize }: Prop) {
                 />
             )}
 
-            <menu className={`menu ${isOpen ? "open" : "closed"}`}>
+            <menu className={`menu ${isOpen ? 'open' : 'closed'}`}>
                 menu content here
             </menu>
             {isOpen ? (

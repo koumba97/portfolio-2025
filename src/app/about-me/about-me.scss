@@ -1,4 +1,4 @@
-@import "../../utils/variables.scss";
+@import '../../utils/variables.scss';
 
 .about-me-section {
     display: grid;
@@ -34,7 +34,7 @@
         }
         .title {
             font-size: 70px;
-            font-family: "Lost Days";
+            font-family: 'Lost Days';
             font-weight: unset;
             width: fit-content;
 
@@ -57,7 +57,7 @@
     }
 
     h3 {
-        font-family: "Lost Days";
+        font-family: 'Lost Days';
         font-weight: unset;
     }
     .get-in-touch {
@@ -84,7 +84,9 @@
             justify-content: space-between;
             font-size: 12px;
             font-weight: 800;
-            transition: scale 0.3s, background-color 0.3s;
+            transition:
+                scale 0.3s,
+                background-color 0.3s;
             p {
                 border-top: solid white;
                 color: white;

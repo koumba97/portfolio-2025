@@ -1,35 +1,35 @@
-import { Tool, ToolInterface } from "./tool-list"
-import lettering from "@/assets/images/projects/lettering/lettering.png";
-import digitalDrawings from "@/assets/images/projects/digital-drawings/digital-drawings-cut.png";
-import abstractLine from "@/assets/images/abstract/line1.svg";
-import musicLibrary from "@/assets/images/projects/music-library/music-library.png";
-import abstractLine2 from "@/assets/images/abstract/line2.svg";
-import cookishMaster from "@/assets/images/projects/cookish-master/cookish-master.png";
-import puff from "@/assets/images/projects/puff/puff.png";
-import eCommerce from "@/assets/images/projects/krush/e-commerce.png";
-import modeling from "@/assets/images/projects/modeling/modeling.png";
-import designSystem from "@/assets/images/projects/design-system/design-system.png";
-import { StaticImageData } from "next/image";
+import { Tool, ToolInterface } from './tool-list';
+import lettering from '@/assets/images/projects/lettering/lettering.png';
+import digitalDrawings from '@/assets/images/projects/digital-drawings/digital-drawings-cut.png';
+import abstractLine from '@/assets/images/abstract/line1.svg';
+import musicLibrary from '@/assets/images/projects/music-library/music-library.png';
+import abstractLine2 from '@/assets/images/abstract/line2.svg';
+import cookishMaster from '@/assets/images/projects/cookish-master/cookish-master.png';
+import puff from '@/assets/images/projects/puff/puff.png';
+import eCommerce from '@/assets/images/projects/krush/e-commerce.png';
+import modeling from '@/assets/images/projects/modeling/modeling.png';
+import designSystem from '@/assets/images/projects/design-system/design-system.png';
+import { StaticImageData } from 'next/image';
 
 //DIGITAL DRAWINGS
-import goodDays from "@/assets/images/projects/digital-drawings/good-days.jpg";
-import queenKing from "@/assets/images/projects/digital-drawings/queen-king.jpg";
-import blackSwan from "@/assets/images/projects/digital-drawings/black-swan.jpg";
-import sunday from "@/assets/images/projects/digital-drawings/sunday.jpg";
-import headInTheClouds from "@/assets/images/projects/digital-drawings/head-in-the-clouds.jpg";
-import starterPack from "@/assets/images/projects/digital-drawings/starter-pack.jpg";
+import goodDays from '@/assets/images/projects/digital-drawings/good-days.jpg';
+import queenKing from '@/assets/images/projects/digital-drawings/queen-king.jpg';
+import blackSwan from '@/assets/images/projects/digital-drawings/black-swan.jpg';
+import sunday from '@/assets/images/projects/digital-drawings/sunday.jpg';
+import headInTheClouds from '@/assets/images/projects/digital-drawings/head-in-the-clouds.jpg';
+import starterPack from '@/assets/images/projects/digital-drawings/starter-pack.jpg';
 
 //LETTERING
-import letteringBook from "@/assets/images/projects/lettering/lettering.png";
-import hybridation from "@/assets/images/projects/lettering/hybridation.png";
-import hybridation2 from "@/assets/images/projects/lettering/hybridation2.png";
-import hybridation3 from "@/assets/images/projects/lettering/hybridation3.jpg";
+import letteringBook from '@/assets/images/projects/lettering/lettering.png';
+import hybridation from '@/assets/images/projects/lettering/hybridation.png';
+import hybridation2 from '@/assets/images/projects/lettering/hybridation2.png';
+import hybridation3 from '@/assets/images/projects/lettering/hybridation3.jpg';
 
 //MUSIC LIBRARY
-import musicLibrary2 from "@/assets/images/projects/music-library/music-library2.png";
-import musicLibrary3 from "@/assets/images/projects/music-library/music-library3.png";
-import musicLibrary4 from "@/assets/images/projects/music-library/music-library4.png";
-import musicLibrary5 from "@/assets/images/projects/music-library/music-library5.png";
+import musicLibrary2 from '@/assets/images/projects/music-library/music-library2.png';
+import musicLibrary3 from '@/assets/images/projects/music-library/music-library3.png';
+import musicLibrary4 from '@/assets/images/projects/music-library/music-library4.png';
+import musicLibrary5 from '@/assets/images/projects/music-library/music-library5.png';
 
 export enum ProjectID {
     lettering = 'lettering',
@@ -42,124 +42,127 @@ export enum ProjectID {
     krush = 'krush',
 }
 export interface ProjectInterface {
-    name:string,
-    id: ProjectID,
+    name: string;
+    id: ProjectID;
     coverImage: {
-        front?: StaticImageData,
-        back?: StaticImageData,
-        frontHeight?: number
-        top?: `${number}%`,
-        left?: `${number}%`
-    },
-    description: string
-    gallery: {original: string, thumbnail:string}[],
+        front?: StaticImageData;
+        back?: StaticImageData;
+        frontHeight?: number;
+        top?: `${number}%`;
+        left?: `${number}%`;
+    };
+    description: string;
+    gallery: { original: string; thumbnail: string }[];
     link?: {
-        github?: string,
-        live?: string
-    },
-    process?: string,
-    tool: ToolInterface[]
+        github?: string;
+        live?: string;
+    };
+    process?: string;
+    tool: ToolInterface[];
 }
 export const ProjectsList: ProjectInterface[] = [
     {
         name: 'Lettering',
         id: ProjectID.lettering,
         coverImage: {
-            back: lettering
+            back: lettering,
         },
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original:letteringBook.src,
-                thumbnail: letteringBook.src
-            }, 
-            {
-                original:hybridation.src, 
-                thumbnail: hybridation.src
+                original: letteringBook.src,
+                thumbnail: letteringBook.src,
             },
             {
-                original:hybridation2.src, 
-                thumbnail: hybridation2.src
+                original: hybridation.src,
+                thumbnail: hybridation.src,
             },
             {
-                original:hybridation3.src, 
-                thumbnail: hybridation3.src
+                original: hybridation2.src,
+                thumbnail: hybridation2.src,
+            },
+            {
+                original: hybridation3.src,
+                thumbnail: hybridation3.src,
             },
         ],
-        tool: [Tool.illustrator, Tool.indesign, Tool.photoshop]
+        tool: [Tool.illustrator, Tool.indesign, Tool.photoshop],
     },
     {
         name: 'Digital drawings',
         id: ProjectID.digitalDrawings,
         coverImage: {
-            back: digitalDrawings
+            back: digitalDrawings,
         },
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original:goodDays.src,
-                thumbnail: goodDays.src
-            }, 
-            {
-                original:queenKing.src, 
-                thumbnail: queenKing.src
+                original: goodDays.src,
+                thumbnail: goodDays.src,
             },
             {
-                original:blackSwan.src, 
-                thumbnail: blackSwan.src
+                original: queenKing.src,
+                thumbnail: queenKing.src,
             },
             {
-                original:headInTheClouds.src, 
-                thumbnail: headInTheClouds.src
+                original: blackSwan.src,
+                thumbnail: blackSwan.src,
             },
             {
-                original:sunday.src,
-                thumbnail: sunday.src
+                original: headInTheClouds.src,
+                thumbnail: headInTheClouds.src,
+            },
+            {
+                original: sunday.src,
+                thumbnail: sunday.src,
             },
             {
                 original: starterPack.src,
-                thumbnail: starterPack.src
-            }
+                thumbnail: starterPack.src,
+            },
         ],
         link: {
-            live: 'https://www.instagram.com/koum.97'
+            live: 'https://www.instagram.com/koum.97',
         },
-        tool: [Tool.procreate, Tool.procreateDreams, Tool.photoshop]
+        tool: [Tool.procreate, Tool.procreateDreams, Tool.photoshop],
     },
     {
         name: 'Cookish master',
         id: ProjectID.cookishMaster,
         coverImage: {
             front: cookishMaster,
-            back: abstractLine2
+            back: abstractLine2,
         },
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original:goodDays.src,
-                thumbnail: goodDays.src
-            }, 
-            {
-                original:queenKing.src, 
-                thumbnail: queenKing.src
+                original: goodDays.src,
+                thumbnail: goodDays.src,
             },
             {
-                original:blackSwan.src, 
-                thumbnail: blackSwan.src
+                original: queenKing.src,
+                thumbnail: queenKing.src,
             },
             {
-                original:headInTheClouds.src, 
-                thumbnail: headInTheClouds.src
+                original: blackSwan.src,
+                thumbnail: blackSwan.src,
             },
             {
-                original:sunday.src,
-                thumbnail: sunday.src
-            }
+                original: headInTheClouds.src,
+                thumbnail: headInTheClouds.src,
+            },
+            {
+                original: sunday.src,
+                thumbnail: sunday.src,
+            },
         ],
         link: {
-            github: 'https://github.com/EpitechIT2020/W-WEB-320-PAR-4-3-app-koumba.keita'
+            github: 'https://github.com/EpitechIT2020/W-WEB-320-PAR-4-3-app-koumba.keita',
         },
-        tool: [Tool.reactNative, Tool.firebase, Tool.figma, Tool.illustrator]
+        tool: [Tool.reactNative, Tool.firebase, Tool.figma, Tool.illustrator],
     },
     {
         name: 'Music library',
@@ -167,98 +170,113 @@ export const ProjectsList: ProjectInterface[] = [
         coverImage: {
             front: musicLibrary,
             back: abstractLine,
-            frontHeight: 230
+            frontHeight: 230,
         },
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original:musicLibrary2.src,
-                thumbnail: musicLibrary2.src
-            }, 
-            {
-                original:musicLibrary3.src,
-                thumbnail: musicLibrary3.src
+                original: musicLibrary2.src,
+                thumbnail: musicLibrary2.src,
             },
             {
-                original:musicLibrary4.src, 
-                thumbnail: musicLibrary4.src
+                original: musicLibrary3.src,
+                thumbnail: musicLibrary3.src,
             },
             {
-                original:musicLibrary5.src, 
-                thumbnail: musicLibrary5.src
+                original: musicLibrary4.src,
+                thumbnail: musicLibrary4.src,
+            },
+            {
+                original: musicLibrary5.src,
+                thumbnail: musicLibrary5.src,
             },
         ],
         link: {
             github: 'https://github.com/koumba97/music-library',
-            live: 'https://music-library-koum.vercel.app/'
+            live: 'https://music-library-koum.vercel.app/',
         },
-        tool: [Tool.react, Tool.typescript, Tool.firebase, Tool.sass]
+        tool: [Tool.react, Tool.typescript, Tool.firebase, Tool.sass],
     },
     {
         name: 'Puff',
         id: ProjectID.puff,
         coverImage: {
-            back: puff
+            back: puff,
         },
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original:goodDays.src,
-                thumbnail: goodDays.src
-            }, 
-            {
-                original:queenKing.src, 
-                thumbnail: queenKing.src
+                original: goodDays.src,
+                thumbnail: goodDays.src,
             },
             {
-                original:blackSwan.src, 
-                thumbnail: blackSwan.src
+                original: queenKing.src,
+                thumbnail: queenKing.src,
             },
             {
-                original:headInTheClouds.src, 
-                thumbnail: headInTheClouds.src
+                original: blackSwan.src,
+                thumbnail: blackSwan.src,
             },
             {
-                original:sunday.src,
-                thumbnail: sunday.src
-            }
+                original: headInTheClouds.src,
+                thumbnail: headInTheClouds.src,
+            },
+            {
+                original: sunday.src,
+                thumbnail: sunday.src,
+            },
         ],
         link: {
             github: 'https://github.com/koumba97/puff',
         },
-        tool: [Tool.reactNative, Tool.figma, Tool.procreate, Tool.firebase, Tool.illustrator]
+        tool: [
+            Tool.reactNative,
+            Tool.figma,
+            Tool.procreate,
+            Tool.firebase,
+            Tool.illustrator,
+        ],
     },
     {
         name: 'Design System',
         id: ProjectID.designSystem,
         coverImage: {
-            back: designSystem
+            back: designSystem,
         },
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original:goodDays.src,
-                thumbnail: goodDays.src
-            }, 
-            {
-                original:queenKing.src, 
-                thumbnail: queenKing.src
+                original: goodDays.src,
+                thumbnail: goodDays.src,
             },
             {
-                original:blackSwan.src, 
-                thumbnail: blackSwan.src
+                original: queenKing.src,
+                thumbnail: queenKing.src,
             },
             {
-                original:headInTheClouds.src, 
-                thumbnail: headInTheClouds.src
+                original: blackSwan.src,
+                thumbnail: blackSwan.src,
             },
             {
-                original:sunday.src,
-                thumbnail: sunday.src
-            }
+                original: headInTheClouds.src,
+                thumbnail: headInTheClouds.src,
+            },
+            {
+                original: sunday.src,
+                thumbnail: sunday.src,
+            },
         ],
 
-        tool: [Tool.react, Tool.typescript, Tool.sass, Tool.storybook, Tool.figma]
+        tool: [
+            Tool.react,
+            Tool.typescript,
+            Tool.sass,
+            Tool.storybook,
+            Tool.figma,
+        ],
     },
     {
         name: '3D Modeling',
@@ -269,66 +287,66 @@ export const ProjectsList: ProjectInterface[] = [
             left: '65%',
             top: '65%',
         },
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original:goodDays.src,
-                thumbnail: goodDays.src
-            }, 
-            {
-                original:queenKing.src, 
-                thumbnail: queenKing.src
+                original: goodDays.src,
+                thumbnail: goodDays.src,
             },
             {
-                original:blackSwan.src, 
-                thumbnail: blackSwan.src
+                original: queenKing.src,
+                thumbnail: queenKing.src,
             },
             {
-                original:headInTheClouds.src, 
-                thumbnail: headInTheClouds.src
+                original: blackSwan.src,
+                thumbnail: blackSwan.src,
             },
             {
-                original:sunday.src,
-                thumbnail: sunday.src
-            }
+                original: headInTheClouds.src,
+                thumbnail: headInTheClouds.src,
+            },
+            {
+                original: sunday.src,
+                thumbnail: sunday.src,
+            },
         ],
-        tool: [Tool.nomadSculpt]
-    }
-    ,
+        tool: [Tool.nomadSculpt],
+    },
     {
         name: 'Krush',
         id: ProjectID.krush,
         coverImage: {
-            back: eCommerce
+            back: eCommerce,
         },
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.",
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original:goodDays.src,
-                thumbnail: goodDays.src
-            }, 
-            {
-                original:queenKing.src, 
-                thumbnail: queenKing.src
+                original: goodDays.src,
+                thumbnail: goodDays.src,
             },
             {
-                original:blackSwan.src, 
-                thumbnail: blackSwan.src
+                original: queenKing.src,
+                thumbnail: queenKing.src,
             },
             {
-                original:headInTheClouds.src, 
-                thumbnail: headInTheClouds.src
+                original: blackSwan.src,
+                thumbnail: blackSwan.src,
             },
             {
-                original:sunday.src,
-                thumbnail: sunday.src
-            }
+                original: headInTheClouds.src,
+                thumbnail: headInTheClouds.src,
+            },
+            {
+                original: sunday.src,
+                thumbnail: sunday.src,
+            },
         ],
         link: {
             github: 'https://github.com/koumba97/krush-ecommerce',
-            live: 'https://krush-koum.vercel.app/'
+            live: 'https://krush-koum.vercel.app/',
         },
-        tool: [Tool.react, Tool.sass, Tool.typescript]
-    }
-
-]
+        tool: [Tool.react, Tool.sass, Tool.typescript],
+    },
+];

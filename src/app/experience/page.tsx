@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import "./experience.scss";
-import VisitCard from "@/components/visit-card/visit-card";
-import { Locals } from "@/utils/locals";
-import { useLang } from "@/context/language-context";
-import ExperienceDetails from "@/components/experience-details/experience-details";
-import { educationList } from "@/utils/education";
-import { experienceList } from "@/utils/experience";
-import { ResumeCard } from "@/components/resume-card/resume-card";
+import './experience.scss';
+import VisitCard from '@/components/visit-card/visit-card';
+import { Locals } from '@/utils/locals';
+import { useLang } from '@/context/language-context';
+import ExperienceDetails from '@/components/experience-details/experience-details';
+import { educationList } from '@/utils/education';
+import { experienceList } from '@/utils/experience';
+import { ResumeCard } from '@/components/resume-card/resume-card';
 
 export default function Experience() {
     const { lang } = useLang();

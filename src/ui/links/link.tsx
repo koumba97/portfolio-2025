@@ -1,4 +1,4 @@
-import "./link.scss";
+import './link.scss';
 
 interface Prop {
     children: React.ReactNode;

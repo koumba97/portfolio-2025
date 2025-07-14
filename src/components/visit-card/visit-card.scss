@@ -1,4 +1,4 @@
-@import "../../utils/variables.scss";
+@import '../../utils/variables.scss';
 
 .visit-card {
     background-color: #f0f0ff;
@@ -22,7 +22,7 @@
         gap: 4px;
         flex-direction: column;
         h3 {
-            font-family: "Lost days";
+            font-family: 'Lost days';
             font-weight: unset;
             font-size: 28px;
         }

@@ -1,4 +1,4 @@
-//SVG 
+//SVG
 export interface SVGProp {
     width: number;
     height: number;

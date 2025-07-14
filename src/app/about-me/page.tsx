@@ -1,22 +1,22 @@
-"use client";
+'use client';
 
-import koumImg from "@/assets/images/about-me/koum2.png";
-import rollerSkate from "@/assets/images/about-me/interests/roller-skates.png";
-import museum from "@/assets/images/about-me/interests/museum.png";
-import paint from "@/assets/images/about-me/interests/design.png";
-import baking from "@/assets/images/about-me/interests/cupcake.png";
-import Image from "next/image";
-import "./about-me.scss";
-import ButtonUI from "@/ui/button/button";
-import Movinwords from "movinwords";
-import "movinwords/styles";
-import { useEffect, useRef, useState } from "react";
-import { Locals } from "@/utils/locals";
-import { useLang } from "@/context/language-context";
-import { Link } from "next-view-transitions";
-import { Chip, Tooltip } from "@mui/material";
-import LinkedinSVG from "@/svg/Linkedin";
-import MailSVG from "@/svg/Mail";
+import koumImg from '@/assets/images/about-me/koum2.png';
+import rollerSkate from '@/assets/images/about-me/interests/roller-skates.png';
+import museum from '@/assets/images/about-me/interests/museum.png';
+import paint from '@/assets/images/about-me/interests/design.png';
+import baking from '@/assets/images/about-me/interests/cupcake.png';
+import Image from 'next/image';
+import './about-me.scss';
+import ButtonUI from '@/ui/button/button';
+import Movinwords from 'movinwords';
+import 'movinwords/styles';
+import { useEffect, useRef, useState } from 'react';
+import { Locals } from '@/utils/locals';
+import { useLang } from '@/context/language-context';
+import { Link } from 'next-view-transitions';
+import { Chip, Tooltip } from '@mui/material';
+import LinkedinSVG from '@/svg/Linkedin';
+import MailSVG from '@/svg/Mail';
 
 export default function AboutMe() {
     const { lang } = useLang();
@@ -29,21 +29,21 @@ export default function AboutMe() {
     ];
     type softSkills = {
         name: string;
-        type: "cognitive" | "organizational" | "interpersonal" | "personal";
+        type: 'cognitive' | 'organizational' | 'interpersonal' | 'personal';
     };
     const softSkills: softSkills[] = [
-        { name: Locals.creative[lang], type: "cognitive" },
-        { name: Locals.stressManagement[lang], type: "personal" },
-        { name: Locals.fastLeaner[lang], type: "cognitive" },
-        { name: Locals.autonomy[lang], type: "organizational" },
-        { name: Locals.positiveAttitude[lang], type: "interpersonal" },
-        { name: Locals.multitasking[lang], type: "organizational" },
-        { name: Locals.problemSolving[lang], type: "cognitive" },
-        { name: Locals.prioritizeIssues[lang], type: "organizational" },
-        { name: Locals.criticalThinking[lang], type: "cognitive" },
-        { name: Locals.attentionToDetail[lang], type: "cognitive" },
-        { name: Locals.teamSpirit[lang], type: "interpersonal" },
-        { name: Locals.adaptability[lang], type: "personal" },
+        { name: Locals.creative[lang], type: 'cognitive' },
+        { name: Locals.stressManagement[lang], type: 'personal' },
+        { name: Locals.fastLeaner[lang], type: 'cognitive' },
+        { name: Locals.autonomy[lang], type: 'organizational' },
+        { name: Locals.positiveAttitude[lang], type: 'interpersonal' },
+        { name: Locals.multitasking[lang], type: 'organizational' },
+        { name: Locals.problemSolving[lang], type: 'cognitive' },
+        { name: Locals.prioritizeIssues[lang], type: 'organizational' },
+        { name: Locals.criticalThinking[lang], type: 'cognitive' },
+        { name: Locals.attentionToDetail[lang], type: 'cognitive' },
+        { name: Locals.teamSpirit[lang], type: 'interpersonal' },
+        { name: Locals.adaptability[lang], type: 'personal' },
     ];
 
     const [currentRole, setCurrentRole] = useState(roles[3]);
@@ -69,9 +69,9 @@ export default function AboutMe() {
         }
 
         titleRef.current = new Movinwords({
-            el: ".test",
+            el: '.test',
             sentence: currentRole,
-            transition: "revealInBottom",
+            transition: 'revealInBottom',
         });
 
         titleRef.current.start();

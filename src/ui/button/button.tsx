@@ -1,16 +1,16 @@
-import "./button.scss";
-import Button from "@mui/material/Button";
+import './button.scss';
+import Button from '@mui/material/Button';
 
 interface Prop {
     children: React.ReactNode;
-    type?: "contained" | "outlined";
+    type?: 'contained' | 'outlined';
     className?: string;
     onClick?: () => void;
 }
 
 export default function ButtonUI({
     children,
-    type = "contained",
+    type = 'contained',
     onClick,
     className,
 }: Prop) {

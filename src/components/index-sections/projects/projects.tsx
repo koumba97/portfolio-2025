@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import "./projects.scss";
-import Image, { StaticImageData } from "next/image";
-import { ProjectsList } from "@/utils/projects";
-import { Link } from "next-view-transitions";
+import './projects.scss';
+import Image, { StaticImageData } from 'next/image';
+import { ProjectsList } from '@/utils/projects';
+import { Link } from 'next-view-transitions';
 
 export default function Projects() {
     return (
@@ -59,8 +59,8 @@ export function ProjectBloc({
             aria-labelledby={id}
             style={{
                 backgroundImage: backImg ? `url("${backImg}")` : undefined,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
             }}
         >
             {frontImg ? (
@@ -70,8 +70,8 @@ export function ProjectBloc({
                     height={frontHeight ? frontHeight : 300}
                     className="front-image"
                     style={{
-                        top: top ? top : "50%",
-                        left: left ? left : "50%",
+                        top: top ? top : '50%',
+                        left: left ? left : '50%',
                     }}
                 />
             ) : null}

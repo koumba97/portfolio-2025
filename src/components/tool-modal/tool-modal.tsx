@@ -1,7 +1,7 @@
-import { Button, Modal } from "@mui/material";
-import "./tool-modal.scss";
-import CloseSVG from "@/svg/Close";
-import Tool, { ToolProp } from "@/ui/tool/tool";
+import { Button, Modal } from '@mui/material';
+import './tool-modal.scss';
+import CloseSVG from '@/svg/Close';
+import Tool, { ToolProp } from '@/ui/tool/tool';
 
 interface Prop {
     tools: ToolProp[];

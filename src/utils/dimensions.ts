@@ -1,14 +1,14 @@
 export const getViewport = () => {
     if (typeof window !== 'undefined') {
-      return {
-        vw: window.innerWidth,
-        vh: window.innerHeight
-      };
+        return {
+            vw: window.innerWidth,
+            vh: window.innerHeight,
+        };
     }
-  
+
     return {
-      vw: 0,
-      vh: 0
+        vw: 0,
+        vh: 0,
     };
 };
 

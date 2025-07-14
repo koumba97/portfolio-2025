@@ -1,6 +1,6 @@
-import CompetenceBox from "@/ui/competence-box/competence-box";
-import "./stack.scss";
-import { Tool } from "@/utils/tool-list";
+import CompetenceBox from '@/ui/competence-box/competence-box';
+import './stack.scss';
+import { Tool } from '@/utils/tool-list';
 
 export default function Stack() {
     const programmingList = [
