@@ -8,7 +8,6 @@ import cookishMaster from '@/assets/images/projects/cookish-master/cookish-maste
 import puffCover from '@/assets/images/projects/puff/puff.png';
 import eCommerce from '@/assets/images/projects/krush/e-commerce.png';
 import modeling from '@/assets/images/projects/modeling/modeling.png';
-import designSystem from '@/assets/images/projects/design-system/design-system.png';
 import { StaticImageData } from 'next/image';
 
 //DIGITAL DRAWINGS
@@ -44,6 +43,10 @@ import puff2 from '@/assets/images/projects/puff/puff2.png';
 import puff4 from '@/assets/images/projects/puff/puff4.png';
 import puff5 from '@/assets/images/projects/puff/puff5.png';
 
+//KOUM UI
+import koumUI from '@/assets/images/projects/koum-ui/koum-ui-logo.png';
+import koumUI2 from '@/assets/images/projects/koum-ui/koum-ui.png';
+
 //KRUSH
 import krush from '@/assets/images/projects/krush/krush.png';
 import krush2 from '@/assets/images/projects/krush/krush2.png';
@@ -65,7 +68,7 @@ export enum ProjectID {
     cookishMaster = 'cookish-master',
     musicLibrary = 'music-library',
     puff = 'puff',
-    designSystem = 'design-system',
+    koumUI = 'koum-ui',
     modeling = '3d-modeling',
     krush = 'krush',
 }
@@ -248,14 +251,6 @@ export const ProjectsList: ProjectInterface[] = [
                 original: puff5.src,
                 thumbnail: puff5.src,
             },
-            {
-                original: headInTheClouds.src,
-                thumbnail: headInTheClouds.src,
-            },
-            {
-                original: sunday.src,
-                thumbnail: sunday.src,
-            },
         ],
         link: {
             github: 'https://github.com/koumba97/puff',
@@ -269,17 +264,17 @@ export const ProjectsList: ProjectInterface[] = [
         ],
     },
     {
-        name: 'Design System',
-        id: ProjectID.designSystem,
+        name: 'Koum UI',
+        id: ProjectID.koumUI,
         coverImage: {
-            back: designSystem,
+            back: koumUI2,
         },
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original: goodDays.src,
-                thumbnail: goodDays.src,
+                original: koumUI.src,
+                thumbnail: koumUI.src,
             },
             {
                 original: queenKing.src,
@@ -298,6 +293,10 @@ export const ProjectsList: ProjectInterface[] = [
                 thumbnail: sunday.src,
             },
         ],
+        link: {
+            live: 'https://koum-ui.vercel.app/',
+            github: 'https://github.com/koumba97/koum-ui',
+        },
 
         tool: [
             Tool.react,
@@ -320,8 +319,8 @@ export const ProjectsList: ProjectInterface[] = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original: sketch.src,
-                thumbnail: sketch.src,
+                original: koum5.src,
+                thumbnail: koum5.src,
             },
             {
                 original: koum.src,
@@ -337,8 +336,8 @@ export const ProjectsList: ProjectInterface[] = [
                 thumbnail: koum4.src,
             },
             {
-                original: koum5.src,
-                thumbnail: koum5.src,
+                original: sketch.src,
+                thumbnail: sketch.src,
             },
         ],
         link: {

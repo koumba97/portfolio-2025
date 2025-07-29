@@ -36,17 +36,17 @@ export default function ExperienceDetails({
         return finalDate;
     };
     return (
-        <div className="experience-details">
-            <Link
-                href={link ? link : ''}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <div
-                    className="image-container"
-                    style={{ backgroundImage: `url("${image}")` }}
-                />
-            </Link>
+        <Link
+            href={link ? link : ''}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="experience-details"
+        >
+            <div
+                className="image-container"
+                style={{ backgroundImage: `url("${image}")` }}
+            />
+
             <div className="experience-info">
                 <h5>{title}</h5>
                 <h3>{name}</h3>
@@ -84,6 +84,6 @@ export default function ExperienceDetails({
                     {/* <LinkUI href="">See more</LinkUI> */}
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
