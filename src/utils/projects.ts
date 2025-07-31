@@ -46,9 +46,11 @@ import puff5 from '@/assets/images/projects/puff/puff5.png';
 //KOUM UI
 import koumULogo from '@/assets/images/projects/koum-ui/koum-ui-logo.png';
 import koumUI from '@/assets/images/projects/koum-ui/koum-ui.png';
+import koumUI1 from '@/assets/images/projects/koum-ui/koum-ui1.png';
 import koumUI2 from '@/assets/images/projects/koum-ui/koum-ui2.png';
 import koumUI3 from '@/assets/images/projects/koum-ui/koum-ui3.png';
 import koumUI4 from '@/assets/images/projects/koum-ui/koum-ui4.png';
+import koumUI5 from '@/assets/images/projects/koum-ui/koum-ui5.png';
 
 //KRUSH
 import krush from '@/assets/images/projects/krush/krush.png';
@@ -276,6 +278,14 @@ export const ProjectsList: ProjectInterface[] = [
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
+                original: koumUI1.src,
+                thumbnail: koumUI1.src,
+            },
+            {
+                original: koumUI5.src,
+                thumbnail: koumUI5.src,
+            },
+            {
                 original: koumUI2.src,
                 thumbnail: koumUI2.src,
             },
@@ -286,14 +296,6 @@ export const ProjectsList: ProjectInterface[] = [
             {
                 original: koumUI4.src,
                 thumbnail: koumUI4.src,
-            },
-            {
-                original: headInTheClouds.src,
-                thumbnail: headInTheClouds.src,
-            },
-            {
-                original: sunday.src,
-                thumbnail: sunday.src,
             },
         ],
         link: {
