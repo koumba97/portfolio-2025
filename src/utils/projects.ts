@@ -44,7 +44,6 @@ import puff4 from '@/assets/images/projects/puff/puff4.png';
 import puff5 from '@/assets/images/projects/puff/puff5.png';
 
 //KOUM UI
-import koumULogo from '@/assets/images/projects/koum-ui/koum-ui-logo.png';
 import koumUI from '@/assets/images/projects/koum-ui/koum-ui.png';
 import koumUI1 from '@/assets/images/projects/koum-ui/koum-ui1.png';
 import koumUI2 from '@/assets/images/projects/koum-ui/koum-ui2.png';
