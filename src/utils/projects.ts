@@ -32,8 +32,8 @@ import musicLibrary5 from '@/assets/images/projects/music-library/music-library5
 
 //COOKISH MASTER
 import cookish from '@/assets/images/projects/cookish-master/cookish.png';
-import cookish2 from '@/assets/images/projects/cookish-master/cookish2.jpg';
-import cookish3 from '@/assets/images/projects/cookish-master/cookish3.jpg';
+import cookish2 from '@/assets/images/projects/cookish-master/cookish2.png';
+import cookish3 from '@/assets/images/projects/cookish-master/cookish3.png';
 import cookish4 from '@/assets/images/projects/cookish-master/cookish4.png';
 
 //PUFF
@@ -193,7 +193,7 @@ export const ProjectsList: ProjectInterface[] = [
         ],
         link: {
             github: 'https://github.com/EpitechIT2020/W-WEB-320-PAR-4-3-app-koumba.keita',
-            live: '/videos/cookish.mp4',
+            live: '/videos/cookish-master-demo.mp4',
         },
         tool: [Tool.reactNative, Tool.firebase, Tool.figma, Tool.illustrator],
     },
@@ -227,7 +227,7 @@ export const ProjectsList: ProjectInterface[] = [
         ],
         link: {
             github: 'https://github.com/koumba97/music-library',
-            live: 'https://music-library-koum.vercel.app/',
+            //live: 'https://music-library-koum.vercel.app/',
         },
         tool: [Tool.react, Tool.typescript, Tool.firebase, Tool.sass],
     },

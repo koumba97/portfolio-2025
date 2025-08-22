@@ -47,8 +47,8 @@ export const Locals: LocalLang = {
         fr: 'Voir le code',
     },
     seeProject: {
-        en: 'See the project',
-        fr: 'Voir le projet',
+        en: 'See the demo',
+        fr: 'Voir la démo',
     },
     tool: {
         en: 'Tool',
