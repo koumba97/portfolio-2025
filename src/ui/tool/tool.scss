@@ -16,8 +16,9 @@
     height: 36px;
     background-color: white;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     border-radius: 10px;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     transition: scale 0.3s;

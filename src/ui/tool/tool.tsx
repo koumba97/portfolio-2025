@@ -1,3 +1,5 @@
+'use client';
+
 import { Tooltip } from '@mui/material';
 import './tool.scss';
 import { StaticImageData } from 'next/image';
@@ -27,8 +29,6 @@ export default function Tool({
                         className="icon-container"
                         style={{
                             backgroundImage: `url("${image.src}")`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
                         }}
                     ></div>
                 </a>

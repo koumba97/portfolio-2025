@@ -14,6 +14,12 @@ import symfonyLogo from '@/assets/images/logo/symfony.png';
 import storybookLogo from '@/assets/images/logo/storybook.png';
 import firebaseLogo from '@/assets/images/logo/firebase.png';
 import angularLogo from '@/assets/images/logo/angular.png';
+import phpLogo from '@/assets/images/logo/php.png';
+import nextLogo from '@/assets/images/logo/next.png';
+import jQueryLogo from '@/assets/images/logo/jquery.png';
+import gitLogo from '@/assets/images/logo/git.png';
+import jestLogo from '@/assets/images/logo/jest.jpg';
+import jasmineLogo from '@/assets/images/logo/jasmine.png';
 
 import photoshopLogo from '@/assets/images/logo/photoshop.png';
 import inDesignLogo from '@/assets/images/logo/indesign.png';
@@ -29,8 +35,6 @@ import microsoftOfficeSuiteLogo from '@/assets/images/logo/symfony.png';
 import procreateLogo from '@/assets/images/logo/procreate.png';
 import procreateDreamsLogo from '@/assets/images/logo/procreate-dreams.png';
 import nomadSculptLogo from '@/assets/images/logo/nomadsculpt.jpeg';
-//import cypressLogo from "@/assets/images/logo/cypress.png";
-//import angularLogo from "@/assets/images/logo/angular.png";
 
 import { StaticImageData } from 'next/image';
 export interface ToolInterface {
@@ -62,6 +66,12 @@ export const Tool: Record<string, ToolInterface> = {
         image: jsLogo,
         full: true,
         link: 'https://www.w3schools.com/js/',
+    },
+    jQuery: {
+        name: 'jQuery',
+        image: jQueryLogo,
+        full: true,
+        link: 'https://jquery.com/',
     },
     typescript: {
         name: 'TypeScript',
@@ -123,6 +133,31 @@ export const Tool: Record<string, ToolInterface> = {
         name: 'Storybook',
         image: storybookLogo,
         link: 'https://storybook.js.org/',
+    },
+    php: {
+        name: 'Php',
+        image: phpLogo,
+        link: 'https://www.php.net/',
+    },
+    next: {
+        name: 'NextJs',
+        image: nextLogo,
+        link: 'https://nextjs.org/',
+    },
+    git: {
+        name: 'Git',
+        image: gitLogo,
+        link: 'https://git-scm.com/',
+    },
+    jest: {
+        name: 'Jest',
+        image: jestLogo,
+        link: 'https://jestjs.io/',
+    },
+    jasmine: {
+        name: 'Jasmine',
+        image: jasmineLogo,
+        link: 'https://jestjs.io/',
     },
 
     //DESIGN
