@@ -87,8 +87,17 @@ export default function NavBar() {
 
             <Link href="/skills">
                 <Tooltip title={Locals.skills[lang]} placement="top">
-                    <Button className="nav-button" color="inherit">
-                        <ToolSVG width={24} height={24} viewBox="0 0 37 37" />
+                    <Button
+                        className={`${pathname === 'skills' ? 'active' : null}
+                        nav-button`}
+                        color="inherit"
+                    >
+                        <ToolSVG
+                            width={24}
+                            height={24}
+                            viewBox="0 0 37 37"
+                            filled={pathname === 'skills'}
+                        />
                     </Button>
                 </Tooltip>
             </Link>

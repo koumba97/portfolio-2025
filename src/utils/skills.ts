@@ -7,25 +7,79 @@ const devSkills: ToolInterface[] = [
     Tool.javascript,
     Tool.typescript,
     Tool.php,
+    Tool.jQuery,
     Tool.sass,
     Tool.tailwind,
-    Tool.storybook,
     Tool.vue,
     Tool.react,
-    Tool.reactNative,
     Tool.angular,
+    Tool.next,
     Tool.laravel,
     Tool.symfony,
-    Tool.next,
+    Tool.reactNative,
+    Tool.expo,
     Tool.node,
-    Tool.cypress,
-    Tool.jQuery,
+    Tool.mysql,
+    Tool.mongoDB,
     Tool.git,
-    Tool.sql,
-    Tool.graphql,
+    Tool.storybook,
+    Tool.firebase,
+    Tool.cypress,
     Tool.jest,
     Tool.jasmine,
-    Tool.firebase,
 ];
 
-export { devSkills };
+const frameworkSkills: ToolInterface[] = [
+    Tool.vue,
+    Tool.react,
+    Tool.angular,
+    Tool.next,
+    Tool.laravel,
+    Tool.symfony,
+];
+
+const langSkills: ToolInterface[] = [
+    Tool.html,
+    Tool.css,
+    Tool.javascript,
+    Tool.typescript,
+    Tool.php,
+];
+
+const mobileSkills: ToolInterface[] = [Tool.reactNative, Tool.expo];
+
+const testingSkills: ToolInterface[] = [Tool.cypress, Tool.jest, Tool.jasmine];
+
+const databaseSkills: ToolInterface[] = [
+    Tool.mysql,
+    Tool.firebase,
+    Tool.mongoDB,
+];
+
+const toolSkills: ToolInterface[] = [
+    Tool.jQuery,
+    Tool.sass,
+    Tool.tailwind,
+    Tool.node,
+    Tool.mysql,
+    Tool.git,
+    Tool.storybook,
+    Tool.firebase,
+    Tool.cypress,
+    Tool.jest,
+    Tool.jasmine,
+];
+
+const styleSkills: ToolInterface[] = [Tool.sass, Tool.tailwind];
+const versioningSkills: ToolInterface[] = [Tool.git, Tool.storybook];
+export {
+    frameworkSkills,
+    langSkills,
+    devSkills,
+    mobileSkills,
+    testingSkills,
+    toolSkills,
+    styleSkills,
+    versioningSkills,
+    databaseSkills,
+};

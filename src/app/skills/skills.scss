@@ -10,38 +10,40 @@
     grid-auto-columns: minmax(100px, auto);
     justify-content: space-between;
 
-    .dev-container {
+    .container {
         background-color: $grey-100;
+        border-radius: 20px;
+        height: 100%;
+        padding: 20;
+        h2 {
+            font-family: 'Lost days';
+            font-weight: unset;
+            margin-bottom: 20px;
+        }
+    }
+
+    .dev-container {
         grid-column: 1/3;
         grid-row: 1/4;
-        height: 100%;
-        border-radius: 20px;
+
         .tool-container {
             flex-wrap: wrap;
+            gap: 12px;
         }
     }
 
     .design-container {
-        background-color: $grey-100;
         grid-column: 3/6;
         grid-row: 1;
-        height: 100%;
-        border-radius: 20px;
     }
 
     .illustration-container {
-        background-color: $grey-100;
         grid-column: 3/6;
         grid-row: 2;
-        height: 100%;
-        border-radius: 20px;
     }
 
     .language-container {
-        background-color: $grey-100;
         grid-column: 3/6;
         grid-row: 3;
-        height: 100%;
-        border-radius: 20px;
     }
 }

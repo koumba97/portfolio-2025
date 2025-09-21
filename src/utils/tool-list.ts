@@ -13,8 +13,11 @@ import cypressLogo from '@/assets/images/logo/cypress.png';
 import symfonyLogo from '@/assets/images/logo/symfony.png';
 import storybookLogo from '@/assets/images/logo/storybook.png';
 import firebaseLogo from '@/assets/images/logo/firebase.png';
+import mysqlLogo from '@/assets/images/logo/mysql.png';
+import expoLogo from '@/assets/images/logo/expo.png';
 import angularLogo from '@/assets/images/logo/angular.png';
 import phpLogo from '@/assets/images/logo/php.png';
+import mongoDbLogo from '@/assets/images/logo/mongodb.png';
 import nextLogo from '@/assets/images/logo/next.png';
 import jQueryLogo from '@/assets/images/logo/jquery.png';
 import gitLogo from '@/assets/images/logo/git.png';
@@ -99,6 +102,11 @@ export const Tool: Record<string, ToolInterface> = {
         image: vueLogo,
         link: 'https://vuejs.org/',
     },
+    mongoDB: {
+        name: 'Mongo DB',
+        image: mongoDbLogo,
+        link: 'https://www.mongodb.com/',
+    },
     angular: {
         name: 'Angular',
         image: angularLogo,
@@ -124,16 +132,6 @@ export const Tool: Record<string, ToolInterface> = {
         image: cypressLogo,
         link: 'https://www.cypress.io/',
     },
-    firebase: {
-        name: 'Firebase',
-        image: firebaseLogo,
-        link: 'https://firebase.google.com/',
-    },
-    storybook: {
-        name: 'Storybook',
-        image: storybookLogo,
-        link: 'https://storybook.js.org/',
-    },
     php: {
         name: 'Php',
         image: phpLogo,
@@ -149,6 +147,11 @@ export const Tool: Record<string, ToolInterface> = {
         image: gitLogo,
         link: 'https://git-scm.com/',
     },
+    expo: {
+        name: 'Expo',
+        image: expoLogo,
+        link: 'https://expo.dev/',
+    },
     jest: {
         name: 'Jest',
         image: jestLogo,
@@ -158,6 +161,21 @@ export const Tool: Record<string, ToolInterface> = {
         name: 'Jasmine',
         image: jasmineLogo,
         link: 'https://jestjs.io/',
+    },
+    firebase: {
+        name: 'Firebase',
+        image: firebaseLogo,
+        link: 'https://firebase.google.com/',
+    },
+    storybook: {
+        name: 'Storybook',
+        image: storybookLogo,
+        link: 'https://storybook.js.org/',
+    },
+    mysql: {
+        name: 'MySQL',
+        image: mysqlLogo,
+        link: 'https://www.mysql.com/',
     },
 
     //DESIGN
