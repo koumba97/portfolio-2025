@@ -20,16 +20,16 @@
             font-weight: unset;
             margin-bottom: 20px;
         }
-    }
-
-    .dev-container {
-        grid-column: 1/3;
-        grid-row: 1/4;
 
         .tool-container {
             flex-wrap: wrap;
             gap: 12px;
         }
+    }
+
+    .dev-container {
+        grid-column: 1/3;
+        grid-row: 1/4;
     }
 
     .design-container {

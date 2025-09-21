@@ -16,6 +16,8 @@ const devSkills: ToolInterface[] = [
     Tool.next,
     Tool.laravel,
     Tool.symfony,
+    Tool.wordpress,
+    Tool.sitecore,
     Tool.reactNative,
     Tool.expo,
     Tool.node,
@@ -69,8 +71,25 @@ const toolSkills: ToolInterface[] = [
     Tool.jest,
     Tool.jasmine,
 ];
-
 const styleSkills: ToolInterface[] = [Tool.sass, Tool.tailwind];
+
+const graphicDesignSkills: ToolInterface[] = [
+    Tool.indesign,
+    Tool.photoshop,
+    Tool.illustrator,
+    Tool.afterEffects,
+    Tool.adobeXD,
+    Tool.adobe,
+    Tool.premierePro,
+    Tool.quarkXpress,
+    Tool.figma,
+    Tool.canva,
+    Tool.procreate,
+    Tool.procreateDreams,
+    Tool.nomadSculpt,
+    Tool.microsoftOfficeSuite,
+];
+
 const versioningSkills: ToolInterface[] = [Tool.git, Tool.storybook];
 export {
     frameworkSkills,
@@ -82,4 +101,5 @@ export {
     styleSkills,
     versioningSkills,
     databaseSkills,
+    graphicDesignSkills,
 };

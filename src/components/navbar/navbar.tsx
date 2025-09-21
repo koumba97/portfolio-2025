@@ -85,7 +85,7 @@ export default function NavBar() {
                 </Tooltip>
             </Link>
 
-            <Link href="/skills">
+            {/* <Link href="/skills">
                 <Tooltip title={Locals.skills[lang]} placement="top">
                     <Button
                         className={`${pathname === 'skills' ? 'active' : null}
@@ -100,7 +100,7 @@ export default function NavBar() {
                         />
                     </Button>
                 </Tooltip>
-            </Link>
+            </Link> */}
         </div>
     );
 }

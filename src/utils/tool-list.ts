@@ -27,14 +27,15 @@ import jasmineLogo from '@/assets/images/logo/jasmine.png';
 import photoshopLogo from '@/assets/images/logo/photoshop.png';
 import inDesignLogo from '@/assets/images/logo/indesign.png';
 import illustratorLogo from '@/assets/images/logo/illustrator.png';
-import afterEffectsLogo from '@/assets/images/logo/javascript.png';
-import adobeXDLogo from '@/assets/images/logo/typescript.png';
-import quarkExpressLogo from '@/assets/images/logo/tailwind.png';
-import wordpressLogo from '@/assets/images/logo/react.png';
-import sitecoreLogo from '@/assets/images/logo/vue.png';
+import afterEffectsLogo from '@/assets/images/logo/aftereffects.png';
+import adobeXDLogo from '@/assets/images/logo/adobexd.png';
+import premiereProLogo from '@/assets/images/logo/premierepro.png';
+import quarkXPressLogo from '@/assets/images/logo/quarkxpress.png';
+import wordpressLogo from '@/assets/images/logo/wordpress.png';
+import sitecoreLogo from '@/assets/images/logo/sitecore.png';
 import figmaLogo from '@/assets/images/logo/figma.png';
-import canvaLogo from '@/assets/images/logo/node.png';
-import microsoftOfficeSuiteLogo from '@/assets/images/logo/symfony.png';
+import canvaLogo from '@/assets/images/logo/canva.png';
+import microsoftOfficeSuiteLogo from '@/assets/images/logo/microsoftoffice.png';
 import procreateLogo from '@/assets/images/logo/procreate.png';
 import procreateDreamsLogo from '@/assets/images/logo/procreate-dreams.png';
 import nomadSculptLogo from '@/assets/images/logo/nomadsculpt.jpeg';
@@ -177,6 +178,16 @@ export const Tool: Record<string, ToolInterface> = {
         image: mysqlLogo,
         link: 'https://www.mysql.com/',
     },
+    wordpress: {
+        name: 'Wordpress',
+        image: wordpressLogo,
+        link: 'https://wordpress.com/fr/',
+    },
+    sitecore: {
+        name: 'Sitecore',
+        image: sitecoreLogo,
+        link: 'https://www.sitecore.com/',
+    },
 
     //DESIGN
     photoshop: {
@@ -204,21 +215,17 @@ export const Tool: Record<string, ToolInterface> = {
         image: adobeXDLogo,
         link: 'https://www.adobe.com/products/xd.html',
     },
+    premierePro: {
+        name: 'Premiere Pro',
+        image: premiereProLogo,
+        link: 'https://www.adobe.com/products/xd.html',
+    },
     quarkExpress: {
-        name: 'Quark Express',
-        image: quarkExpressLogo,
+        name: 'QuarkXPress',
+        image: quarkXPressLogo,
         link: 'https://www.quark.com/products/quarkxpress',
     },
-    wordpress: {
-        name: 'Wordpress',
-        image: wordpressLogo,
-        link: 'https://wordpress.com/fr/',
-    },
-    sitecore: {
-        name: 'Sitecore',
-        image: sitecoreLogo,
-        link: 'https://www.sitecore.com/',
-    },
+
     figma: {
         name: 'Figma',
         image: figmaLogo,

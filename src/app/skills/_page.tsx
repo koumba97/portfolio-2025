@@ -5,6 +5,7 @@ import {
     databaseSkills,
     devSkills,
     frameworkSkills,
+    graphicDesignSkills,
     langSkills,
     mobileSkills,
     styleSkills,
@@ -17,10 +18,12 @@ export default function Skills() {
         <div className="skills-section section">
             <div className="dev-container container">
                 <h2>Development</h2>
-
                 <ToolContainer tools={devSkills} />
             </div>
-            <div className="design-container container"></div>
+            <div className="design-container container">
+                <h2>Graphic design</h2>
+                <ToolContainer tools={graphicDesignSkills} />
+            </div>
             <div className="illustration-container container"></div>
             <div className="language-container container"></div>
         </div>
