@@ -3,7 +3,6 @@
 import './navbar.scss';
 import { Link } from 'next-view-transitions';
 import SuitcaseSVG from '@/svg/Suitcase';
-import ToolSVG from '@/svg/Tool';
 import UserSVG from '@/svg/User';
 import Tooltip from '@mui/material/Tooltip';
 import Button from '@mui/material/Button';

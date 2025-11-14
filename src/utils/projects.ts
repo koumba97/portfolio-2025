@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import { Tool, ToolInterface } from './tool-list';
 import lettering from '@/assets/images/projects/lettering/lettering.png';
 import digitalDrawings from '@/assets/images/projects/digital-drawings/digital-drawings-cut.png';
@@ -5,7 +7,6 @@ import abstractLine from '@/assets/images/abstract/line1.svg';
 import musicLibrary from '@/assets/images/projects/music-library/music-library.png';
 import abstractLine2 from '@/assets/images/abstract/line2.svg';
 import cookishMaster from '@/assets/images/projects/cookish-master/cookish-master.png';
-import puffCover from '@/assets/images/projects/puff/puff.png';
 import eCommerce from '@/assets/images/projects/krush/e-commerce.png';
 import modeling from '@/assets/images/projects/modeling/modeling.png';
 import { StaticImageData } from 'next/image';
@@ -37,11 +38,12 @@ import cookish3 from '@/assets/images/projects/cookish-master/cookish3.png';
 import cookish4 from '@/assets/images/projects/cookish-master/cookish4.png';
 
 //PUFF
-import puff from '@/assets/images/projects/puff/puff.png';
 import puff2 from '@/assets/images/projects/puff/puff2.png';
-// import puff3 from '@/assets/images/projects/puff/puff3.png';
 import puff4 from '@/assets/images/projects/puff/puff4.png';
 import puff5 from '@/assets/images/projects/puff/puff5.png';
+
+// KOUM'S STUDIO
+import koumsStudioCover from '@/assets/images/projects/koums-studio/koums-studio-cover.jpg';
 
 //KOUM UI
 import koumUI from '@/assets/images/projects/koum-ui/koum-ui.png';
@@ -62,7 +64,6 @@ import krush5 from '@/assets/images/projects/krush/krush5.png';
 import sketch from '@/assets/images/projects/modeling/sketch.jpg';
 import koum from '@/assets/images/projects/modeling/koum.png';
 import koum2 from '@/assets/images/projects/modeling/koum2.png';
-//import koum3 from '@/assets/images/projects/modeling/koum3.png';
 import koum4 from '@/assets/images/projects/modeling/koum4.png';
 import koum5 from '@/assets/images/projects/modeling/koum5.png';
 
@@ -234,14 +235,14 @@ export const ProjectsList: ProjectInterface[] = [
         name: 'Puff',
         id: ProjectID.puff,
         coverImage: {
-            back: puff,
+            back: koumsStudioCover,
         },
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
         gallery: [
             {
-                original: puffCover.src,
-                thumbnail: puffCover.src,
+                original: koumsStudioCover.src,
+                thumbnail: koumsStudioCover.src,
             },
             {
                 original: puff2.src,
@@ -381,7 +382,7 @@ export const ProjectsList: ProjectInterface[] = [
         ],
         link: {
             github: 'https://github.com/koumba97/krush-ecommerce',
-            live: 'https://krush-koum.vercel.app/',
+            //live: 'https://krush-koum.vercel.app/',
         },
         tool: [Tool.react, Tool.sass, Tool.typescript],
     },

@@ -1,17 +1,6 @@
 import { ToolContainer } from '@/ui/tool/tool';
 import './skills.scss';
-import { Tool } from '@/utils/tool-list';
-import {
-    databaseSkills,
-    devSkills,
-    frameworkSkills,
-    graphicDesignSkills,
-    langSkills,
-    mobileSkills,
-    styleSkills,
-    testingSkills,
-    versioningSkills,
-} from '@/utils/skills';
+import { devSkills, graphicDesignSkills } from '@/utils/skills';
 
 export default function Skills() {
     return (
