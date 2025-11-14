@@ -37,13 +37,12 @@ import cookish2 from '@/assets/images/projects/cookish-master/cookish2.png';
 import cookish3 from '@/assets/images/projects/cookish-master/cookish3.png';
 import cookish4 from '@/assets/images/projects/cookish-master/cookish4.png';
 
-//PUFF
-import puff2 from '@/assets/images/projects/puff/puff2.png';
-import puff4 from '@/assets/images/projects/puff/puff4.png';
-import puff5 from '@/assets/images/projects/puff/puff5.png';
-
 // KOUM'S STUDIO
 import koumsStudioCover from '@/assets/images/projects/koums-studio/koums-studio-cover.jpg';
+import koumsStudio1 from '@/assets/images/projects/koums-studio/koums-studio1.png';
+import koumsStudio2 from '@/assets/images/projects/koums-studio/koums-studio2.jpg';
+import koumsStudio3 from '@/assets/images/projects/koums-studio/koum-s-studio.gif';
+import koumsStudio4 from '@/assets/images/projects/koums-studio/koums-studio3.jpg';
 
 //KOUM UI
 import koumUI from '@/assets/images/projects/koum-ui/koum-ui.png';
@@ -72,7 +71,7 @@ export enum ProjectID {
     digitalDrawings = 'digital-drawings',
     cookishMaster = 'cookish-master',
     musicLibrary = 'music-library',
-    puff = 'puff',
+    koumsStudio = 'koum-s-studio',
     koumUI = 'koum-ui',
     modeling = '3d-modeling',
     krush = 'krush',
@@ -232,8 +231,8 @@ export const ProjectsList: ProjectInterface[] = [
         tool: [Tool.react, Tool.typescript, Tool.firebase, Tool.sass],
     },
     {
-        name: 'Puff',
-        id: ProjectID.puff,
+        name: "Koum's Studio",
+        id: ProjectID.koumsStudio,
         coverImage: {
             back: koumsStudioCover,
         },
@@ -245,26 +244,27 @@ export const ProjectsList: ProjectInterface[] = [
                 thumbnail: koumsStudioCover.src,
             },
             {
-                original: puff2.src,
-                thumbnail: puff2.src,
+                original: koumsStudio3.src,
+                thumbnail: koumsStudio1.src,
             },
             {
-                original: puff4.src,
-                thumbnail: puff4.src,
+                original: koumsStudio2.src,
+                thumbnail: koumsStudio2.src,
             },
             {
-                original: puff5.src,
-                thumbnail: puff5.src,
+                original: koumsStudio4.src,
+                thumbnail: koumsStudio4.src,
             },
         ],
         link: {
-            github: 'https://github.com/koumba97/puff',
+            live: 'https://koums-studio.vercel.app/',
+            github: 'https://github.com/koumba97/koums-studio',
         },
         tool: [
-            Tool.reactNative,
+            Tool.react,
+            Tool.typescript,
             Tool.figma,
             Tool.procreate,
-            Tool.firebase,
             Tool.illustrator,
         ],
     },
