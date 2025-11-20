@@ -47,6 +47,10 @@ export default function RootLayout({
                     data-page={currentPage}
                     data-transition={transition}
                 >
+                    <head>
+                        <title>Koumba Keita | Portfolio</title>
+                        <link rel="icon" href="/favicon.png" />
+                    </head>
                     <body>
                         <menu className="menu-bar">
                             <p>Portfolio 2025</p>
