@@ -7,7 +7,6 @@ import abstractLine from '@/assets/images/abstract/line1.svg';
 import musicLibrary from '@/assets/images/projects/music-library/music-library.png';
 import abstractLine2 from '@/assets/images/abstract/line2.svg';
 import cookishMaster from '@/assets/images/projects/cookish-master/cookish-master.png';
-import eCommerce from '@/assets/images/projects/krush/e-commerce.png';
 import modeling from '@/assets/images/projects/modeling/modeling.png';
 import { StaticImageData } from 'next/image';
 

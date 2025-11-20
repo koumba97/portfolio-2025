@@ -1,6 +1,5 @@
 import BehanceSVG from '@/svg/Behance';
 import './social-media.scss';
-import DribbbleSVG from '@/svg/Dribbble';
 import GithubSVG from '@/svg/Github';
 import InstagramSVG from '@/svg/Instagram';
 import LinkedinSVG from '@/svg/Linkedin';
@@ -32,7 +31,6 @@ export default function SocialMedia() {
                     filled
                 />
             </a>
-            {/* <DribbbleSVG width={22} height={22} viewBox="-5 -5 65 65" filled />*/}
 
             <a href="https://www.behance.net/koumbakeita">
                 <BehanceSVG width={20} height={20} viewBox="0 0 65 65" filled />
