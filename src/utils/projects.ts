@@ -52,12 +52,13 @@ import koumUI3 from '@/assets/images/projects/koum-ui/koum-ui3.png';
 import koumUI4 from '@/assets/images/projects/koum-ui/koum-ui4.png';
 import koumUI5 from '@/assets/images/projects/koum-ui/koum-ui5.png';
 
-//KRUSH
-import krush from '@/assets/images/projects/krush/krush.png';
-import krush2 from '@/assets/images/projects/krush/krush2.png';
-import krush3 from '@/assets/images/projects/krush/krush3.png';
-import krush4 from '@/assets/images/projects/krush/krush4.png';
-import krush5 from '@/assets/images/projects/krush/krush5.png';
+//AROUND THE WORLD
+import aroundTheWorld from '@/assets/images/projects/around-the-world/around-the-world.png';
+import aroundTheWorld1 from '@/assets/images/projects/around-the-world/around-the-world1.png';
+import aroundTheWorld2 from '@/assets/images/projects/around-the-world/around-the-world2.png';
+import aroundTheWorld3 from '@/assets/images/projects/around-the-world/around-the-world3.png';
+import aroundTheWorld4 from '@/assets/images/projects/around-the-world/around-the-world4.png';
+import aroundTheWorld5 from '@/assets/images/projects/around-the-world/around-the-world5.png';
 
 //MODELING
 import sketch from '@/assets/images/projects/modeling/sketch.jpg';
@@ -74,7 +75,7 @@ export enum ProjectID {
     koumsStudio = 'koum-s-studio',
     koumUI = 'koum-ui',
     modeling = '3d-modeling',
-    krush = 'krush',
+    aroundTheWorld = 'around-the-world',
 }
 export interface ProjectInterface {
     name: string;
@@ -86,7 +87,10 @@ export interface ProjectInterface {
         top?: `${number}%`;
         left?: `${number}%`;
     };
-    description: string;
+    description: {
+        en: string;
+        fr: string;
+    };
     gallery: { original: string; thumbnail: string }[];
     link?: {
         github?: string;
@@ -102,8 +106,10 @@ export const ProjectsList: ProjectInterface[] = [
         coverImage: {
             back: lettering,
         },
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
+        description: {
+            en: 'A typographic experiment where I merged Carolingian script with the OCR A typeface to create a hybrid identity blending historical elegance with a digital, technical aesthetic.',
+            fr: 'Projet d’expérimentation typographique où j’ai fusionné l’écriture Caroline avec la police OCR A pour créer une identité hybride, mêlant élégance historique et esthétique numérique.',
+        },
         gallery: [
             {
                 original: letteringBook.src,
@@ -130,8 +136,10 @@ export const ProjectsList: ProjectInterface[] = [
         coverImage: {
             back: digitalDrawings,
         },
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
+        description: {
+            en: 'A series of digital illustrations created with Procreate and Photoshop, combining stylized art and vibrant colors. This project highlights my attention to detail and my personal visual style.',
+            fr: 'Série de dessins numériques réalisés sur Procreate et Photoshop, mêlant illustration stylisée et couleurs vibrantes. Ce projet reflète mon sens du détail et mon univers graphique personnel.',
+        },
         gallery: [
             {
                 original: goodDays.src,
@@ -170,8 +178,10 @@ export const ProjectsList: ProjectInterface[] = [
             front: cookishMaster,
             back: abstractLine2,
         },
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
+        description: {
+            en: 'Cookish Master is a mobile app offering recipes from around the world using the TheMealDB API. Users can generate a shopping list from selected recipes and schedule their meals in their phone’s calendar. The project highlights my skills in mobile development, and UI/UX.',
+            fr: 'Cookish Master est une app mobile qui propose des recettes du monde grâce à l’API TheMealDB. Les utilisateurs peuvent générer une liste de courses à partir des recettes choisies et planifier leurs plats dans le calendrier de leur téléphone. Le projet met en avant mes compétences en développement mobile et en design UI/UX.',
+        },
         gallery: [
             {
                 original: cookish.src,
@@ -191,7 +201,7 @@ export const ProjectsList: ProjectInterface[] = [
             },
         ],
         link: {
-            github: 'https://github.com/EpitechIT2020/W-WEB-320-PAR-4-3-app-koumba.keita',
+            github: 'https://github.com/koumba97/cookish-master',
             live: '/videos/cookish-master-demo.mp4',
         },
         tool: [Tool.reactNative, Tool.firebase, Tool.figma, Tool.illustrator],
@@ -204,8 +214,11 @@ export const ProjectsList: ProjectInterface[] = [
             back: abstractLine,
             frontHeight: 230,
         },
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
+
+        description: {
+            en: 'My Music Library project lets users explore my favorite albums and listen to music previews using the Spotify API. The app focuses on usability, intuitive design, and user experience, providing a clean interface to easily navigate through a music collection.',
+            fr: 'Mon projet Music Library permet d’explorer mes albums préférés et d’écouter des extraits de musique grâce à l’API Spotify. L’application met l’accent sur l’ergonomie, le design intuitif et l’expérience utilisateur, offrant une interface claire pour naviguer facilement dans ma collection musicale.',
+        },
         gallery: [
             {
                 original: musicLibrary2.src,
@@ -236,8 +249,10 @@ export const ProjectsList: ProjectInterface[] = [
         coverImage: {
             back: koumsStudioCover,
         },
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
+        description: {
+            en: "Koum's Studio is a web app that lets you create and customize your own avatar. It showcases my skills in development, design, drawing, and UI/UX, offering a wide range of hairstyles, eyes, noses, and accessories to create a unique and expressive avatar.",
+            fr: "Koum's Studio est une application web où tu peux créer et personnaliser ton avatar. Elle combine mes compétences en développement, design, dessin et UI/UX pour offrir un large choix de coiffures, yeux, nez et accessoires, permettant à chacun de créer un avatar unique et expressif.",
+        },
         gallery: [
             {
                 original: koumsStudioCover.src,
@@ -274,8 +289,10 @@ export const ProjectsList: ProjectInterface[] = [
         coverImage: {
             back: koumUI,
         },
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
+        description: {
+            en: 'Koum UI is a library of reusable and accessible web interface components. It highlights my skills in frontend development, design, drawing, and UI/UX, enabling the fast creation of consistent and visually appealing interfaces.',
+            fr: 'Koum UI est une bibliothèque de composants d’interface web réutilisables et accessibles. Elle met en avant mes compétences en développement frontend, design, dessin et UI/UX, permettant de créer rapidement des interfaces cohérentes et esthétiques.',
+        },
         gallery: [
             {
                 original: koumUI1.src,
@@ -320,8 +337,10 @@ export const ProjectsList: ProjectInterface[] = [
             left: '65%',
             top: '65%',
         },
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
+        description: {
+            en: 'During my first experience with Nomad Sculpt, I created a series of 3D figurines based on myself, inspired by Pop Mart blind boxes. Each character features stylized traits and unique expressions, combining personal creativity with digital sculpting exploration.',
+            fr: 'Lors de ma première expérience sur Nomad Sculpt, j’ai réalisé une série de figurines 3D à mon effigie, inspirées des blind box Pop Mart. Chaque personnage met en avant des traits stylisés et des expressions uniques, alliant créativité personnelle et exploration de la sculpture numérique.',
+        },
         gallery: [
             {
                 original: koum5.src,
@@ -351,38 +370,40 @@ export const ProjectsList: ProjectInterface[] = [
         tool: [Tool.nomadSculpt, Tool.procreate],
     },
     {
-        name: 'Krush',
-        id: ProjectID.krush,
+        name: 'The world',
+        id: ProjectID.aroundTheWorld,
         coverImage: {
-            back: eCommerce,
+            back: aroundTheWorld,
         },
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis neque ut elit malesuada cursus. Nulla facilisi. Praesent purus ex, tempor vel quam condimentum, mollis ultrices nisl. Sed neque nunc, vestibulum sed massa a, rutrum imperdiet velit. Fusce dolor ex, auctor sed sodales vel, luctus eu urna. Vivamus porta egestas purus non aliquam. Nulla at viverra nulla, id vulputate nisi. Mauris sed fringilla nibh. Praesent lacinia tincidunt nisi et eleifend. Vestibulum cursus accumsan metus nec ornare. In eu ipsum rhoncus, eleifend velit in, dapibus justo. Suspendisse accumsan non ex imperdiet finibus. Donec iaculis placerat tellus in hendrerit. Curabitur dignissim pharetra dui. Etiam eleifend risus quis accumsan egestas. Aenean nibh justo, fermentum id ornare ut, tempor id risus. Sed iaculis diam eget ipsum convallis, nec scelerisque nibh dictum. Morbi eget felis quis arcu malesuada suscipit nec eget dui. Duis congue quam vitae magna tincidunt, sit amet vehicula lectus posuere. Sed volutpat ut sapien ac imperdiet. Ut sagittis erat tortor, sodales aliquam tellus aliquam sit amet. Integer fringilla, felis semper eleifend convallis, est nulla sagittis turpis, nec mollis velit turpis ac nisi. Fusce pulvinar imperdiet odio, eu lobortis tortor rutrum at.',
+        description: {
+            en: 'Around the World is an interactive app that lets users discover and explore countries through maps and key information. I integrated the RestCountries API to fetch detailed data for each country and Google Maps to visualize their locations. The project showcases my skills in development, design, drawing, and UI/UX, providing a fun and educational experience.',
+            fr: 'Around the World est une application interactive qui permet de découvrir et explorer des pays à travers des cartes et des informations clés. J’ai intégré l’API RestCountries pour récupérer des données détaillées sur chaque pays et Google Maps pour visualiser leur localisation. Le projet met en avant mes compétences en développement, design, dessin et UI/UX, offrant une expérience à la fois ludique et éducative.',
+        },
         gallery: [
             {
-                original: krush.src,
-                thumbnail: krush.src,
+                original: aroundTheWorld1.src,
+                thumbnail: aroundTheWorld1.src,
             },
             {
-                original: krush2.src,
-                thumbnail: krush2.src,
+                original: aroundTheWorld2.src,
+                thumbnail: aroundTheWorld2.src,
             },
             {
-                original: krush3.src,
-                thumbnail: krush3.src,
+                original: aroundTheWorld3.src,
+                thumbnail: aroundTheWorld3.src,
             },
             {
-                original: krush4.src,
-                thumbnail: krush4.src,
+                original: aroundTheWorld4.src,
+                thumbnail: aroundTheWorld4.src,
             },
             {
-                original: krush5.src,
-                thumbnail: krush5.src,
+                original: aroundTheWorld5.src,
+                thumbnail: aroundTheWorld5.src,
             },
         ],
         link: {
-            github: 'https://github.com/koumba97/krush-ecommerce',
-            //live: 'https://krush-koum.vercel.app/',
+            github: 'https://github.com/koumba97/around-the-world',
+            live: 'https://koum-around-the-world.vercel.app/',
         },
         tool: [Tool.react, Tool.sass, Tool.typescript],
     },

@@ -142,7 +142,7 @@ export default function ProjectPage({ params }: Props) {
                         onClick={handleDescriptionModal}
                         truncatedEndingComponent={'... '}
                     >
-                        {project?.description}
+                        {project?.description[lang]}
                     </ShowMoreText>
 
                     <ProjectModal

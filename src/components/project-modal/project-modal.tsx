@@ -5,6 +5,7 @@ import CloseSVG from '@/svg/Close';
 import LinkUI from '@/ui/links/link';
 import LinkSVG from '@/svg/Link';
 import GithubSVG from '@/svg/Github';
+import { useLang } from '@/context/language-context';
 
 interface Prop {
     project: ProjectInterface;
@@ -20,6 +21,7 @@ export default function ProjectModal({
     function handleModal() {
         handleDescriptionModal();
     }
+    const { lang } = useLang();
     return (
         <Modal
             open={isOpen}
@@ -42,7 +44,7 @@ export default function ProjectModal({
                         />
                     </Button>
                 </div>
-                <p className="content">{project?.description}</p>
+                <p className="content">{project?.description[lang]}</p>
                 <div className="modal-footer">
                     <div className="link-container">
                         {project?.link
@@ -55,7 +57,7 @@ export default function ProjectModal({
                                                       <GithubSVG
                                                           width={20}
                                                           height={20}
-                                                          viewBox="6 0 25 35"
+                                                          viewBox="0 0 60 60"
                                                       />
                                                       See the code
                                                   </>

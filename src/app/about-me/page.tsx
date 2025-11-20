@@ -93,11 +93,7 @@ export default function AboutMe() {
                     <h2>{Locals.aboutMeRoleIntro[lang]}</h2>
                     <h1 className="title test"></h1>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectet adipiscing elit.
-                    Integer porttitor ligula sit amet turpis congue, at faucibus
-                    tellus auctor. Fusce molestie scelerisque ligula in varius.
-                </p>
+                <p>{Locals.aboutMeDescription[lang]}</p>
                 <div className="buttons-container">
                     <Link href="/experience">
                         <ButtonUI>{Locals.learnMore[lang]}</ButtonUI>

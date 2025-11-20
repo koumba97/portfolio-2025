@@ -88,6 +88,10 @@ export const Locals: LocalLang = {
         en: 'Learn more',
         fr: 'En savoir plus',
     },
+    aboutMeDescription: {
+        en: 'Front-end developer with a passion for design, illustration, and interactive experiences. I love blending tech and creativity through apps, 3D, digital art, and UI/UX. Always curious and always learning, I build projects that reflect who I am.',
+        fr: 'Développeuse front-end passionnée par le design, l’illustration et la création d’expériences interactives. J’aime mélanger technique et créativité, que ce soit à travers des apps, de la 3D, du dessin ou de l’UI/UX. Toujours curieuse, toujours en train d’apprendre, je construis des projets qui me ressemblent.',
+    },
     getInTouch: {
         en: 'Get in touch',
         fr: 'Rester en contact',
@@ -245,8 +249,8 @@ export const Locals: LocalLang = {
         fr: 'Voir mon CV complet',
     },
     fullResumeDescription: {
-        en: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        fr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        en: 'To learn more about me and my experience, feel free to check out my résumé!',
+        fr: 'Pour en savoir plus sur moi et mon parcours, n’hésite pas à consulter mon CV!',
     },
     download: {
         en: 'Download',
