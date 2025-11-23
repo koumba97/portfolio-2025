@@ -65,6 +65,9 @@ import koum from '@/assets/images/projects/modeling/koum.png';
 import koum2 from '@/assets/images/projects/modeling/koum2.png';
 import koum4 from '@/assets/images/projects/modeling/koum4.png';
 import koum5 from '@/assets/images/projects/modeling/koum5.png';
+import koum1Gif from '@/assets/images/projects/modeling/koum1.gif';
+import koum2Gif from '@/assets/images/projects/modeling/koum2.gif';
+import koum4Gif from '@/assets/images/projects/modeling/koum4.gif';
 
 export enum ProjectID {
     lettering = 'lettering',
@@ -342,21 +345,21 @@ export const ProjectsList: ProjectInterface[] = [
         },
         gallery: [
             {
-                original: koum5.src,
-                thumbnail: koum5.src,
-            },
-            {
-                original: koum.src,
+                original: koum1Gif.src,
                 thumbnail: koum.src,
             },
             {
-                original: koum2.src,
+                original: koum2Gif.src,
                 thumbnail: koum2.src,
             },
 
             {
-                original: koum4.src,
+                original: koum4Gif.src,
                 thumbnail: koum4.src,
+            },
+            {
+                original: koum5.src,
+                thumbnail: koum5.src,
             },
             {
                 original: sketch.src,
