@@ -18,6 +18,7 @@ import GridSVG from '@/svg/Grid';
 import OtherProjects from '@/components/other-projects/other-projects';
 import { useLang } from '@/context/language-context';
 import { Locals } from '@/utils/locals';
+import { redirect } from 'next/navigation';
 
 type Props = {
     params: Promise<{ slug: string }>;
@@ -39,7 +40,6 @@ export default function ProjectPage({ params }: Props) {
             const foundProject = ProjectsList.find((project, index) => {
                 if (project.id === slug) {
                     setProjectIndex(index);
-                    console.log(index);
                     return project;
                 }
             });
@@ -54,6 +54,8 @@ export default function ProjectPage({ params }: Props) {
                 } else {
                     setTitleHTML(foundProject.name);
                 }
+            } else {
+                redirect('/');
             }
         };
 
