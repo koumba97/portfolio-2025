@@ -63,7 +63,7 @@ import aroundTheWorld5 from '@/assets/images/projects/around-the-world/around-th
 import sketch from '@/assets/images/projects/modeling/sketch.jpg';
 import koum from '@/assets/images/projects/modeling/koum.png';
 import koum2 from '@/assets/images/projects/modeling/koum2.png';
-import koum4 from '@/assets/images/projects/modeling/koum4.png';
+import koum3 from '@/assets/images/projects/modeling/koum3.png';
 import koum5 from '@/assets/images/projects/modeling/koum5.png';
 import koum1Gif from '@/assets/images/projects/modeling/koum1.gif';
 import koum2Gif from '@/assets/images/projects/modeling/koum2.gif';
@@ -274,8 +274,8 @@ export const ProjectsList: ProjectInterface[] = [
             },
         ],
         link: {
-            live: 'https://koums-studio.vercel.app/',
             github: 'https://github.com/koumba97/koums-studio',
+            live: 'https://koums-studio.vercel.app/',
         },
         tool: [
             Tool.react,
@@ -318,8 +318,8 @@ export const ProjectsList: ProjectInterface[] = [
             },
         ],
         link: {
-            live: 'https://koum-ui.vercel.app/',
             github: 'https://github.com/koumba97/koum-ui',
+            live: 'https://koum-ui.vercel.app/',
         },
 
         tool: [
@@ -355,7 +355,7 @@ export const ProjectsList: ProjectInterface[] = [
 
             {
                 original: koum4Gif.src,
-                thumbnail: koum4.src,
+                thumbnail: koum3.src,
             },
             {
                 original: koum5.src,

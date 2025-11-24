@@ -23,7 +23,7 @@ export default function SocialMedia() {
                     filled
                 />
             </a>
-            <a href="https://www.instagram.com/koum.97/">
+            <a href="https://www.instagram.com/koum.97/" target="_blank">
                 <InstagramSVG
                     width={20}
                     height={20}
@@ -32,7 +32,7 @@ export default function SocialMedia() {
                 />
             </a>
 
-            <a href="https://www.behance.net/koumbakeita">
+            <a href="https://www.behance.net/koumbakeita" target="_blank">
                 <BehanceSVG width={20} height={20} viewBox="0 0 65 65" filled />
             </a>
         </div>

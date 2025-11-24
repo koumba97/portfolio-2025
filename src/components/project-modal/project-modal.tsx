@@ -6,6 +6,7 @@ import LinkUI from '@/ui/links/link';
 import LinkSVG from '@/svg/Link';
 import GithubSVG from '@/svg/Github';
 import { useLang } from '@/context/language-context';
+import { Locals } from '@/utils/locals';
 
 interface Prop {
     project: ProjectInterface;
@@ -59,7 +60,7 @@ export default function ProjectModal({
                                                           height={20}
                                                           viewBox="0 0 60 60"
                                                       />
-                                                      See the code
+                                                      {Locals.seeCode[lang]}
                                                   </>
                                               ) : key === 'live' ? (
                                                   <>
@@ -68,7 +69,7 @@ export default function ProjectModal({
                                                           height={20}
                                                           viewBox="6 0 25 35"
                                                       />
-                                                      See the project
+                                                      {Locals.seeProject[lang]}
                                                   </>
                                               ) : null}
                                           </>
