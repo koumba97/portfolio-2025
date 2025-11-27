@@ -13,7 +13,10 @@ export function ResumeCard() {
             <div className="info-card">
                 <h3>{Locals.fullResumeTitle[lang]}</h3>
                 <p>{Locals.fullResumeDescription[lang]}</p>
-                <a href="/resume/koumba-keita-cv-fr-web.pdf" target="_blank">
+                <a
+                    href={`/resume/koumba-keita-resume-${lang}.pdf`}
+                    target="_blank"
+                >
                     <ButtonUI>{Locals.download[lang]}</ButtonUI>
                 </a>
             </div>
